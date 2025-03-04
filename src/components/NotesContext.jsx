@@ -6,6 +6,7 @@ const NotesContext = createContext();
 export const NotesProvider = ({children}) => {
     
     const [notes,setNotes] = useState([]);
+    const [noteInput,setNoteInput] = useState({title:"",content:""});
 
 // fetch notes
 
@@ -25,14 +26,14 @@ export const NotesProvider = ({children}) => {
     const saveNote = async(title , content) =>{
         console.log('1');
 
-        const newNote = {title,content};
+        const newNote = {id: noteInput.id,title,content}; // this create an object which check 
         console.log(newNote.id);
 
         try { 
 
             if(newNote.id){
-                await axios.put(`http://localhost:5000/notes${newNote.id}`,newNote)
-                console.log('puting note',newNote)
+                await axios.put(`http://localhost:5000/notes/${newNote.id}`,newNote)
+                setNotes(prevNotes => prevNotes.map(note => note.id === newNote.id ? newNote : note))
             }else{
            const res = await axios.post('http://localhost:5000/notes', newNote)
               setNotes( prevNotes => [...prevNotes,res.data]); // error was because react updates state asynchronously.to optimize.
@@ -55,9 +56,11 @@ export const NotesProvider = ({children}) => {
         }
     } 
     // edit notes
-   
+    const handleEdit =(note) =>{
+        setNoteInput(note);
+    }
     return ( 
-        <NotesContext.Provider value={{notes,saveNote,deleteNote}}>
+        <NotesContext.Provider value={{notes,saveNote,deleteNote,handleEdit,noteInput,setNoteInput }}>
             {children}
         </NotesContext.Provider>
      );

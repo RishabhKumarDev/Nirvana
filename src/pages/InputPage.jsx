@@ -1,13 +1,13 @@
-import { useState } from "react";
 import NotePad from "../components/NotePad";
 import { useNotes } from "../components/NotesContext";
 import SaveBtn from "../components/SaveBtn";
 import "../styles/InputPage.css";
 
 const InputPage = () => {
-
-   const {saveNote} = useNotes();
-   const [noteInput,setNoteInput] = useState({title:'',content:''});
+       
+   const {saveNote,noteInput,setNoteInput} = useNotes();
+   // const [noteInput,setNoteInput] = useState({title:'',content:''});
+   // const {noteInput,setNoteInput} = useNoteInput();
 
    const saveInput = () =>{
       if(!noteInput.title.trim() || !noteInput.content.trim()){

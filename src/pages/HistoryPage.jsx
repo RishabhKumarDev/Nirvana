@@ -3,8 +3,8 @@ import InputPage from "./InputPage";
 import { useNotes } from "../components/NotesContext";
 
 const HistoryPage = () => {
-    const {notes,deleteNote} = useNotes();
-    
+    const {notes,deleteNote,handleEdit} = useNotes();
+
 //# the error is happening because the json structure got changed 
 
     return ( 
@@ -21,6 +21,7 @@ const HistoryPage = () => {
                              <div className="history-title">{note.title}</div>
                              <div className="history-content">{note.content}</div>
                              <div className="delete-btn"><button onClick={()=>deleteNote(note.id)}>Delete</button></div>
+                             <div className="edit-btn"><button onClick={() => handleEdit(note)}>Edit</button></div>
                             </div>
                         </li>
                     ))}
