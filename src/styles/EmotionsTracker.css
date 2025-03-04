@@ -1,0 +1,44 @@
+.question-container{
+    display: flex;
+    justify-content: center;
+}
+.question{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    color: rgb(36, 43, 50);
+}
+.emoji-and-name-container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+}
+.emoji-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: red; */
+}
+.emoji{
+    font-size: 2rem;
+}
+.emoji-name{
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.rad{
+    color:#39bfa3 ;
+}
+.good{
+    color: #92c63d;
+}
+.meh{
+    color: #54adce;
+}
+.bad{
+    color: #f89d45;
+}
+.awful{
+    color: #f89636;
+}
