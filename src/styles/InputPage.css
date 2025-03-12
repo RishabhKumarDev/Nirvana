@@ -1,11 +1,14 @@
 .input-wrap{
-    margin: 5em auto;
+    margin: 1em auto;
     width:75vw;
     height: 100%;
     display: grid;
     grid-template-rows: 4rem repeat(3 , 150px) 200px 180px 600px 50px;
+
     grid-template-columns: repeat(3,1fr);
-    gap: 0.5rem;
+    /* grid-auto-rows: auto; */
+    align-items: start;
+    gap: 1rem;
 }
 .cd12{
     grid-column: span 3;
@@ -13,11 +16,12 @@
     border-radius: 0;
 }
 .input-wrap > div{
+    /* min-height: 9rem; */
     border-radius: 1rem;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.05), 
+    0 1px 3px rgba(255, 255, 255, 0.1); /* Softer, lower shadow */
 }
+
 
 .cd1{
     grid-column: span 3;
@@ -26,7 +30,7 @@
 }
 .cd2{
     grid-column: span 2;
-    background-color: black;
+    background-color: wheat;
 }
 .cd3{
     background-color: green;

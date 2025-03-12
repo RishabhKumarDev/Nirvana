@@ -1,24 +1,68 @@
 {
   "notes": [
     {
-      "id": "2435",
-      "title": "how oyou",
-      "content": "hlo"
+      "id": "e76a",
+      "title": "first test of day",
+      "content": "lets see if this woeks",
+      "selectedEmojis": [
+        "Running",
+        "Stretching",
+        "Walking"
+      ]
     },
     {
-      "id": "4168",
-      "title": "2nd check",
-      "content": "thsi is chekc 3"
+      "id": "684a",
+      "title": "ghgg",
+      "content": "gfgf",
+      "selectedEmojis": [
+        "Running",
+        "Stretching"
+      ]
     },
     {
-      "id": "f49d",
-      "title": "u",
-      "content": "k"
+      "id": "fb4e",
+      "title": "lets see ",
+      "content": "if this works",
+      "selectedEmojis": [
+        "Medation",
+        "Helping",
+        "Walking",
+        "Running"
+      ]
     },
     {
-      "id": "7fb0",
-      "title": "chekc 2",
-      "content": "234"
+      "id": "00b8",
+      "title": "why is this happening ",
+      "content": "in the input field too",
+      "selectedEmojis": [
+        "Focus",
+        "Haircut",
+        "Wellness",
+        "Manicure",
+        "Skin Care",
+        "Start Early",
+        "Make List",
+        "Relax",
+        "Walking",
+        "Stretching",
+        "Eat Healthy",
+        "Drink Water",
+        "Read",
+        "Party",
+        "Friends"
+      ]
+    },
+    {
+      "id": "9e48",
+      "title": "great full",
+      "content": "i am great full for everything i have like head phone, scuty, laptop, house, book, body, hair, past experiences, existance it self.\n",
+      "selectedEmojis": [
+        "Medation",
+        "Medium Sleep",
+        "Relax",
+        "Progress",
+        "Skin Care"
+      ]
     }
   ]
 }

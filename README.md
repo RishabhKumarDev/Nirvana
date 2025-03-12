@@ -14,3 +14,4 @@
   I got an error "Objects are not valid as a React child (found: object with keys {title, content}). If you meant to render a collection of children, use an array instead."
   i think this is most probably because of the logic inside the NoteContext.jsx component where saveNtoe() takes arguments which is different from the state i am getting.
 >>>>>>> 0a0c7c5 (Initial commit - added half projet)
+

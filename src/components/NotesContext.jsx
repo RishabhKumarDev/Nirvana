@@ -7,6 +7,7 @@ export const NotesProvider = ({children}) => {
     
     const [notes,setNotes] = useState([]);
     const [noteInput,setNoteInput] = useState({title:"",content:""});
+    const [selectedEmojis,setSelectedEmojis] = useState([]);
 
 // fetch notes
 
@@ -23,10 +24,10 @@ export const NotesProvider = ({children}) => {
     //# leaves content as undefined.(reason for the errors displaying history and structure change is json server.)
     //# resolved this issue by passing two seperete value in saveNote() in InputPage.jsx;
     
-    const saveNote = async(title , content) =>{
+    const saveNote = async(title , content, selectedEmojis) =>{
         console.log('1');
 
-        const newNote = {id: noteInput.id,title,content}; // this create an object which check 
+        const newNote = {id: noteInput.id,title,content,selectedEmojis}; // this create an object which check 
         console.log(newNote.id);
 
         try { 
@@ -37,7 +38,7 @@ export const NotesProvider = ({children}) => {
             }else{
            const res = await axios.post('http://localhost:5000/notes', newNote)
               setNotes( prevNotes => [...prevNotes,res.data]); // error was because react updates state asynchronously.to optimize.
-                            // this is functional state update which ensure state update instantly.
+                                                               // this is functional state update which ensure state update instantly.
               console.log('updated Notes',notes);
              console.log('saved note from api',res.data);
             }
@@ -58,9 +59,10 @@ export const NotesProvider = ({children}) => {
     // edit notes
     const handleEdit =(note) =>{
         setNoteInput(note);
+        setSelectedEmojis(note.selectedEmojis)
     }
     return ( 
-        <NotesContext.Provider value={{notes,saveNote,deleteNote,handleEdit,noteInput,setNoteInput }}>
+        <NotesContext.Provider value={{notes,saveNote,deleteNote,handleEdit,noteInput,setNoteInput,selectedEmojis,setSelectedEmojis }}>
             {children}
         </NotesContext.Provider>
      );
