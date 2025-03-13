@@ -63,6 +63,64 @@
         "Progress",
         "Skin Care"
       ]
+    },
+    {
+      "id": "cec9",
+      "title": "test",
+      "content": "for cover emoji save function",
+      "selectedEmojis": [
+        "Biking",
+        "Paint",
+        "Medation",
+        "Helping"
+      ],
+      "selectedCoverEmoji": "rad"
+    },
+    {
+      "id": "670f",
+      "title": "tes 33333",
+      "content": "3333333333333333333333333",
+      "selectedEmojis": [
+        "Biking",
+        "Guitar",
+        "Exercise"
+      ],
+      "selectedCoverEmoji": "rad"
+    },
+    {
+      "id": "86b5",
+      "title": "bad day test",
+      "content": "i had a bod hae",
+      "selectedEmojis": [
+        "Guitar",
+        "Anme"
+      ],
+      "selectedCoverEmoji": "meh"
+    },
+    {
+      "id": "cbe4",
+      "title": "tes3344444",
+      "content": "44444444",
+      "selectedEmojis": [
+        "Exercise",
+        "Delivery",
+        "Content"
+      ],
+      "selectedCoverEmoji": "rad"
+    },
+    {
+      "id": "48c2",
+      "title": "test ",
+      "content": "check before commiting changes to github\n",
+      "selectedEmojis": [
+        "Guitar",
+        "Donate",
+        "Drink Water",
+        "Relax",
+        "Focus",
+        "Sad"
+      ],
+      "selectedCoverEmoji": "meh"
     }
   ]
 }

@@ -42,3 +42,9 @@
 .awful{
     color: #f89636;
 }
+.cover-emoji-selected{
+    background-color: green;
+}
+.cover-emoji-not-selected{
+    background-color: brown;
+}

@@ -1,7 +1,10 @@
 import '../styles/FirstPage.css';
 import EmotionsTracker from '../components/EmotionsTracker';
-const FirstPage = () => {
+import { useNotes } from "../components/NotesContext";
 
+const FirstPage = () => {
+ const {selectedCoverEmoji,setSelectedCoverEmoji} = useNotes();
+ 
     return ( 
     <div className="first-page-wrap">
         <div className="first-page-journal-cover-wrap">
@@ -11,7 +14,7 @@ const FirstPage = () => {
                     <h2>Blue's Journal</h2>
                 </div>
                 <div className="input">
-                    <EmotionsTracker />
+                    <EmotionsTracker selectedCoverEmoji={selectedCoverEmoji} setSelectedCoverEmoji={setSelectedCoverEmoji} />
                 </div>
             </div>
         </div>

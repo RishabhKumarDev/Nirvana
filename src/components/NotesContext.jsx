@@ -8,6 +8,7 @@ export const NotesProvider = ({children}) => {
     const [notes,setNotes] = useState([]);
     const [noteInput,setNoteInput] = useState({title:"",content:""});
     const [selectedEmojis,setSelectedEmojis] = useState([]);
+    const [selectedCoverEmoji,setSelectedCoverEmoji] = useState("");
 
 // fetch notes
 
@@ -24,10 +25,10 @@ export const NotesProvider = ({children}) => {
     //# leaves content as undefined.(reason for the errors displaying history and structure change is json server.)
     //# resolved this issue by passing two seperete value in saveNote() in InputPage.jsx;
     
-    const saveNote = async(title , content, selectedEmojis) =>{
+    const saveNote = async(title , content, selectedEmojis, selectedCoverEmoji) =>{
         console.log('1');
 
-        const newNote = {id: noteInput.id,title,content,selectedEmojis}; // this create an object which check 
+        const newNote = {id: noteInput.id,title,content,selectedEmojis,selectedCoverEmoji}; // this create an object which check 
         console.log(newNote.id);
 
         try { 
@@ -60,9 +61,10 @@ export const NotesProvider = ({children}) => {
     const handleEdit =(note) =>{
         setNoteInput(note);
         setSelectedEmojis(note.selectedEmojis)
+        setSelectedCoverEmoji(note.selectedCoverEmoji)
     }
     return ( 
-        <NotesContext.Provider value={{notes,saveNote,deleteNote,handleEdit,noteInput,setNoteInput,selectedEmojis,setSelectedEmojis }}>
+        <NotesContext.Provider value={{notes,saveNote,deleteNote,handleEdit,noteInput,setNoteInput,selectedEmojis,setSelectedEmojis,selectedCoverEmoji,setSelectedCoverEmoji }}>
             {children}
         </NotesContext.Provider>
      );

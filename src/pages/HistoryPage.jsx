@@ -1,10 +1,16 @@
 import "../styles/HistoryPage.css";
 import InputPage from "./InputPage";
 import { useNotes } from "../components/NotesContext";
-import { iconCategory } from "../components/IconsContainer";
+import { iconCategory, CoverEmojis } from "../components/IconsContainer";
 const HistoryPage = () => {
     const {notes,deleteNote,handleEdit} = useNotes();
 
+    const showCoverEmoji = (name)=>{
+        
+            const emoji = CoverEmojis.find((e) => e.name === name);
+            if(emoji) return emoji.icon;
+        
+    }
     const findIcon=(name)=>{
         for(let category of iconCategory){
             const emoji = category.emojis.find((e) => e.name === name);
@@ -26,6 +32,7 @@ const HistoryPage = () => {
                           key={note.id} 
                           className="note-item">
                            <div className="one-history">
+                            <div className="cover-emoji-history">{showCoverEmoji(note.selectedCoverEmoji)}</div>
                              <div className="history-title">{note.title}</div>
                              <div className="history-content">{note.content}</div>
                              <div className="history-emojis">

@@ -1,22 +1,12 @@
 import '../styles/EmotionsTracker.css';
-import CoverEmojis from './CoverEmojis';
-import { IoIosHappy } from "react-icons/io";
-import { RiEmotionHappyFill } from "react-icons/ri";
-import { AiFillMeh } from "react-icons/ai";
-import { MdMoodBad } from "react-icons/md";
-import { LiaSadCrySolid } from "react-icons/lia";
+import { Link, useLocation } from 'react-router-dom';
+import { CoverEmojis } from './IconsContainer';
 
 
+const EmotionsTracker = ({selectedCoverEmoji,setSelectedCoverEmoji}) => {
 
-const EmotionsTracker = () => {
+   const location = useLocation();
 
-    const emojis = [
-        {icon: <IoIosHappy/>,name:'rad'},
-        {icon: <RiEmotionHappyFill/>,name:'good'},
-        {icon: <AiFillMeh/>,name:'meh'},
-        {icon: <MdMoodBad/>,name:'bad'},
-        {icon: <LiaSadCrySolid/>,name:'awful'}
-    ]
     return ( 
         
         <div className="cover-felling-tracker">
@@ -25,10 +15,24 @@ const EmotionsTracker = () => {
            </div>
            <div className="emoji-and-name-container">
 
-           {emojis.map((emoji,i)=>(
-            <CoverEmojis key={i} icon={emoji.icon} name={emoji.name}/>
-           ))}
-        
+           {CoverEmojis.map((emoji,i)=> {
+
+            const emojiElement = (
+                <div 
+              key={i} 
+              className={`emoji-container ${selectedCoverEmoji === emoji.name ? "cover-emoji-selected": selectedCoverEmoji ? "cover-emoji-not-selected" : ""}`} 
+              onClick={()=> setSelectedCoverEmoji(emoji.name)}
+                >
+                   <span className={`emoji ${emoji.name}`}>{emoji.icon}</span>
+                   <p className={`emoji-name ${emoji.name}`}>{emoji.name}</p> 
+                </div>
+            )
+            // wrap Link only if the location is first page "/".
+            
+            return location.pathname === "/" ? (<Link to={"/input"} key={i}> {emojiElement} </Link>) : (<div key={i}> {emojiElement}  </div>);
+           
+ } )}
+       
             </div>
         </div>
      );

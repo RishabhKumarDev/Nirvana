@@ -6,21 +6,23 @@ import "../styles/InputPage.css";
 import InputEmojis from "../components/InputEmojis";
 const InputPage = () => {
        
-   const {saveNote,noteInput,setNoteInput,selectedEmojis,setSelectedEmojis} = useNotes();
+   const {saveNote,noteInput,setNoteInput,selectedEmojis,setSelectedEmojis,selectedCoverEmoji,setSelectedCoverEmoji} = useNotes();
 
    const saveInput = () =>{
       if(!noteInput.title.trim() || !noteInput.content.trim()){
          return;
      }
-      saveNote(noteInput.title, noteInput.content,selectedEmojis);
+      saveNote(noteInput.title, noteInput.content,selectedEmojis,selectedCoverEmoji);
       setNoteInput({title:'',content:''});
       setSelectedEmojis([]);
+      setSelectedCoverEmoji("");
+      console.log("save",setSelectedCoverEmoji) // remove 
    }
 
     return ( 
       <>
       <div className="start-emotion">
-         <EmotionsTracker /> 
+         <EmotionsTracker selectedCoverEmoji={selectedCoverEmoji} setSelectedCoverEmoji={setSelectedCoverEmoji} /> 
       </div>
         <div className="input-wrap">
            <div className="cd1"> <h1>HOW HAVE YOU BEEN ?</h1></div>

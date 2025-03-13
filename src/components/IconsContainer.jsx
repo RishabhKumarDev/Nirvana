@@ -22,13 +22,26 @@ import {
     GiFruitBowl, GiWaterBottle, GiConsoleController, 
     GiMeditation,
      GiScissors, GiThreeLeaves , GiIsland, GiHotSurface, GiVolcano, 
-     GiWaterDrop, GiHeavyRain ,GiLotus , GiHelp
+     GiHeavyRain ,GiLotus , GiHelp
   } from "react-icons/gi";
   
   // react-icons/tb
   import { TbCloudStorm, TbBalloon, TbMountain , TbMeatOff } from "react-icons/tb";
   
- 
+ // cover emojis
+ import { IoIosHappy } from "react-icons/io";
+ import { RiEmotionHappyFill } from "react-icons/ri";
+ import { AiFillMeh } from "react-icons/ai";
+ import { MdMoodBad } from "react-icons/md";
+ import { LiaSadCrySolid } from "react-icons/lia";
+
+export const CoverEmojis = [
+    {icon: <IoIosHappy/>,name:'rad'},
+    {icon: <RiEmotionHappyFill/>,name:'good'},
+    {icon: <AiFillMeh/>,name:'meh'},
+    {icon: <MdMoodBad/>,name:'bad'},
+    {icon: <LiaSadCrySolid/>,name:'awful'}
+]
 
 export const iconCategory = [
     {
