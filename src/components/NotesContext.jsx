@@ -9,7 +9,7 @@ export const NotesProvider = ({children}) => {
     const [noteInput,setNoteInput] = useState({title:"",content:""});
     const [selectedEmojis,setSelectedEmojis] = useState([]);
     const [selectedCoverEmoji,setSelectedCoverEmoji] = useState("");
-
+    const [dateAndTime,setDateAndTime]= useState(new Date());
 // fetch notes
 
     useEffect(()=>{
@@ -18,7 +18,21 @@ export const NotesProvider = ({children}) => {
         .catch(err => console.log('failed to fetch',err));
 
     },[])
+//current date and time while displying entry history on input page.
 
+const formatDate = (date) =>{
+    return new Date(date).toLocaleDateString("en-US",{
+       weekday:"long",
+       day:"numeric",
+       month:"long",
+    })
+}
+const formatTime = (time) =>{
+return new Date(time).toLocaleTimeString("en-US",{
+   hour:"2-digit",
+   minute:"2-digit"
+})
+}
     // save notes
     //# when you pass an object where separate parameters are expected, 
     //# it treats the first argument (title) as the whole object and 
@@ -28,8 +42,8 @@ export const NotesProvider = ({children}) => {
     const saveNote = async(title , content, selectedEmojis, selectedCoverEmoji) =>{
         console.log('1');
 
-        const newNote = {id: noteInput.id,title,content,selectedEmojis,selectedCoverEmoji}; // this create an object which check 
-        console.log(newNote.id);
+        const newNote = {id: noteInput.id,date: new Date().toISOString(), title,content,selectedEmojis,selectedCoverEmoji}; // this create an object which check 
+        console.log(newNote.id,newNote.date);
 
         try { 
 
@@ -62,9 +76,24 @@ export const NotesProvider = ({children}) => {
         setNoteInput(note);
         setSelectedEmojis(note.selectedEmojis)
         setSelectedCoverEmoji(note.selectedCoverEmoji)
+        setDateAndTime(note.date ? new Date(note.date) : new Date());
     }
     return ( 
-        <NotesContext.Provider value={{notes,saveNote,deleteNote,handleEdit,noteInput,setNoteInput,selectedEmojis,setSelectedEmojis,selectedCoverEmoji,setSelectedCoverEmoji }}>
+        <NotesContext.Provider value={{notes,
+                                       saveNote
+                                       ,deleteNote
+                                       ,handleEdit
+                                       ,noteInput
+                                       ,setNoteInput
+                                       ,selectedEmojis
+                                       ,setSelectedEmojis
+                                       ,selectedCoverEmoji
+                                       ,setSelectedCoverEmoji
+                                       ,formatDate
+                                       ,formatTime
+                                       ,dateAndTime
+                                       ,setDateAndTime
+                                        }}>
             {children}
         </NotesContext.Provider>
      );

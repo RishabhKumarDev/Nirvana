@@ -27,11 +27,11 @@ const InputEmojis = ({selectedEmojis,setSelectedEmojis}) => {
             {categoryObj.emojis.map((iconObj)=>(
                 <div 
                 key={iconObj.name}
-                className={`emoji-name-container ${selectedEmojis.includes(iconObj.name)? "selected" : ""}`}
+                className={`emoji-name-container `}
                 onClick = {() => toggleEmoji(iconObj.name)}    
                 >
-                    <div className="input-emoji-wrap">
-                        <span className="input-icon-entry">{iconObj.icon}</span>
+                    <div className={`input-emoji-wrap ${selectedEmojis.includes(iconObj.name)? "selected-icon-wrap":""}`}>
+                        <span className={`input-icon-entry  ${selectedEmojis.includes(iconObj.name)? "selected-icon":""} `}>{iconObj.icon}</span>
                         </div>
                     <div className="input-emoji-name">
                         <span className="input-icon-name-entry">{iconObj.name}</span>

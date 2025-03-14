@@ -66,8 +66,10 @@ export const iconCategory = [
         emojis:[
             {icon:<GiNightSleep /> ,name:"Good Sleep" },
             {icon:<FaRegTired/>,name:"Bad Sleep"},
-            {icon:<MdNightlight/>,name:"Medium Sleep"},
-            {icon:<GiAlarmClock/>,name:"Sleep Early"}
+            {icon:<MdNightlight/>,name:"Mid Sleep"},
+            {icon:<GiAlarmClock/>,name:"Sleep Early"},
+            {icon:<GiAlarmClock/>,name:"Sleep Late"}
+
         ]
     },{
         category:"Health",
@@ -94,9 +96,9 @@ export const iconCategory = [
             {icon:<GiFrenchFries/>,name:"Fast Food"},
             {icon:<GiHotMeal/>,name:"Homemade"},
             {icon:<MdDeliveryDining/>,name:"Delivery"},
-            {icon:<TbMeatOff/>,name:"NO Meat"},
-            {icon:<GiCakeSlice/>,name:"No Sweets"},
-            {icon:<GiSodaCan/>,name:"No Soda"}
+            {icon:<TbMeatOff/>,name:"NoMeat"},
+            {icon:<GiCakeSlice/>,name:"NoSweets"},
+            {icon:<GiSodaCan/>,name:"NoSoda"}
         ]
     },{
         category:"Social",

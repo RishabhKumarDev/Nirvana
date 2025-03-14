@@ -36,8 +36,8 @@
 .emoji-name-container:hover {
     transform: translateY(-0.1rem);
 }
-.selected{
-    background-color: red;
+.selected-icon-wrap{
+    background-color: #26A69A !important;
 }
 .input-emoji{
     background-color: gray;
@@ -55,7 +55,9 @@
     align-items: center;
     justify-content: center;
     border: 0.1px solid #b0bdbbb9 ;
-
+}
+.selected-icon{
+    color: #202324 !important;
 }
 .input-icon-entry{
     font-size: 1.5rem;

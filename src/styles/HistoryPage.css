@@ -1,6 +1,5 @@
 .history-wrap{
     /* you have to add shadow border to the main div to make it look better  */
-    background-color: red;
     border: 2px solid white;
     display: flex;
     margin: 3rem 0 0 8rem ;    
@@ -23,7 +22,7 @@
     display: flex;
     align-items: center;
     justify-self: center;
-    background-color: blue;
+    background-color: #202324;
 }
 .input-container{
     transform: scale(0.8);

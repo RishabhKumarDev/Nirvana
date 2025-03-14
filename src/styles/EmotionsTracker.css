@@ -13,13 +13,12 @@
     color: white;
 }
 .emoji-and-name-container{
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
     gap: 1rem;
     width: 100%;
     height: 100%;
- 
 }
 .emoji-container{
     display: flex;
@@ -58,4 +57,17 @@
 }
 .in-input-page{
     background: none;
+}
+.date-display , .time-display{
+    color: #26A69A;
+    font-family: monospace;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #15B790;
+}
+.date-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.5rem;
 }

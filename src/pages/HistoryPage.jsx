@@ -3,7 +3,7 @@ import InputPage from "./InputPage";
 import { useNotes } from "../components/NotesContext";
 import { iconCategory, CoverEmojis } from "../components/IconsContainer";
 const HistoryPage = () => {
-    const {notes,deleteNote,handleEdit} = useNotes();
+    const {notes,deleteNote,handleEdit,formatDate,formatTime} = useNotes();
 
     const showCoverEmoji = (name)=>{
         
@@ -18,7 +18,7 @@ const HistoryPage = () => {
         }
         return null;
     }
-
+   
 //# the error is happening because the json structure got changed 
 
     return ( 
@@ -32,6 +32,8 @@ const HistoryPage = () => {
                           key={note.id} 
                           className="note-item">
                            <div className="one-history">
+                            <div className="date-display-history">{formatDate(note.date)} </div>
+                            <div className="time-display-history">{formatTime(note.date)} </div>
                             <div className="cover-emoji-history">{showCoverEmoji(note.selectedCoverEmoji)}</div>
                              <div className="history-title">{note.title}</div>
                              <div className="history-content">{note.content}</div>

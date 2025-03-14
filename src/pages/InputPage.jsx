@@ -4,6 +4,8 @@ import { useNotes } from "../components/NotesContext";
 import SaveBtn from "../components/SaveBtn";
 import "../styles/InputPage.css";
 import InputEmojis from "../components/InputEmojis";
+
+
 const InputPage = () => {
        
    const {saveNote,noteInput,setNoteInput,selectedEmojis,setSelectedEmojis,selectedCoverEmoji,setSelectedCoverEmoji} = useNotes();

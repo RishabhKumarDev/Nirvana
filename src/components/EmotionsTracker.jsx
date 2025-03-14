@@ -1,6 +1,7 @@
 import '../styles/EmotionsTracker.css';
 import { Link, useLocation } from 'react-router-dom';
 import { CoverEmojis } from './IconsContainer';
+import DateTime from './DateTime';
 
 
 const EmotionsTracker = ({selectedCoverEmoji,setSelectedCoverEmoji}) => {
@@ -13,6 +14,7 @@ const EmotionsTracker = ({selectedCoverEmoji,setSelectedCoverEmoji}) => {
            <div className="question-container">
             <h3 className='question'>How are you?</h3>
            </div>
+           <div className="date-container"> <DateTime/> </div>
            <div className="emoji-and-name-container">
 
            {CoverEmojis.map((emoji,i)=> {
