@@ -18,15 +18,21 @@
 .input-wrap > div{
     /* min-height: 9rem; */
     border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.05), 
-    0 1px 3px rgba(255, 255, 255, 0.1); /* Softer, lower shadow */
+    /* Softer, lower shadow */
 }
 
 
 .cd1{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff ;
     grid-column: span 3;
-    
-    background-color: blue;
+    background-color: #3e4141e0 ;
+}
+.cd1 h1{
+    font-family: sans-serif;
 }
 .cd2{
     grid-column: span 2;

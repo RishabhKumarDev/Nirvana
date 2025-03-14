@@ -30,8 +30,12 @@ const InputEmojis = ({selectedEmojis,setSelectedEmojis}) => {
                 className={`emoji-name-container ${selectedEmojis.includes(iconObj.name)? "selected" : ""}`}
                 onClick = {() => toggleEmoji(iconObj.name)}    
                 >
-                    <div className="input-emoji-wrap">{iconObj.icon}</div>
-                    <div className="input-emoji-name">{iconObj.name}</div>
+                    <div className="input-emoji-wrap">
+                        <span className="input-icon-entry">{iconObj.icon}</span>
+                        </div>
+                    <div className="input-emoji-name">
+                        <span className="input-icon-name-entry">{iconObj.name}</span>
+                        </div>
                 </div>
             ))}
         </div>

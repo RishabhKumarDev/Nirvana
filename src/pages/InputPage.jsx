@@ -25,7 +25,7 @@ const InputPage = () => {
          <EmotionsTracker selectedCoverEmoji={selectedCoverEmoji} setSelectedCoverEmoji={setSelectedCoverEmoji} /> 
       </div>
         <div className="input-wrap">
-           <div className="cd1"> <h1>HOW HAVE YOU BEEN ?</h1></div>
+           <div className="cd1"> <h1>What have been up to?</h1></div>
            <InputEmojis selectedEmojis={selectedEmojis} setSelectedEmojis={setSelectedEmojis} />
            
            <div className="cd12">

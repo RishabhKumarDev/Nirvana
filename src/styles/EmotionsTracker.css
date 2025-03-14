@@ -1,50 +1,61 @@
+.cover-felling-tracker{
+    border-radius: 1rem;
+    padding: 1rem;
+    background: black;
+}
 .question-container{
     display: flex;
     justify-content: center;
 }
 .question{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.5rem;
-    color: rgb(36, 43, 50);
+    font-family: sans-serif;
+    font-size: 1.5em;
+    color: white;
 }
 .emoji-and-name-container{
+    margin-top: 2.5rem;
     display: flex;
     justify-content: center;
     gap: 1rem;
     width: 100%;
     height: 100%;
+ 
 }
 .emoji-container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: red; */
 }
 .emoji{
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 .emoji-name{
     font-size: 1rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:  sans-serif;
+    font-weight: 525;
 }
 .rad{
-    color:#39bfa3 ;
+    color:#15B790  ;
 }
 .good{
-    color: #92c63d;
+    color: #8CCD29 ;
 }
 .meh{
-    color: #54adce;
+    color: #4DA3D4 ;
 }
 .bad{
-    color: #f89d45;
+    color: #F28C38;
 }
 .awful{
-    color: #f89636;
+    color: #F0162F ;
 }
-.cover-emoji-selected{
-    background-color: green;
-}
+
 .cover-emoji-not-selected{
-    background-color: brown;
+    color: gray;
+}
+.cover-emoji-not-selected-name{
+    color: white;
+}
+.in-input-page{
+    background: none;
 }

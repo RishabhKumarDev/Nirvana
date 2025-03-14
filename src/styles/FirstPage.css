@@ -8,8 +8,8 @@
 .first-page-journal-cover-wrap{
     display: flex;
     margin-left: 20%;
-    max-width: 680px;
-    width: 35vw;
+    max-width: 670px;
+    width: 33vw;
     max-height:500px ;
     height: 59vh;
 }
@@ -25,7 +25,7 @@
     border-bottom-left-radius: 1rem;
 
     background: rgb(44,44,44);
-    background: linear-gradient(90deg, rgba(44,44,44,1) 8%, rgba(0, 0, 0, 0.905) 65%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.905) 8%, rgb(33, 33, 33) 65%);
 }
 .journal-cover{
     width: 100%;
@@ -35,7 +35,9 @@
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
     background: rgb(255,122,119);
-    background: linear-gradient(90deg, rgba(255,122,119,1) 0%, rgba(133,63,63,0.7797356828193833) 100%);
+    /* background: linear-gradient(90deg, rgba(255,122,119,1) 0%, rgba(133,63,63,0.7797356828193833) 100%); */
+    background: linear-gradient(190deg, #4E6675 0%, #334D5A 100%);
+
 }
 .owner-name-dispay{
     width: fit-content;
@@ -46,8 +48,11 @@
      
 .owner-name-dispay h2{
     font-family: sans-serif;
+    border: 0.2rem solid wheat;
+    padding: 0.8rem 1rem;
+    border-radius: 2rem;
 }  
 .input{
-    /* margin-top: 5rem; */
+    margin-top: 6rem;
     justify-self: center;
 }

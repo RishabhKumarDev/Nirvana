@@ -31,12 +31,11 @@ const Navbar = () => {
                )}
             
             </div>
-           
+
+
             <Link to="/" className="logo">
-             <span> <AiOutlineQq className='logo-icon' /> </span>
-              <span className="nirvana-part1">Nir</span>
-              <span className="nirvana-part2">va</span>
-              <span className="nirvana-part3">na</span>
+            <span> <AiOutlineQq className='logo-icon' /> </span>
+              <span className="nirvana-part1">Nirvana</span>
             </Link>
 
         </nav>

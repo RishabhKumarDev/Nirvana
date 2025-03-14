@@ -5,6 +5,7 @@ import {
     FaAssistiveListeningSystems, FaHandHoldingUsd, FaUserFriends, FaUser, 
     FaPeopleCarry,  FaRegClock, FaBullseye, FaSmile, FaBookOpen, 
     FaHandSparkles, FaRegTired , FaHeart, FaQuestion , FaChess ,FaBiking , FaGuitar , FaPaintBrush
+    ,FaTired ,FaFrown ,FaGrinStars ,FaGrinBeam ,FaMeh 
   } from "react-icons/fa";
   
   // react-icons/md
@@ -13,7 +14,7 @@ import {
     MdOutlineSportsBasketball, MdMovie, 
     MdFamilyRestroom,  MdEmojiPeople, MdOutlineTrackChanges, MdChecklist, 
     MdCelebration ,
-    MdFaceRetouchingNatural , 
+    MdFaceRetouchingNatural ,MdSentimentSatisfied 
   } from "react-icons/md";
   
   // react-icons/gi
@@ -28,19 +29,14 @@ import {
   // react-icons/tb
   import { TbCloudStorm, TbBalloon, TbMountain , TbMeatOff } from "react-icons/tb";
   
- // cover emojis
- import { IoIosHappy } from "react-icons/io";
- import { RiEmotionHappyFill } from "react-icons/ri";
- import { AiFillMeh } from "react-icons/ai";
- import { MdMoodBad } from "react-icons/md";
- import { LiaSadCrySolid } from "react-icons/lia";
+ 
 
 export const CoverEmojis = [
-    {icon: <IoIosHappy/>,name:'rad'},
-    {icon: <RiEmotionHappyFill/>,name:'good'},
-    {icon: <AiFillMeh/>,name:'meh'},
-    {icon: <MdMoodBad/>,name:'bad'},
-    {icon: <LiaSadCrySolid/>,name:'awful'}
+    {icon: <FaGrinStars/>,name:'rad'},
+    {icon: <FaGrinBeam  />,name:'good'},
+    {icon: <FaMeh />,name:'meh'},
+    {icon: <FaFrown />,name:'bad'},
+    {icon: <FaTired />,name:'awful'}
 ]
 
 export const iconCategory = [

@@ -4,7 +4,6 @@
     display: flex;
     align-items: center;
     padding: 0.2rem;
-    border-radius: 1rem;
     background-color: #202324;
     color: #d1e2e8;
     font-size: 104%;
@@ -19,7 +18,9 @@
     /* justify-content: space-evenly; */
     gap: 0.4rem;
     min-height:  auto;
-    /* background-color: #111314; */
+    background-color: #1B2A29 ;
+    /* box-shadow: 0 4px 6px rgba(255, 255, 255, 0.05), 
+    0 1px 3px rgba(255, 255, 255, 0.1); */
 }
 .emoji-name-container{
     border-radius: 50%;
@@ -44,4 +45,25 @@
     height: 2rem;
     border-radius: 50%;
     padding: 0.2rem;
+}
+.input-emoji-wrap{
+    background-color: #1d2124;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.1px solid #b0bdbbb9 ;
+
+}
+.input-icon-entry{
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: #26A69A ;
+}
+.input-icon-name-entry{
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    color: #d1e2e8;
 }
