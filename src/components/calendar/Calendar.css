@@ -1,0 +1,17 @@
+.actual-calendar-wrap{
+    background-color: red;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px;
+}
+.actual-calendar{
+    width: 250px;
+    height: 250px;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}

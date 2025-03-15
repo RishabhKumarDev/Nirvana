@@ -7,6 +7,16 @@
     height: 80vh;
     /* overflow: auto; */
 }
+.heading-history{
+    margin: 0.5rem 0 0.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.heading-history h2{
+    font-family: sans-serif;
+}
 .history-list{
     overflow: auto;
     background-color: green;
@@ -23,6 +33,18 @@
     align-items: center;
     justify-self: center;
     background-color: #202324;
+}
+.calendar-icon-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.calendar-icon{
+    font-size: 1.3rem;
+    color: #12f4c3;
+    display: flex;
+    align-content: center;
 }
 .input-container{
     transform: scale(0.8);
