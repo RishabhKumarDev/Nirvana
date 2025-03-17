@@ -8,7 +8,7 @@
   opacity: 0; 
   visibility: hidden; 
   transition: all 1s ease-in-out;
-
+  z-index: 1;
 }
 .side-bar-shadow.open {
   /* background: rgba(0, 0, 0, 0.5); */
@@ -26,6 +26,7 @@
   opacity: 0;
   transition: all 1s ease-in-out;
   padding: 0 8px;
+  z-index: 2;
 }
 
 .side-bar.open{
