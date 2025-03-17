@@ -1,5 +1,5 @@
 .actual-calendar-wrap{
-    background-color: red;
+    background-color: #202324;
     position: fixed;
     left: 0;
     top: 0;
@@ -14,4 +14,54 @@
 }
 .hide{
     display: none;
+}
+.cancle-icon{
+    position: absolute;
+    right: 0;
+    font-size: 2em;
+    color: #fff;
+}
+.cancle-icon :hover{
+    background-color: #131314;
+}
+.react-calendar__month-view__weekdays{
+    background-color: #26A69A;
+    margin-top: 1em;
+} 
+.react-calendar__month-view__days{
+    background-color: #202324;
+}
+.react-calendar__tile{
+    background-color: rgb(32, 29, 29);
+    color: aliceblue;
+    border: none;
+    width: 1.5em;
+    height: 2em;
+    font-size: 1em;
+    border-radius: 50%;
+    margin-top: 0.3em;
+}
+.future-date{
+    background-color: #202324;
+}
+.react-calendar__navigation__label__labelText{
+    font-size: 1.4em;
+    color: antiquewhite;
+    background-color: #202324;
+}
+.react-calendar__navigation__label{
+    border:  #202324;
+    outline: none;
+}
+
+.react-calendar__navigation__arrow{
+    font-size: 1.4em;
+    background-color: #202324;
+    border: none;
+    margin-left: 1em;
+    margin-right: 1em;
+    color: #fff;
+}
+.today-highlight{
+    background-color: #26A69A;
 }
