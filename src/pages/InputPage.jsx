@@ -8,7 +8,7 @@ import InputEmojis from "../components/InputEmojis";
 
 const InputPage = () => {
        
-   const {saveNote,noteInput,setNoteInput,selectedEmojis,setSelectedEmojis,selectedCoverEmoji,setSelectedCoverEmoji} = useNotes();
+   const {saveNote,noteInput,setNoteInput,selectedEmojis,setSelectedEmojis,selectedCoverEmoji,setSelectedCoverEmoji,status,setStatus} = useNotes();
 
    const saveInput = () =>{
       if(!noteInput.title.trim() || !noteInput.content.trim()){
@@ -31,7 +31,7 @@ const InputPage = () => {
            <InputEmojis selectedEmojis={selectedEmojis} setSelectedEmojis={setSelectedEmojis} />
            
            <div className="cd12">
-            <NotePad noteInput={noteInput} setNoteInput={setNoteInput} />
+            <NotePad noteInput={noteInput} setNoteInput={setNoteInput} status={status} setStatus={setStatus} />
            </div>
            <div className="cd13">
             <SaveBtn onSave={saveInput} />

@@ -10,6 +10,8 @@ export const NotesProvider = ({children}) => {
     const [selectedEmojis,setSelectedEmojis] = useState([]);
     const [selectedCoverEmoji,setSelectedCoverEmoji] = useState("");
     const [dateAndTime,setDateAndTime]= useState(new Date());
+    const [status,setStatus] = useState('');
+
 // fetch notes
 
     useEffect(()=>{
@@ -62,11 +64,68 @@ return new Date(time).toLocaleTimeString("en-US",{
             console.error('failed to save',err);
         }
     }
+    // auto save---------------------------------------------------------
+    useEffect(()=>{
+console.log('useEffect start 1')
+        if((noteInput.title ==="" && noteInput.content === "") && noteInput.id){
+            deleteNote(noteInput.id);
+            console.log('delete')
+        }
+        else if(noteInput.title === "" && noteInput.content === ""){
+            console.log('return')
+            return;
+        }
+        else{
+        setStatus('saving...');
+
+    const timmer=  setTimeout(() => {
+
+        autoSaveNote();
+
+      }, 2000);
+
+      return () => clearTimeout(timmer);
+
+    }
+console.log('timmer')
+    },[noteInput])
+
+    const autoSaveNote= async()=>{
+        const note = {title: noteInput.title,
+                      content: noteInput.content,
+                      date: new Date().toISOString(),
+                       selectedEmojis: selectedEmojis,
+                       selectedCoverEmoji: selectedCoverEmoji}
+        try {
+            if(!noteInput.id){
+                const res = await axios.post('http://localhost:5000/notes',note);
+                setNotes(prevNotes => [...prevNotes,res.data])
+                setNoteInput(prev => ({...prev, id:res.data.id}))
+                console.log('post',note)
+            }else{
+                
+            setStatus('saved')
+
+            await axios.patch(`http://localhost:5000/notes/${noteInput.id}`,note)
+            console.log('patch',note)
+
+          setStatus('Saved✅')
+        }
+        } catch (error) {
+            console.error('fucked up',error);
+            setStatus('❌Error')
+        }
+
+    }
 // delete notes
     const deleteNote =async (id) =>{
         try {
+            console.log('deleted started')
+
             await axios.delete(`http://localhost:5000/notes/${id}`)
              setNotes(notes.filter(note => note.id !== id));
+             setNoteInput({title:"",content:""});
+             console.log('deleted sucessfully')
         } catch (error) {
             console.error("couldn't delete data",error);
         }
@@ -93,6 +152,9 @@ return new Date(time).toLocaleTimeString("en-US",{
                                        ,formatTime
                                        ,dateAndTime
                                        ,setDateAndTime
+                                       ,status
+                                       ,setStatus
+                                       
                                         }}>
             {children}
         </NotesContext.Provider>
