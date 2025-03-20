@@ -6,12 +6,15 @@ import { FaRegCalendarAlt } from "react-icons/fa";
 import CalendarDisplay from "../components/calendar/Calendar";
 import { useMemo, useState } from "react";
 import { IoRefresh } from "react-icons/io5"; // Refresh icon
+import { FaHeart } from "react-icons/fa";
 
 
 const HistoryPage = () => {
     const {notes,deleteNote,handleEdit,formatDate,formatTime} = useNotes();
     const [calendarVisible,setCalendarVisible] = useState(false);
     const [selectedDate,setSelectedDate] = useState(null);
+    const [showFavourite,setShowFavourite] = useState(false);
+
     const showCoverEmoji = (name)=>{
         
             const emoji = CoverEmojis.find((e) => e.name === name);
@@ -26,17 +29,20 @@ const HistoryPage = () => {
     }
 
    
-    const filteredNotes = useMemo(() => {
 // what it does is checks for selecteddate if it is not true it returns notes
 // which gets maped and shown 
 // else if returns filtred note when the selecteddate is true;
 // and only re-render when they get changed.
 // it reduced the ternory operator ? i was useing to chekc for displying.
-        if (!selectedDate) return notes;
-        return notes.filter(note => 
-            new Date(note.date).toDateString() === selectedDate
-        );
-    }, [selectedDate, notes]);
+const filteredNotes = useMemo(() => {
+if(showFavourite){
+    return notes.filter(note => note.isFavourite === true);
+}else if(selectedDate){
+    return notes.filter(note => new Date(note.date).toDateString() === selectedDate)
+}else if(!showFavourite && !selectedDate){
+    return notes;
+}
+    }, [selectedDate, notes,showFavourite]);
     
 
 //# the error is happening because the json structure got changed 
@@ -55,9 +61,18 @@ const HistoryPage = () => {
                         <FaRegCalendarAlt
                         onClick={()=> setCalendarVisible(true)}
                     /></span>
+                    <div className="favourite-list-wrap">
+                        <span className="favoutite-show"
+                        onClick={()=> setShowFavourite(!showFavourite)}
+                        >
+                            List FAVs <FaHeart/>
+                        </span>
+                    </div>
                     <div className="refresh-icon">
                         <span
-                        onClick={()=>setSelectedDate(null)}
+                        onClick={()=> {setSelectedDate(null)
+                            ,setShowFavourite(false)
+                         } }
                          >Refresh list <IoRefresh/> </span>
                     </div>
                 </div>
@@ -70,6 +85,7 @@ const HistoryPage = () => {
                            <div className="one-history">
                             <div className="date-display-history">{formatDate(note.date)} </div>
                             <div className="time-display-history">{formatTime(note.date)} </div>
+                            <div className="favourite-icon-wrap"> <span className={`favourite-history ${note.isFavourite? "favourite-history-true" : ""}`}>{<FaHeart/>}</span> </div>
                             <div className="cover-emoji-history">{showCoverEmoji(note.selectedCoverEmoji)}</div>
                              <div className="history-title">{note.title}</div>
                              <div className="history-content">{note.content}</div>

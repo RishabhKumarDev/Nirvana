@@ -8,17 +8,33 @@ import InputEmojis from "../components/InputEmojis";
 
 const InputPage = () => {
        
-   const {saveNote,noteInput,setNoteInput,selectedEmojis,setSelectedEmojis,selectedCoverEmoji,setSelectedCoverEmoji,status,setStatus} = useNotes();
+   const {saveNote,
+          noteInput,setNoteInput,
+          selectedEmojis,setSelectedEmojis,
+          selectedCoverEmoji,setSelectedCoverEmoji,
+          status,
+          isFavourite,
+          setIsFavourite,
+          setDateAndTime
+         } = useNotes();
+
 
    const saveInput = () =>{
-      if(!noteInput.title.trim() || !noteInput.content.trim()){
-         return;
-     }
-      saveNote(noteInput.title, noteInput.content,selectedEmojis,selectedCoverEmoji);
-      setNoteInput({title:'',content:''});
-      setSelectedEmojis([]);
-      setSelectedCoverEmoji("");
-      console.log("save",setSelectedCoverEmoji) // remove 
+      try {
+         if(!noteInput.title.trim() || !noteInput.content.trim()){
+            // if empty add date to title;
+            return;
+        }
+         saveNote(noteInput.title, noteInput.content,selectedEmojis,selectedCoverEmoji,isFavourite);
+         setNoteInput({title:'',content:''});
+         setSelectedEmojis([]);
+         setSelectedCoverEmoji("");
+         setIsFavourite(false)
+         setDateAndTime(null)
+      } catch (error) {
+         console.error("coundn't save data")
+      }
+     
    }
 
     return ( 
@@ -31,7 +47,7 @@ const InputPage = () => {
            <InputEmojis selectedEmojis={selectedEmojis} setSelectedEmojis={setSelectedEmojis} />
            
            <div className="cd12">
-            <NotePad noteInput={noteInput} setNoteInput={setNoteInput} status={status} setStatus={setStatus} />
+            <NotePad noteInput={noteInput} setNoteInput={setNoteInput} status={status}   />
            </div>
            <div className="cd13">
             <SaveBtn onSave={saveInput} />

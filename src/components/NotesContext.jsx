@@ -11,6 +11,7 @@ export const NotesProvider = ({children}) => {
     const [selectedCoverEmoji,setSelectedCoverEmoji] = useState("");
     const [dateAndTime,setDateAndTime]= useState(new Date());
     const [status,setStatus] = useState('');
+    const [isFavourite,setIsFavourite] = useState(false);
 
 // fetch notes
 
@@ -41,10 +42,10 @@ return new Date(time).toLocaleTimeString("en-US",{
     //# leaves content as undefined.(reason for the errors displaying history and structure change is json server.)
     //# resolved this issue by passing two seperete value in saveNote() in InputPage.jsx;
     
-    const saveNote = async(title , content, selectedEmojis, selectedCoverEmoji) =>{
+    const saveNote = async(title , content, selectedEmojis, selectedCoverEmoji , isFavourite) =>{
         console.log('1');
 
-        const newNote = {id: noteInput.id,date: new Date().toISOString(), title,content,selectedEmojis,selectedCoverEmoji}; // this create an object which check 
+        const newNote = {id: noteInput.id,date: new Date().toISOString(), title,content,selectedEmojis,selectedCoverEmoji,isFavourite}; // this create an object which check 
         console.log(newNote.id,newNote.date);
 
         try { 
@@ -52,6 +53,7 @@ return new Date(time).toLocaleTimeString("en-US",{
             if(newNote.id){
                 await axios.put(`http://localhost:5000/notes/${newNote.id}`,newNote)
                 setNotes(prevNotes => prevNotes.map(note => note.id === newNote.id ? newNote : note))
+                setStatus('')
             }else{
            const res = await axios.post('http://localhost:5000/notes', newNote)
               setNotes( prevNotes => [...prevNotes,res.data]); // error was because react updates state asynchronously.to optimize.
@@ -69,6 +71,7 @@ return new Date(time).toLocaleTimeString("en-US",{
 console.log('useEffect start 1')
         if((noteInput.title ==="" && noteInput.content === "") && noteInput.id){
             deleteNote(noteInput.id);
+            setStatus('saved')
             console.log('delete')
         }
         else if(noteInput.title === "" && noteInput.content === ""){
@@ -79,9 +82,8 @@ console.log('useEffect start 1')
         setStatus('saving...');
 
     const timmer=  setTimeout(() => {
-
+          
         autoSaveNote();
-
       }, 2000);
 
       return () => clearTimeout(timmer);
@@ -95,7 +97,11 @@ console.log('timmer')
                       content: noteInput.content,
                       date: new Date().toISOString(),
                        selectedEmojis: selectedEmojis,
-                       selectedCoverEmoji: selectedCoverEmoji}
+                       selectedCoverEmoji: selectedCoverEmoji,
+                       isFavourite: isFavourite
+                    }
+
+                       
         try {
             if(!noteInput.id){
                 const res = await axios.post('http://localhost:5000/notes',note);
@@ -109,7 +115,7 @@ console.log('timmer')
             await axios.patch(`http://localhost:5000/notes/${noteInput.id}`,note)
             console.log('patch',note)
 
-          setStatus('Saved✅')
+          setStatus(' Entry Saved✅')
         }
         } catch (error) {
             console.error('fucked up',error);
@@ -136,6 +142,7 @@ console.log('timmer')
         setSelectedEmojis(note.selectedEmojis)
         setSelectedCoverEmoji(note.selectedCoverEmoji)
         setDateAndTime(note.date ? new Date(note.date) : new Date());
+        setIsFavourite(note.isFavourite)
     }
     return ( 
         <NotesContext.Provider value={{notes,
@@ -153,7 +160,8 @@ console.log('timmer')
                                        ,dateAndTime
                                        ,setDateAndTime
                                        ,status
-                                       ,setStatus
+                                       ,isFavourite
+                                       ,setIsFavourite
                                        
                                         }}>
             {children}

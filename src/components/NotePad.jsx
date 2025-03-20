@@ -1,8 +1,11 @@
 import "../styles/NotePad.css";
 import { FaHeart } from "react-icons/fa";
+import { useNotes } from "./NotesContext";
 
 
-const NotePad = ({noteInput,setNoteInput,status,setStatus}) => {
+const NotePad = ({noteInput,setNoteInput}) => {
+
+    const {isFavourite,setIsFavourite,status} = useNotes();
     return ( 
         <div className="note-container">
             <div className="note-title">
@@ -15,9 +18,11 @@ const NotePad = ({noteInput,setNoteInput,status,setStatus}) => {
                     
                      />
                     <div className="entry-title-element">
-                    <span className={`favorite `}><FaHeart /></span>
+                    <span className={`favourite ${isFavourite ? "favourite-selected" : ""}`}
+                    onClick={() => setIsFavourite(!isFavourite)}
+                    ><FaHeart /></span>
 
-                        <span className="status">{status}</span>
+                        <span className="status">{status}</span> 
                     </div>
             </div>
             <div className="note-content">
