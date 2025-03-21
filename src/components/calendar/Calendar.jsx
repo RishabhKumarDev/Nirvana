@@ -5,6 +5,8 @@ import '../calendar/Calendar.css'
 const CalendarDisplay = ({calendarVisible , setSelectedDate , setCalendarVisible}) => {
     const today = new Date();
     return ( 
+        <>
+        <div className={`calendar-shadow ${calendarVisible? "calendar-shadow-open":""}`} onClick={()=>setCalendarVisible(false)}></div>
         <div className={`actual-calendar-wrap ${calendarVisible ? "show" : "hide"}`}>
             <span className="cancle-icon">
          <IoClose
@@ -24,7 +26,7 @@ const CalendarDisplay = ({calendarVisible , setSelectedDate , setCalendarVisible
         // minDate={new Date(today.getFullYear(), today.getMonth(), 1)} // Disable past months
         // defaultActiveStartDate={today} // Ensure calendar opens on the current month
         showNeighboringMonth={false} // Hide previous and next month's dates
-        nextLabel={null}
+        // nextLabel={null}
         next2Label={null}
         
         onClickDay={(value)=>{ 
@@ -36,6 +38,7 @@ const CalendarDisplay = ({calendarVisible , setSelectedDate , setCalendarVisible
         </span>
         
         </div>
+        </>
      );
 }
  

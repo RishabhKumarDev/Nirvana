@@ -305,13 +305,6 @@
       "isFavourite": false
     },
     {
-      "id": "75a2",
-      "date": "2025-03-20T05:05:08.299Z",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
       "id": "0f22",
       "date": "2025-03-20T05:05:10.321Z",
       "selectedEmojis": [],
@@ -404,6 +397,45 @@
       "title": "A random thought I had...",
       "content": "   \n\n Gratitude \n \n  Today I am grateful for:\n \n  Why these things matter:",
       "date": "2025-03-21T05:43:44.340Z",
+      "selectedEmojis": [],
+      "selectedCoverEmoji": "",
+      "isFavourite": false
+    },
+    {
+      "id": "621b",
+      "title": "What made you smile today?",
+      "content": "   \n\n Daily Reflection \n \n  📝 Today’s highlight:\n💡 One thing I learned:\n⚠️ What I could do better:",
+      "date": "2025-03-21T06:25:24.263Z",
+      "selectedEmojis": [],
+      "selectedCoverEmoji": "",
+      "isFavourite": false
+    },
+    {
+      "id": "0e74",
+      "date": "2025-03-21T08:07:54.084Z",
+      "title": "hi",
+      "content": "   \n\n Daily Reflection \n \n  📝 Today’s highlight:\n💡 One thing I learned:\n⚠️ What I could do better:",
+      "selectedEmojis": [
+        "Start Early",
+        "Relax"
+      ],
+      "selectedCoverEmoji": "bad",
+      "isFavourite": false
+    },
+    {
+      "id": "4049",
+      "title": "Something I learned today",
+      "content": "",
+      "date": "2025-03-21T08:14:05.173Z",
+      "selectedEmojis": [],
+      "selectedCoverEmoji": "",
+      "isFavourite": false
+    },
+    {
+      "id": "e320",
+      "title": "What made you smile today?",
+      "content": "\n Random Thoughts \n\nThought #1:\nThought #2:\nThought #3:    \n\n\n",
+      "date": "2025-03-21T08:29:25.414Z",
       "selectedEmojis": [],
       "selectedCoverEmoji": "",
       "isFavourite": false

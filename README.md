@@ -1,12 +1,11 @@
 <<<<<<< HEAD
 # Nirvana
 =======
-# you will need to download the emojis. from the data of daylio u downloaded it have the name of app u can use.
+
 
 
 ## check the pdf downloaded for useeffect it uses a style you can use in your project.
 
-# add shadow at the borders to make it foalt
 
 # add animated placeholder in the entry title which changes but stops as user start writing.
 

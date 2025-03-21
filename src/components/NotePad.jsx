@@ -35,6 +35,14 @@ const NotePad = ({noteInput,setNoteInput}) => {
                     </div>
             </div>
             <div className="notepad-features">
+                <div className="counts">
+                    <span className="title-char-count">
+                     Title Char:{(noteInput.title).length}
+                    </span>
+                    <span className="note-char-count">
+                     Note Char:{(noteInput.content).length}
+                    </span>
+                </div>
                 <span className={`prompt-icon ${showPrompts? "feature-true":""}`}
                 onClick={()=>setShowPrompts(!showPrompts)}
                 ><BsLightbulb/>

@@ -2,8 +2,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: rgba(0, 0, 0, 0);
   opacity: 0; 
   visibility: hidden; 
@@ -11,10 +11,11 @@
   z-index: 1;
 }
 .side-bar-shadow.open {
-  /* background: rgba(0, 0, 0, 0.5); */
-  background-color: rebeccapurple;
+  background: rgba(0, 0, 0, 0.5);
+  /* background-color: rebeccapurple; */
   opacity: 1;
   visibility: visible; 
+  
 }
 .side-bar{
   width: 240px;

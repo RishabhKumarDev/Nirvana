@@ -8,6 +8,7 @@
     opacity: 0; 
     visibility: hidden; 
     transition: all 1s ease-in-out;
+    z-index: 1;
   }
   .shadow-open {
     background: rgba(0, 0, 0, 0.5);
@@ -67,6 +68,10 @@
     color: #26A69A;
 }
 /*--------------------- notepad features -----------------*/
+.title-char-count, .note-char-count{
+    color: rgb(8, 255, 28);
+    margin-left: 1rem;
+}
 .notepad-features{
     height: 5%;
     display: flex;
@@ -100,6 +105,7 @@
     right: 1rem;
     display: none;
     transition: all 1s ease-in-out;
+    z-index: 2;
 }
 .prompts-list{
     background-color: yellow;
@@ -118,6 +124,7 @@
     position: absolute;
     right: 1rem;
     display: none;
+    z-index: 2;
 }
 .templates-list{
     color: black;
