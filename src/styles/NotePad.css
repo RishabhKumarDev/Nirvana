@@ -1,10 +1,28 @@
+.prompt-shadow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    opacity: 0; 
+    visibility: hidden; 
+    transition: all 1s ease-in-out;
+  }
+  .shadow-open {
+    /* background: rgba(0, 0, 0, 0.5); */
+    background-color: rebeccapurple;
+    opacity: 1;
+    visibility: visible; 
+  }
+
 .note-container{
     height: 600px;
     /* display: flex; */
     /* align-items: center; */
     /* justify-content: center; */
     padding: 1rem;
-    border: 2px solid red;
+    background-color: #fff;
 }
 .note-title{
     height: 10%; 
@@ -39,13 +57,7 @@
 .favourite-selected{
     color: red;
 }
-.note-content textarea:focus {
-    border-bottom: 2px solid rgb(0, 255, 0); /* Change border color */
-    border-left:2px solid rgb(0, 255, 0) ;
-    border-right:2px solid rgb(0, 255, 0) ;
 
-    outline: none; /* Remove default outline */
-  }
   
 .status{
     display: flex;
@@ -53,10 +65,82 @@
     justify-content: end;
     color: rgb(0, 89, 255);
 }
+/*--------------------- notepad features -----------------*/
+.notepad-features{
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.2rem;
+    gap: 0.5rem;
+    background-color: #f4efef;
+    border-bottom: 1px solid black;
+}
+.prompt-icon{
+    font-size: 1.2rem;
+    position: relative;
+
+}
+.template-icon{
+    font-size: 1.2rem;
+    position: relative;
+}
+.feature-true{
+    color: red;
+
+}
+.prompts-container{
+    width: max-content;
+    height: fit-content;
+    background-color: red;
+    position: absolute;
+    right: 1rem;
+    display: none;
+    transition: all 1s ease-in-out;
+}
+.prompts-list{
+    background-color: yellow;
+    color: black;
+    padding: 0.5rem;
+}
+.prompts-list ul{
+    background-color: red;
+}
+.prompts-list li{
+    list-style: inside;
+}
+.templates-container{
+    
+    background-color: yellow;
+    position: absolute;
+    right: 1rem;
+    display: none;
+}
+.templates-list{
+    color: black;
+    width: max-content;
+    height: fit-content;
+    background-color: green;
+    padding: 0.5rem;
+}
+.templates-list li{
+    list-style: inside;
+
+}
+.prompt-template-visible{
+    display: block;
+}
+/* note content---------------------------------------------- */
 .note-content{
     height: 80%;
     /* border: 2px solid blue; */
 }
+.note-content textarea:focus {
+    
+    border:2px solid rgb(0, 255, 0) ;
+
+    outline: none; /* Remove default outline */
+  }
 .note-content textarea{
     width: 100%;
     height: 100%;

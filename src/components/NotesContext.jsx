@@ -78,11 +78,14 @@ console.log('useEffect start 1')
             console.log('return')
             return;
         }
+        
         else{
         setStatus('saving...');
 
     const timmer=  setTimeout(() => {
-          
+        if(noteInput.title === "" && noteInput.content !== ""){
+            setNoteInput({...noteInput,title:new Date().toDateString()})
+        }
         autoSaveNote();
       }, 2000);
 

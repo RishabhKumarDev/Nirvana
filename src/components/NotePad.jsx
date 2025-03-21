@@ -1,12 +1,21 @@
 import "../styles/NotePad.css";
-import { FaHeart } from "react-icons/fa";
+import { FaHeart ,FaRegClipboard } from "react-icons/fa";
 import { useNotes } from "./NotesContext";
-
-
+import {BsLightbulb } from "react-icons/bs";
+import { useState } from "react";
+import Prompts from "./Prompts";
+import Templates from "./Templates";
 const NotePad = ({noteInput,setNoteInput}) => {
 
     const {isFavourite,setIsFavourite,status} = useNotes();
+    const [showPrompts,setShowPrompts] = useState(false);
+    const [showTemplate,setShowTemplate] = useState(false);
+
     return ( 
+        <>
+        <div className={`prompt-shadow ${(showPrompts || showTemplate)? "shadow-open" :""}`} onClick={()=>{setShowPrompts(false)
+            ,setShowTemplate(false)
+        }}></div>
         <div className="note-container">
             <div className="note-title">
                 <input 
@@ -25,6 +34,26 @@ const NotePad = ({noteInput,setNoteInput}) => {
                         <span className="status">{status}</span> 
                     </div>
             </div>
+            <div className="notepad-features">
+                <span className={`prompt-icon ${showPrompts? "feature-true":""}`}
+                onClick={()=>setShowPrompts(!showPrompts)}
+                ><BsLightbulb/>
+                
+                <div className={`prompts-container ${showPrompts? "prompt-template-visible":""}`} > 
+                    <Prompts/>
+                </div>
+                </span>
+                <span className={`template-icon ${showTemplate? "feature-true" : ""}`}
+                onClick={()=>setShowTemplate(!showTemplate)}
+                ><FaRegClipboard/>
+                <div className={`templates-container ${showTemplate? "prompt-template-visible":""}`}>
+                    <Templates/>
+                </div>
+                </span>
+
+                
+            </div>
+            
             <div className="note-content">
 
             <textarea 
@@ -34,6 +63,7 @@ const NotePad = ({noteInput,setNoteInput}) => {
                 ></textarea>
             </div>
         </div>
+        </>
      );
 }
     
