@@ -14,12 +14,9 @@
 }
 .cd12{
     grid-column: span 3;
-    background-color: aliceblue;
-    border-radius: 0;
 }
 .input-wrap > div{
     /* min-height: 9rem; */
-    border-radius: 1rem;
     /* Softer, lower shadow */
 }
 
@@ -41,8 +38,3 @@
     grid-column: span 3;
 }
 
-.cd13{
-    grid-column: 2;
-    background-color: cadetblue;
-    
-}
