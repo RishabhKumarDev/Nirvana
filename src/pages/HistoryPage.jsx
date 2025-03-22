@@ -88,7 +88,9 @@ if(showFavourite){
                             <div className="favourite-icon-wrap"> <span className={`favourite-history ${note.isFavourite? "favourite-history-true" : ""}`}>{<FaHeart/>}</span> </div>
                             <div className="cover-emoji-history">{showCoverEmoji(note.selectedCoverEmoji)}</div>
                              <div className="history-title">{note.title}</div>
-                             <div className="history-content">{note.content}</div>
+                             <div className="history-content"><p>
+                             {(note.content || "").replace(/<[^>]+>/g,"")}
+                                </p></div>
                              <div className="history-emojis">
                                 {note.selectedEmojis.map(((name,i) =>{ 
                                     return (

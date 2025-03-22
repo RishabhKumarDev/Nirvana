@@ -69,22 +69,28 @@ return new Date(time).toLocaleTimeString("en-US",{
     // auto save---------------------------------------------------------
     useEffect(()=>{
 console.log('useEffect start 1')
-        if((noteInput.title ==="" && noteInput.content === "") && noteInput.id){
+
+const isContentEmpty = (html)=>{
+    const text = html.replace(/<[^>]*>/g,"").trim();
+    return text.length === 0;
+}
+        if((noteInput.title ==="" && isContentEmpty(noteInput.content)) && noteInput.id){
             deleteNote(noteInput.id);
             setStatus('saved')
             console.log('delete')
+            return;
         }
-        else if(noteInput.title === "" && noteInput.content === ""){
+        else if(noteInput.title === "" && isContentEmpty(noteInput.content)){
             console.log('return')
             return;
         }
         
         else{
         setStatus('saving...');
-
+       
     const timmer=  setTimeout(() => {
-        if(noteInput.title === "" && noteInput.content !== ""){
-            setNoteInput({...noteInput,title:new Date().toDateString()})
+        if(noteInput.title === ''&& !isContentEmpty(noteInput.content)){
+            setNoteInput({...noteInput,title: new Date().toDateString()})
         }
         autoSaveNote();
       }, 2000);

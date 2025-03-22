@@ -5,12 +5,17 @@ import {BsLightbulb } from "react-icons/bs";
 import { useState } from "react";
 import Prompts from "./Prompts";
 import Templates from "./Templates";
+import ReactQuill from "react-quill-new";
+import 'react-quill-new/dist/quill.snow.css';
 const NotePad = ({noteInput,setNoteInput}) => {
 
     const {isFavourite,setIsFavourite,status} = useNotes();
     const [showPrompts,setShowPrompts] = useState(false);
     const [showTemplate,setShowTemplate] = useState(false);
-
+   
+    const countWords = ()=>{
+       return noteInput.content.trim().split(" ").filter(word => word !== "").length;
+    }
     return ( 
         <>
         <div className={`prompt-shadow ${(showPrompts || showTemplate)? "shadow-open" :""}`} onClick={()=>{setShowPrompts(false)
@@ -40,7 +45,7 @@ const NotePad = ({noteInput,setNoteInput}) => {
                      Title Char:{(noteInput.title).length}
                     </span>
                     <span className="note-char-count">
-                     Note Char:{(noteInput.content).length}
+                     Note Char:{(noteInput.content).length} | Words:{countWords()}
                     </span>
                 </div>
                 <span className={`prompt-icon ${showPrompts? "feature-true":""}`}
@@ -64,11 +69,20 @@ const NotePad = ({noteInput,setNoteInput}) => {
             
             <div className="note-content">
 
-            <textarea 
+                <ReactQuill 
+                className="write-note"
+                theme="snow"
+                value={noteInput.content}
+                onChange={(value) => setNoteInput({...noteInput,content:value})}
+                />
+
+
+
+            {/* <textarea 
                 placeholder="Your Entry Here" 
                 value={noteInput.content || ""}
                 onChange={(e)=> setNoteInput({...noteInput,content:e.target.value})}
-                ></textarea>
+                ></textarea> */}
             </div>
         </div>
         </>

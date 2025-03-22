@@ -15,12 +15,6 @@
 .cd12{
     grid-column: span 3;
 }
-.input-wrap > div{
-    /* min-height: 9rem; */
-    /* Softer, lower shadow */
-}
-
-
 .cd1{
 
     display: flex;
@@ -37,4 +31,8 @@
 .cd11{
     grid-column: span 3;
 }
+.cd13{
+    background-color: red;
 
+    grid-column: span 3;
+}

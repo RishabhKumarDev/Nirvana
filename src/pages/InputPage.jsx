@@ -48,7 +48,12 @@ const InputPage = () => {
            
            <div className="cd12">
             <NotePad noteInput={noteInput} setNoteInput={setNoteInput} status={status}   />
-            <SaveBtn onSave={saveInput} />
+           <SaveBtn onSave={saveInput} />
+
+           </div>
+
+           <div className="cd13">
+
            </div>
           
         </div>

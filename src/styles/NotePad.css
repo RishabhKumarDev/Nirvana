@@ -143,22 +143,32 @@
 /* note content---------------------------------------------- */
 .note-content{
     height: 80%;
-    /* border: 2px solid blue; */
+    overflow: hidden;
+    position: relative;
+       
 }
-.note-content textarea{
+.ql-container {
+    border: none !important;
+    padding: 0 !important;
+    background-color: inherit; 
+  }
+  
+  .ql-editor {
+    padding: 10px; /* Add controlled padding */
+    border: none;
+    min-height: 200px; /* or whatever height suits your textarea size */
+    background-color: inherit;
+  }
+  
+.write-note{
     width: 100%;
     height: 100%;
-    padding: 2rem 1rem;
-    font-size: 16px;
-    outline: none;
-    border: none;
     color: aliceblue;
     background-color: #1d2124;
-
 }
 .save-btn{
-    margin-top: -2.6em;
-    margin-bottom: 1em;
+    /* margin-top: -2.6em; */
+    /* margin-bottom: 1em; */
     width: 15em;
     height: 2.5em;
     border-radius: 30px;
