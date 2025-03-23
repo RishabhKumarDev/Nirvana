@@ -7,6 +7,8 @@ import CalendarDisplay from "../components/calendar/Calendar";
 import { useMemo, useState } from "react";
 import { IoRefresh } from "react-icons/io5"; // Refresh icon
 import { FaHeart } from "react-icons/fa";
+import { PiDotsThreeCircleDuotone } from "react-icons/pi";
+import { GoDotFill } from "react-icons/go";
 
 
 const HistoryPage = () => {
@@ -14,11 +16,14 @@ const HistoryPage = () => {
     const [calendarVisible,setCalendarVisible] = useState(false);
     const [selectedDate,setSelectedDate] = useState(null);
     const [showFavourite,setShowFavourite] = useState(false);
+    const [editMenu,setEditMenu] = useState(false);
 
     const showCoverEmoji = (name)=>{
         
             const emoji = CoverEmojis.find((e) => e.name === name);
             if(emoji) return emoji.icon;
+            
+             
     }
     const findIcon=(name)=>{
         for(let category of iconCategory){
@@ -82,28 +87,50 @@ if(showFavourite){
                         <li 
                           key={note.id} 
                           className="note-item">
-                           <div className="one-history">
+                            <div className="main-one-history-date-wrap">
                             <div className="date-display-history">{formatDate(note.date)} </div>
-                            <div className="time-display-history">{formatTime(note.date)} </div>
-                            <div className="favourite-icon-wrap"> <span className={`favourite-history ${note.isFavourite? "favourite-history-true" : ""}`}>{<FaHeart/>}</span> </div>
+                            <div className="one-hirtory-coveremoji-wrap">
                             <div className="cover-emoji-history">{showCoverEmoji(note.selectedCoverEmoji)}</div>
-                             <div className="history-title">{note.title}</div>
-                             <div className="history-content"><p>
-                             {(note.content || "").replace(/<[^>]+>/g,"")}
-                                </p></div>
-                             <div className="history-emojis">
+
+                           <div className="one-history">
+                            <div className="time-coveremojiname-fav-edit-wrap">
+                                <div className="time-coveremoji-wrap">
+                                <div className="cover-emoji-name-history">{note.selectedCoverEmoji}</div>
+                                <div className="time-display-history">{formatTime(note.date)} </div>
+
+                                </div>
+                                <div className="fav-edit-wrap">
+                                <div className="favourite-icon-wrap"> <span className={`favourite-history ${note.isFavourite? "favourite-history-true" : ""}`}>{<FaHeart/>}</span> </div>
+                                 <div className="three-dot-icon-container">
+                                    <span className="threedot-icon"><PiDotsThreeCircleDuotone />
+                                    <div className="edit-delete-container">
+                            {/* <div className="delete-btn"><button onClick={()=>deleteNote(note.id)}>Delete</button></div> */}
+                             {/* <div className="edit-btn"><button onClick={() => handleEdit(note)}>Edit</button></div> */}
+                                    </div>
+                                    </span>
+                                 </div>
+                                </div>
+                            </div>
+                            <div className="history-emojis">
                                 {note.selectedEmojis.map(((name,i) =>{ 
                                     return (
                                     <div key={i} className="emoji-name-wrap-history">
+                                        <div className="emoji-name-container-history">
+                                        <span className="dot-icon"><GoDotFill/></span>
                                     <span  className="single-emoji-display">{findIcon(name)}</span>
                                     <span className="single-name-display">{name}</span>
                                     </div>
+                                    </div>
                                 )}))}
                              </div>
-                             <div className="delete-btn"><button onClick={()=>deleteNote(note.id)}>Delete</button></div>
-                             <div className="edit-btn"><button onClick={() => handleEdit(note)}>Edit</button></div>
+                             <div className="history-title">{note.title}</div>
+                             <div className="history-content"><p>
+                             {(note.content || "").replace(/<[^>]+>/g," ")} {/* <-- this is to display the notes wihtout html elements what happening was besause react-quill act as html editor so it was pushing whole html element in api and display was desplaying all the elements too */}
+                                </p></div> 
+                                
                              
-                            
+                             </div>
+                            </div>
                             </div>
                         </li>
                     ))}

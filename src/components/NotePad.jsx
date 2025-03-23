@@ -14,7 +14,10 @@ const NotePad = ({noteInput,setNoteInput}) => {
     const [showTemplate,setShowTemplate] = useState(false);
    
     const countWords = ()=>{
-       return noteInput.content.trim().split(" ").filter(word => word !== "").length;
+       return noteInput.content.replace(/<[^>]*>/g,"").trim().split(" ").filter(word => word !== "").length;
+    }
+    const countChars = ()=>{
+        return noteInput.content.replace(/<[^>]*>/g,"").length
     }
     return ( 
         <>
@@ -45,7 +48,7 @@ const NotePad = ({noteInput,setNoteInput}) => {
                      Title Char:{(noteInput.title).length}
                     </span>
                     <span className="note-char-count">
-                     Note Char:{(noteInput.content).length} | Words:{countWords()}
+                     Note Char:{countChars()} | Words:{countWords()}
                     </span>
                 </div>
                 <span className={`prompt-icon ${showPrompts? "feature-true":""}`}
