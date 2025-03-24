@@ -42,19 +42,27 @@ return new Date(time).toLocaleTimeString("en-US",{
     //# leaves content as undefined.(reason for the errors displaying history and structure change is json server.)
     //# resolved this issue by passing two seperete value in saveNote() in InputPage.jsx;
     
-    const saveNote = async(title , content, selectedEmojis, selectedCoverEmoji , isFavourite) =>{
+    const saveNote = async(note) =>{
         console.log('1');
 
-        const newNote = {id: noteInput.id,date: new Date().toISOString(), title,content,selectedEmojis,selectedCoverEmoji,isFavourite}; // this create an object which check 
-        console.log(newNote.id,newNote.date);
+        const newNote = {id: note.id,
+                        date: new Date().toISOString(),
+                        title: note.title,
+                        content: note.content,
+                        selectedEmojis: note.selectedEmojis,
+                        selectedCoverEmoji: note.selectedCoverEmoji,
+                        isFavourite: note.isFavourite}; // this create an object which check 
+        console.log(newNote.id,note.id);
 
         try { 
 
             if(newNote.id){
                 await axios.put(`http://localhost:5000/notes/${newNote.id}`,newNote)
                 setNotes(prevNotes => prevNotes.map(note => note.id === newNote.id ? newNote : note))
-                setStatus('')
-            }else{
+                setStatus('xxxxxxxxxxxxxxx')
+                setNoteInput({...noteInput, title:"",content:"",id:null})
+            }
+            else{
            const res = await axios.post('http://localhost:5000/notes', newNote)
               setNotes( prevNotes => [...prevNotes,res.data]); // error was because react updates state asynchronously.to optimize.
                                                                // this is functional state update which ensure state update instantly.
@@ -68,7 +76,6 @@ return new Date(time).toLocaleTimeString("en-US",{
     }
     // auto save---------------------------------------------------------
     useEffect(()=>{
-console.log('useEffect start 1')
 
 const isContentEmpty = (html)=>{
     const text = html.replace(/<[^>]*>/g,"").trim();
@@ -77,11 +84,9 @@ const isContentEmpty = (html)=>{
         if((noteInput.title ==="" && isContentEmpty(noteInput.content)) && noteInput.id){
             deleteNote(noteInput.id);
             setStatus('saved')
-            console.log('delete')
             return;
         }
         else if(noteInput.title === "" && isContentEmpty(noteInput.content)){
-            console.log('return')
             return;
         }
         
@@ -89,9 +94,9 @@ const isContentEmpty = (html)=>{
         setStatus('saving...');
        
     const timmer=  setTimeout(() => {
-        // if(noteInput.title === ''&& !isContentEmpty(noteInput.content) && noteInput.id){
-        //     setNoteInput({...noteInput,title: new Date().toDateString()})
-        // }
+        if(noteInput.title === ''&& !isContentEmpty(noteInput.content) && noteInput.id){
+            setNoteInput({...noteInput,title: new Date().toDateString()})
+        }
         autoSaveNote();
       }, 2000);
 
@@ -116,13 +121,11 @@ console.log('timmer')
                 const res = await axios.post('http://localhost:5000/notes',note);
                 setNotes(prevNotes => [...prevNotes,res.data])
                 setNoteInput(prev => ({...prev, id:res.data.id}))
-                console.log('post',note)
             }else{
                 
             setStatus('saved')
 
             await axios.patch(`http://localhost:5000/notes/${noteInput.id}`,note)
-            console.log('patch',note)
 
           setStatus(' Entry Saved✅')
         }

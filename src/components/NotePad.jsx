@@ -81,11 +81,7 @@ const NotePad = ({noteInput,setNoteInput}) => {
 
 
 
-            {/* <textarea 
-                placeholder="Your Entry Here" 
-                value={noteInput.content || ""}
-                onChange={(e)=> setNoteInput({...noteInput,content:e.target.value})}
-                ></textarea> */}
+           
             </div>
         </div>
         </>

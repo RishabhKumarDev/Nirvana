@@ -4,6 +4,7 @@ import { useNotes } from "../components/NotesContext";
 import SaveBtn from "../components/SaveBtn";
 import "../styles/InputPage.css";
 import InputEmojis from "../components/InputEmojis";
+import { useEffect } from "react";
 
 
 const InputPage = () => {
@@ -18,15 +19,29 @@ const InputPage = () => {
           setDateAndTime
          } = useNotes();
 
-
+         useEffect(() => {
+            console.log("NoteInput changed", noteInput);
+         }, [noteInput]);
+         
    const saveInput = () =>{
       try {
-         if(!noteInput.title.trim() || !noteInput.content.replace(/<[^>]+/g,"").trim()){
-            // if empty add date to title;
-            return;
-        }
-         saveNote(noteInput.title, noteInput.content,selectedEmojis,selectedCoverEmoji,isFavourite);
-         setNoteInput({title:'',content:''});
+         const plainTextContent = noteInput.content.replace(/<[^>]*>/g, "").trim();
+         if (!noteInput.title.trim() || !plainTextContent) {
+           alert("Please fill both Title and Note before saving."); // or show a UI message
+           return;
+         }
+        console.log('title',noteInput.title)
+        console.log('constent',noteInput.content)
+setTimeout(()=>
+         saveNote({...noteInput,
+            selectedEmojis,
+            selectedCoverEmoji,
+            isFavourite}), 0
+         )
+console.log(noteInput.title,'second')
+
+         setNoteInput({title:'',content:'',id:null});
+         console.log(noteInput.title,'third')
          setSelectedEmojis([]);
          setSelectedCoverEmoji("");
          setIsFavourite(false)
