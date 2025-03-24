@@ -146,11 +146,45 @@
     font-size: clamp(1rem , 1vw + 1rem , 1.4rem);
     display: contents;
 }
+
 .threedot-icon{
     font-size: clamp(1rem , 1vw + 1rem , 1.4rem);
     color: whitesmoke;
-    display: contents;
+    display: flex;
+    position: relative;
 
+}
+.edit-delete-container{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: min-content;
+    height: max-content;
+    padding: clamp(0.4rem ,1vw , 0.6rem);
+    /* padding: 0.4rem; */
+    border-radius: 0.5rem;
+    background-color:#383d3e ;
+    display: none;
+
+}
+.three-dot-true{
+    display: block;
+}
+.delete-btn , .edit-btn{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: max-content;
+}
+.delete-btn button, .edit-btn button{
+    color: #fff;
+    background-color: #202324;
+    outline: none;
+    border: none;
+    padding: 0.1rem 0.2rem;
+    margin: 0.1rem;
+    border-radius: 0.3rem;
+    
 }
 /* -------------------------------------- */
 .history-emojis{

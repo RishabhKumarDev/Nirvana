@@ -89,9 +89,9 @@ const isContentEmpty = (html)=>{
         setStatus('saving...');
        
     const timmer=  setTimeout(() => {
-        if(noteInput.title === ''&& !isContentEmpty(noteInput.content)){
-            setNoteInput({...noteInput,title: new Date().toDateString()})
-        }
+        // if(noteInput.title === ''&& !isContentEmpty(noteInput.content) && noteInput.id){
+        //     setNoteInput({...noteInput,title: new Date().toDateString()})
+        // }
         autoSaveNote();
       }, 2000);
 

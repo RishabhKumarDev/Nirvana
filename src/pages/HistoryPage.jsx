@@ -9,15 +9,18 @@ import { IoRefresh } from "react-icons/io5"; // Refresh icon
 import { FaHeart } from "react-icons/fa";
 import { PiDotsThreeCircleDuotone } from "react-icons/pi";
 import { GoDotFill } from "react-icons/go";
-
+import { MdDelete,MdEdit } from "react-icons/md";
 
 const HistoryPage = () => {
     const {notes,deleteNote,handleEdit,formatDate,formatTime} = useNotes();
     const [calendarVisible,setCalendarVisible] = useState(false);
     const [selectedDate,setSelectedDate] = useState(null);
     const [showFavourite,setShowFavourite] = useState(false);
-    const [editMenu,setEditMenu] = useState(false);
+    const [openMenuId,setOpenMenuId] = useState(null);
 
+    const handleMenuId = (id)=>{
+        setOpenMenuId((prev) => (prev === id? null : id));
+    }
     const showCoverEmoji = (name)=>{
         
             const emoji = CoverEmojis.find((e) => e.name === name);
@@ -102,10 +105,10 @@ if(showFavourite){
                                 <div className="fav-edit-wrap">
                                 <div className="favourite-icon-wrap"> <span className={`favourite-history ${note.isFavourite? "favourite-history-true" : ""}`}>{<FaHeart/>}</span> </div>
                                  <div className="three-dot-icon-container">
-                                    <span className="threedot-icon"><PiDotsThreeCircleDuotone />
-                                    <div className="edit-delete-container">
-                            {/* <div className="delete-btn"><button onClick={()=>deleteNote(note.id)}>Delete</button></div> */}
-                             {/* <div className="edit-btn"><button onClick={() => handleEdit(note)}>Edit</button></div> */}
+                                    <span className="threedot-icon" onClick={()=>handleMenuId(note.id)}><PiDotsThreeCircleDuotone />
+                                    <div className={`edit-delete-container ${openMenuId === note.id ? "three-dot-true":""}`}>
+                            <div className="delete-btn"><button onClick={()=>deleteNote(note.id)}><span className="delete-icon"><MdDelete /> </span> Delete</button></div>
+                             <div className="edit-btn"><button onClick={() => handleEdit(note)}> <span className="edit-icon">  <MdEdit/></span> Edit it</button></div>
                                     </div>
                                     </span>
                                  </div>

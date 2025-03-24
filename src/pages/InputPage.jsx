@@ -21,7 +21,7 @@ const InputPage = () => {
 
    const saveInput = () =>{
       try {
-         if(!noteInput.title.trim() || !noteInput.content.trim()){
+         if(!noteInput.title.trim() || !noteInput.content.replace(/<[^>]+/g,"").trim()){
             // if empty add date to title;
             return;
         }

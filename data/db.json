@@ -11,17 +11,6 @@
       ]
     },
     {
-      "id": "fb4e",
-      "title": "lets see ",
-      "content": "if this works",
-      "selectedEmojis": [
-        "Medation",
-        "Helping",
-        "Walking",
-        "Running"
-      ]
-    },
-    {
       "id": "00b8",
       "title": "why is this happening ",
       "content": "in the input field too",
@@ -137,27 +126,6 @@
       "selectedCoverEmoji": "rad"
     },
     {
-      "id": "6360",
-      "date": "2025-03-14T12:30:48.146Z",
-      "title": "this test to check if date update is working ",
-      "content": "check tommrow if it's work or not",
-      "selectedEmojis": [
-        "Exercise",
-        "Movies",
-        "Teamwork",
-        "Tired"
-      ],
-      "selectedCoverEmoji": ""
-    },
-    {
-      "id": "727d",
-      "date": "2025-03-14T12:30:59.194Z",
-      "title": "test two ",
-      "content": "to chekc it it work",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": ""
-    },
-    {
       "id": "bee3",
       "date": "2025-03-15T02:02:32.946Z",
       "title": "test 1",
@@ -185,15 +153,6 @@
         "Content"
       ],
       "selectedCoverEmoji": "good"
-    },
-    {
-      "id": "059a",
-      "date": "2025-03-20T02:20:34.633Z",
-      "title": "without ",
-      "content": "the emoji ",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "good",
-      "isFavourite": true
     },
     {
       "id": "ff71",
@@ -464,6 +423,104 @@
       "title": "",
       "content": "<p><br></p><p>Random Thoughts 🌼 🌀 Thought #1:</p><p><br></p><p>🌀 Thought #2:</p><p><br></p><p>🌀 Thought #3:</p><p><br></p><p>💭 A takeaway or insight:</p>",
       "date": "2025-03-22T10:12:41.138Z",
+      "selectedEmojis": [],
+      "selectedCoverEmoji": "",
+      "isFavourite": false
+    },
+    {
+      "id": "a611",
+      "title": "Mon Mar 24 2025",
+      "content": "<p><br></p>",
+      "date": "2025-03-24T03:33:45.183Z",
+      "selectedEmojis": [
+        "Exercise",
+        "Movies",
+        "Teamwork",
+        "Tired"
+      ],
+      "selectedCoverEmoji": ""
+    },
+    {
+      "id": "f55a",
+      "date": "2025-03-24T08:41:26.573Z",
+      "title": "Mon Mar 24 2025",
+      "content": "<p><br></p>",
+      "selectedEmojis": [],
+      "selectedCoverEmoji": "",
+      "isFavourite": false
+    },
+    {
+      "id": "7618",
+      "date": "2025-03-24T08:41:40.619Z",
+      "title": "Mon Mar 24 2025",
+      "content": "<p><br></p>",
+      "selectedEmojis": [],
+      "selectedCoverEmoji": "",
+      "isFavourite": false
+    },
+    {
+      "id": "27b7",
+      "date": "2025-03-24T08:50:20.162Z",
+      "title": "Mon Mar 24 2025",
+      "content": "<p><br></p>",
+      "selectedEmojis": [],
+      "selectedCoverEmoji": "",
+      "isFavourite": false
+    },
+    {
+      "id": "9ed7",
+      "date": "2025-03-24T08:50:41.258Z",
+      "title": "hii",
+      "content": "<p><br></p>",
+      "selectedEmojis": [],
+      "selectedCoverEmoji": "",
+      "isFavourite": false
+    },
+    {
+      "id": "ec8a",
+      "date": "2025-03-24T08:52:35.837Z",
+      "title": "Mon Mar 24 2025",
+      "content": "<p><br></p>",
+      "selectedEmojis": [],
+      "selectedCoverEmoji": "",
+      "isFavourite": false
+    },
+    {
+      "id": "96ec",
+      "date": "2025-03-24T09:00:04.166Z",
+      "title": "checking for error",
+      "content": "<p><br></p>",
+      "selectedEmojis": [
+        "Sad",
+        "Content",
+        "Progress"
+      ],
+      "selectedCoverEmoji": "",
+      "isFavourite": false
+    },
+    {
+      "id": "282a",
+      "date": "2025-03-24T09:00:58.196Z",
+      "title": "eror 2",
+      "content": "<p><br></p>",
+      "selectedEmojis": [],
+      "selectedCoverEmoji": "",
+      "isFavourite": false
+    },
+    {
+      "id": "f42e",
+      "date": "2025-03-24T09:05:37.185Z",
+      "title": "",
+      "content": "<p>📝 Today’s highlight: 💡 One thing I learned: ⚠️ What I could do better:</p>",
+      "selectedEmojis": [],
+      "selectedCoverEmoji": "",
+      "isFavourite": false
+    },
+    {
+      "id": "8e02",
+      "date": "2025-03-24T09:14:14.210Z",
+      "title": "chat gpt help",
+      "content": "<p><br></p>",
       "selectedEmojis": [],
       "selectedCoverEmoji": "",
       "isFavourite": false
