@@ -4,7 +4,7 @@ import { useNotes } from "../components/NotesContext";
 import SaveBtn from "../components/SaveBtn";
 import "../styles/InputPage.css";
 import InputEmojis from "../components/InputEmojis";
-import { useEffect } from "react";
+import Notification from "../components/Notification/Notification";
 
 
 const InputPage = () => {
@@ -16,12 +16,11 @@ const InputPage = () => {
           status,
           isFavourite,
           setIsFavourite,
-          setDateAndTime
+          setDateAndTime,
+          notificationMessage
          } = useNotes();
 
-         useEffect(() => {
-            console.log("NoteInput changed", noteInput);
-         }, [noteInput]);
+      
          
    const saveInput = () =>{
       try {
@@ -66,7 +65,7 @@ console.log(noteInput.title,'second')
            <SaveBtn onSave={saveInput} />
 
            </div>
-
+           {notificationMessage && <Notification message={notificationMessage}/>}
            <div className="cd13">
 
            </div>

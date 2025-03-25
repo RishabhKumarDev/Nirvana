@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import FirstPage from './pages/FirstPage';
 import InputPage from './pages/InputPage';
 import HistoryPage from './pages/HistoryPage';
+import Playground from './components/Notification/playground';
 
 function App() {
   return (
@@ -14,7 +15,9 @@ function App() {
         <Route path='/' element={ <FirstPage />} />
         <Route path='/input' element={ <InputPage />} />
         <Route path='/history' element={ <HistoryPage />} />
+        <Route path='/playground' element={ <Playground/>} />
 
+        
         </Routes>
       </div>
       </>

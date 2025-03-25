@@ -1,38 +1,6 @@
 {
   "notes": [
     {
-      "id": "e76a",
-      "title": "first test of day",
-      "content": "lets see if this woeks",
-      "selectedEmojis": [
-        "Running",
-        "Stretching",
-        "Walking"
-      ]
-    },
-    {
-      "id": "00b8",
-      "title": "why is this happening ",
-      "content": "in the input field too",
-      "selectedEmojis": [
-        "Focus",
-        "Haircut",
-        "Wellness",
-        "Manicure",
-        "Skin Care",
-        "Start Early",
-        "Make List",
-        "Relax",
-        "Walking",
-        "Stretching",
-        "Eat Healthy",
-        "Drink Water",
-        "Read",
-        "Party",
-        "Friends"
-      ]
-    },
-    {
       "id": "9e48",
       "title": "great full",
       "content": "i am great full for everything i have like head phone, scuty, laptop, house, book, body, hair, past experiences, existance it self.\n",
@@ -258,15 +226,6 @@
       "isFavourite": false
     },
     {
-      "id": "4019",
-      "title": "hd",
-      "content": "",
-      "date": "2025-03-20T05:05:04.264Z",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
       "id": "0f22",
       "date": "2025-03-20T05:05:10.321Z",
       "selectedEmojis": [],
@@ -346,24 +305,6 @@
       "isFavourite": false
     },
     {
-      "id": "263b",
-      "title": "Fri Mar 21 2025",
-      "content": "sdf",
-      "date": "2025-03-21T03:40:32.595Z",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "8477",
-      "title": "A random thought I had...",
-      "content": "   \n\n Gratitude \n \n  Today I am grateful for:\n \n  Why these things matter:",
-      "date": "2025-03-21T05:43:44.340Z",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
       "id": "621b",
       "title": "What made you smile today?",
       "content": "   \n\n Daily Reflection \n \n  📝 Today’s highlight:\n💡 One thing I learned:\n⚠️ What I could do better:",
@@ -382,24 +323,6 @@
         "Relax"
       ],
       "selectedCoverEmoji": "bad",
-      "isFavourite": false
-    },
-    {
-      "id": "4049",
-      "title": "Something I learned today",
-      "content": "",
-      "date": "2025-03-21T08:14:05.173Z",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "e320",
-      "title": "What made you smile today?",
-      "content": "\n Random Thoughts \n\nThought #1:\nThought #2:\nThought #3:    \n\n\n",
-      "date": "2025-03-21T08:29:25.414Z",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
       "isFavourite": false
     },
     {
@@ -422,275 +345,34 @@
       "isFavourite": true
     },
     {
-      "id": "53ac",
-      "title": "",
-      "content": "<p><br></p><p>Random Thoughts 🌼 🌀 Thought #1:</p><p><br></p><p>🌀 Thought #2:</p><p><br></p><p>🌀 Thought #3:</p><p><br></p><p>💭 A takeaway or insight:</p>",
-      "date": "2025-03-22T10:12:41.138Z",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "a611",
-      "title": "Mon Mar 24 2025",
-      "content": "<p><br></p>",
-      "date": "2025-03-24T03:33:45.183Z",
+      "id": "9eba",
+      "title": "Tue Mar 25 2025",
+      "content": "<p>i am great full for everything i have like head phone, scuty, laptop, house, book, body, hair, past experiences, existance it self. </p>",
+      "date": "2025-03-25T10:33:59.547Z",
       "selectedEmojis": [
-        "Exercise",
-        "Movies",
-        "Teamwork",
-        "Tired"
+        "Medation",
+        "Medium Sleep",
+        "Relax",
+        "Progress",
+        "Skin Care"
       ],
-      "selectedCoverEmoji": ""
+      "draft": true
     },
     {
-      "id": "f55a",
-      "date": "2025-03-24T08:41:26.573Z",
-      "title": "Mon Mar 24 2025",
-      "content": "<p><br></p>",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "7618",
-      "date": "2025-03-24T08:41:40.619Z",
-      "title": "Mon Mar 24 2025",
-      "content": "<p><br></p>",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "27b7",
-      "date": "2025-03-24T08:50:20.162Z",
-      "title": "Mon Mar 24 2025",
-      "content": "<p><br></p>",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "9ed7",
-      "date": "2025-03-24T08:50:41.258Z",
-      "title": "hii",
-      "content": "<p><br></p>",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "ec8a",
-      "date": "2025-03-24T08:52:35.837Z",
-      "title": "Mon Mar 24 2025",
-      "content": "<p><br></p>",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "96ec",
-      "date": "2025-03-24T09:00:04.166Z",
-      "title": "checking for error",
-      "content": "<p><br></p>",
+      "id": "2967",
+      "title": "Tue Mar 25 2025",
+      "content": "<p>check before commiting changes to github </p>",
+      "date": "2025-03-25T10:41:33.401Z",
       "selectedEmojis": [
-        "Sad",
-        "Content",
-        "Progress"
+        "Guitar",
+        "Donate",
+        "Drink Water",
+        "Relax",
+        "Focus",
+        "Sad"
       ],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "282a",
-      "date": "2025-03-24T09:00:58.196Z",
-      "title": "eror 2",
-      "content": "<p><br></p>",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "f42e",
-      "date": "2025-03-24T09:05:37.185Z",
-      "title": "",
-      "content": "<p>📝 Today’s highlight: 💡 One thing I learned: ⚠️ What I could do better:</p>",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "8e02",
-      "date": "2025-03-24T09:14:14.210Z",
-      "title": "chat gpt help",
-      "content": "<p><br></p>",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "6d79",
-      "date": "2025-03-24T09:33:39.300Z",
-      "title": "erroer ",
-      "content": "<p><br></p>",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "79e4",
-      "date": "2025-03-24T09:34:39.700Z",
-      "title": "bh",
-      "content": "<p><br></p>",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "299f",
-      "date": "2025-03-24T09:50:20.837Z",
-      "title": "1111",
-      "content": "<p><br></p>",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "15a7",
-      "date": "2025-03-24T09:50:44.649Z",
-      "title": "sdfsa",
-      "content": "<p><br></p>",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "0279",
-      "date": "2025-03-24T09:52:13.515Z",
-      "title": "s",
-      "content": "<p><br></p>",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "4ac9",
-      "title": "s",
-      "content": "<p><br></p>",
-      "date": "2025-03-24T09:58:33.398Z",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "48a9",
-      "title": "zz",
-      "content": "<p>s</p>",
-      "date": "2025-03-24T09:59:45.092Z",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "0a44",
-      "date": "2025-03-24T10:00:06.653Z",
-      "title": "err",
-      "content": "<p><br></p>",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "9d17",
-      "date": "2025-03-24T10:04:27.839Z",
-      "title": "sdfsd",
-      "content": "<p><br></p>",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "1f91",
-      "date": "2025-03-24T10:04:47.340Z",
-      "title": "sdfsdf",
-      "content": "<p><br></p>",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "9ab4",
-      "date": "2025-03-24T10:06:18.418Z",
-      "title": "sd",
-      "content": "<p><br></p>",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "59cb",
-      "date": "2025-03-24T10:16:23.578Z",
-      "title": "hhh",
-      "content": "<p><br></p>",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "71da",
-      "date": "2025-03-24T10:30:15.890Z",
-      "title": "sdf",
-      "content": "<p><br></p>",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "7644",
-      "date": "2025-03-24T10:30:37.951Z",
-      "title": "sddsd",
-      "content": "<p><br></p>",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "0d82",
-      "date": "2025-03-24T10:31:20.154Z",
-      "title": "Mon Mar 24 2025",
-      "content": "<p>dsfsf</p>",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "b74e",
-      "date": "2025-03-24T10:33:21.493Z",
-      "title": "sdfs",
-      "content": "<p>sdff</p>",
-      "selectedEmojis": [
-        "Walking"
-      ],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "1610",
-      "date": "2025-03-24T10:34:06.433Z",
-      "title": "please is it working",
-      "content": "<p>tell </p>",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "2607",
-      "date": "2025-03-24T10:44:14.869Z",
-      "title": "Mon Mar 24 2025",
-      "content": "<p>b</p>",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
+      "selectedCoverEmoji": "meh",
+      "draft": true
     }
   ]
 }

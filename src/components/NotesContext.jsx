@@ -12,9 +12,10 @@ export const NotesProvider = ({children}) => {
     const [dateAndTime,setDateAndTime]= useState(new Date());
     const [status,setStatus] = useState('');
     const [isFavourite,setIsFavourite] = useState(false);
+    const [draft,setIsDraft] = useState(false);
+    const [notificationMessage, setNotificationMessage] = useState('');
 
 // fetch notes
-
     useEffect(()=>{
         axios.get('http://localhost:5000/notes')
         .then(res => setNotes(res.data))
@@ -51,7 +52,9 @@ return new Date(time).toLocaleTimeString("en-US",{
                         content: note.content,
                         selectedEmojis: note.selectedEmojis,
                         selectedCoverEmoji: note.selectedCoverEmoji,
-                        isFavourite: note.isFavourite}; // this create an object which check 
+                        isFavourite: note.isFavourite,
+                        draft: false
+                    }; // this create an object which check 
         console.log(newNote.id,note.id);
 
         try { 
@@ -59,15 +62,21 @@ return new Date(time).toLocaleTimeString("en-US",{
             if(newNote.id){
                 await axios.put(`http://localhost:5000/notes/${newNote.id}`,newNote)
                 setNotes(prevNotes => prevNotes.map(note => note.id === newNote.id ? newNote : note))
-                setStatus('xxxxxxxxxxxxxxx')
+                setStatus('final saved')
+                setTimeout(() => {
+                    setStatus('')
+                }, 1000);
                 setNoteInput({...noteInput, title:"",content:"",id:null})
+                setNotificationMessage('Sucessfully Saved');
+               
+                
             }
             else{
            const res = await axios.post('http://localhost:5000/notes', newNote)
               setNotes( prevNotes => [...prevNotes,res.data]); // error was because react updates state asynchronously.to optimize.
                                                                // this is functional state update which ensure state update instantly.
-              console.log('updated Notes',notes);
-             console.log('saved note from api',res.data);
+
+             
             }
         } catch (err) {
             console.log('4')
@@ -103,7 +112,6 @@ const isContentEmpty = (html)=>{
       return () => clearTimeout(timmer);
 
     }
-console.log('timmer')
     },[noteInput])
 
     const autoSaveNote= async()=>{
@@ -112,12 +120,14 @@ console.log('timmer')
                       date: new Date().toISOString(),
                        selectedEmojis: selectedEmojis,
                        selectedCoverEmoji: selectedCoverEmoji,
-                       isFavourite: isFavourite
+                       isFavourite: isFavourite,
+                       draft:true,
                     }
 
                        
         try {
             if(!noteInput.id){
+                setIsDraft(true)
                 const res = await axios.post('http://localhost:5000/notes',note);
                 setNotes(prevNotes => [...prevNotes,res.data])
                 setNoteInput(prev => ({...prev, id:res.data.id}))
@@ -143,9 +153,11 @@ console.log('timmer')
             await axios.delete(`http://localhost:5000/notes/${id}`)
              setNotes(notes.filter(note => note.id !== id));
              setNoteInput({title:"",content:""});
-             console.log('deleted sucessfully')
+             setNotificationMessage('Successfully deleted')
+
         } catch (error) {
             console.error("couldn't delete data",error);
+            setNotificationMessage("Couldn't delte")
         }
     } 
     // edit notes
@@ -155,7 +167,17 @@ console.log('timmer')
         setSelectedCoverEmoji(note.selectedCoverEmoji)
         setDateAndTime(note.date ? new Date(note.date) : new Date());
         setIsFavourite(note.isFavourite)
+        setNotificationMessage('Editing on.')
+    
     }
+         // notification setting
+         useEffect(()=>{
+            if(notificationMessage){
+                setTimeout(() => {
+                    setNotificationMessage('')
+                }, 3000);
+            }
+        },[notificationMessage]) 
     return ( 
         <NotesContext.Provider value={{notes,
                                        saveNote
@@ -174,6 +196,8 @@ console.log('timmer')
                                        ,status
                                        ,isFavourite
                                        ,setIsFavourite
+                                       ,draft
+                                       ,notificationMessage
                                        
                                         }}>
             {children}

@@ -28,7 +28,7 @@
     /* look at the microsoft to do list section that style has to done here in the display. */
     overflow: auto;
     width: 70%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-self: center;
@@ -224,4 +224,20 @@
 .history-content{
     white-space: pre-line;
     color: #fff;
+}
+
+.rad{
+    color:#15B790  ;
+}
+.good{
+    color: #8CCD29 ;
+}
+.meh{
+    color: #4DA3D4 ;
+}
+.bad{
+    color: #F28C38;
+}
+.awful{
+    color: #F0162F ;
 }

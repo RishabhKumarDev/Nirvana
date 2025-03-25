@@ -12,7 +12,7 @@ import { GoDotFill } from "react-icons/go";
 import { MdDelete,MdEdit } from "react-icons/md";
 
 const HistoryPage = () => {
-    const {notes,deleteNote,handleEdit,formatDate,formatTime} = useNotes();
+    const {notes,deleteNote,handleEdit,formatDate,formatTime,draft} = useNotes();
     const [calendarVisible,setCalendarVisible] = useState(false);
     const [selectedDate,setSelectedDate] = useState(null);
     const [showFavourite,setShowFavourite] = useState(false);
@@ -35,7 +35,18 @@ const HistoryPage = () => {
         }
         return null;
     }
-
+    const handelColor = (name)=>{
+        // instead of using if statement it is more clean;
+    const colorMap = {
+        rad: "rad",
+        good: "good",
+        meh: "meh",
+        bad: "bad",
+        asful: "awful"
+    }
+    return colorMap[name] || "";
+       
+   }
    
 // what it does is checks for selecteddate if it is not true it returns notes
 // which gets maped and shown 
@@ -45,11 +56,12 @@ const HistoryPage = () => {
 const filteredNotes = useMemo(() => {
 if(showFavourite){
     return notes.filter(note => note.isFavourite === true);
-}else if(selectedDate){
+} if(selectedDate){
     return notes.filter(note => new Date(note.date).toDateString() === selectedDate)
-}else if(!showFavourite && !selectedDate){
-    return notes;
 }
+return notes.filter(note => note.draft !== true);  // had to add draft becasue auto save caused history to show without final save ( better approach could be saving the auto save entry in local storage )
+// and very intresting thing we are checking !== true because all the prev. data don't have draft key so if i check if the draft is false i.e === false; will won't return any prev. data as they don't contain draft key so the responce will undefined 
+// but when we check !== true it checks only if it is not true any thing else will be fine.
     }, [selectedDate, notes,showFavourite]);
     
 
@@ -93,12 +105,15 @@ if(showFavourite){
                             <div className="main-one-history-date-wrap">
                             <div className="date-display-history">{formatDate(note.date)} </div>
                             <div className="one-hirtory-coveremoji-wrap">
-                            <div className="cover-emoji-history">{showCoverEmoji(note.selectedCoverEmoji)}</div>
+                            <div className={`cover-emoji-history ${ handelColor(note.selectedCoverEmoji)}`} >{showCoverEmoji(note.selectedCoverEmoji)}</div>
 
                            <div className="one-history">
                             <div className="time-coveremojiname-fav-edit-wrap">
                                 <div className="time-coveremoji-wrap">
-                                <div className="cover-emoji-name-history">{note.selectedCoverEmoji}</div>
+                                <div className={`cover-emoji-name-history ${ handelColor(note.selectedCoverEmoji)}`}
+                                >
+                                    {note.selectedCoverEmoji}
+                                </div>
                                 <div className="time-display-history">{formatTime(note.date)} </div>
 
                                 </div>
@@ -120,7 +135,7 @@ if(showFavourite){
                                     <div key={i} className="emoji-name-wrap-history">
                                         <div className="emoji-name-container-history">
                                         <span className="dot-icon"><GoDotFill/></span>
-                                    <span  className="single-emoji-display">{findIcon(name)}</span>
+                                    <span  className={`single-emoji-display ${ handelColor(note.selectedCoverEmoji)}`} >{findIcon(name)}</span>
                                     <span className="single-name-display">{name}</span>
                                     </div>
                                     </div>
