@@ -28,24 +28,50 @@
     /* look at the microsoft to do list section that style has to done here in the display. */
     overflow: auto;
     width: 70%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-self: center;
     background-color: #202324;
 }
-/* -------------------------search notes style------------------------------- */
+/* ----.---------------------search notes style------------------------------- */
+.heading-history h2{
+    background-color: #383d3e;
+    color: #12f4c3;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 1rem;
+    padding: 0.3rem 0.5rem;
+}
+
 .calendar-icon-wrap{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
+
 }
 .calendar-icon{
     font-size: 1.3rem;
     color: #12f4c3;
     display: flex;
     align-content: center;
+    background-color: #202324;
+    padding: 0.2rem 0.3rem;
+    border-radius: 0.4rem;
+}
+.favourite-show{
+    background-color: #202324;
+    padding: 0.4rem;
+    border-radius: 0.2rem 0.3rem;
+    color: #F0162F;
+    display: flex;
+    gap: 0.1rem;
+}
+.refresh-icon{
+    background-color: #202324;
+    padding: 0.2rem 0.3rem;
+    border-radius: 0.4rem;
+    color: #F28C38;
 }
 .input-container{
     transform: scale(0.8);
@@ -84,7 +110,9 @@
     .history-list{
         width: 35%;
     }
-
+    .calendar-icon-wrap{
+        gap: 0.4rem;
+    }
 }
 /* ---------------------history display style--------------------- */
 .main-one-history-date-wrap{

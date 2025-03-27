@@ -5,7 +5,7 @@ import FirstPage from './pages/FirstPage';
 import InputPage from './pages/InputPage';
 import HistoryPage from './pages/HistoryPage';
 import Playground from './components/Notification/playground';
-
+import Notification from './components/Notification/Notification';
 function App() {
   return (
     <>
@@ -19,6 +19,7 @@ function App() {
 
         
         </Routes>
+        <Notification/>
       </div>
       </>
   );

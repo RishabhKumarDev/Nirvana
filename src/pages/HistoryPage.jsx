@@ -42,7 +42,7 @@ const HistoryPage = () => {
         good: "good",
         meh: "meh",
         bad: "bad",
-        asful: "awful"
+        awful: "awful"
     }
     return colorMap[name] || "";
        
@@ -76,16 +76,16 @@ return notes.filter(note => note.draft !== true);  // had to add draft becasue a
                 <h2>Your Entries</h2>
                 </div>
                 <div className="calendar-icon-wrap">
-                    <p>Search By Date </p>
                     <span className="calendar-icon">
+                    <p>Search </p>
                         <FaRegCalendarAlt
                         onClick={()=> setCalendarVisible(true)}
                     /></span>
                     <div className="favourite-list-wrap">
-                        <span className="favoutite-show"
+                        <span className="favourite-show"
                         onClick={()=> setShowFavourite(!showFavourite)}
                         >
-                            List FAVs <FaHeart/>
+                            <p>list</p> <FaHeart/>
                         </span>
                     </div>
                     <div className="refresh-icon">
@@ -93,7 +93,7 @@ return notes.filter(note => note.draft !== true);  // had to add draft becasue a
                         onClick={()=> {setSelectedDate(null)
                             ,setShowFavourite(false)
                          } }
-                         >Refresh list <IoRefresh/> </span>
+                         >Refresh<IoRefresh/> </span>
                     </div>
                 </div>
                 <ul className="notes-list">

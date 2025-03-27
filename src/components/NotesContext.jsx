@@ -13,7 +13,6 @@ export const NotesProvider = ({children}) => {
     const [status,setStatus] = useState('');
     const [isFavourite,setIsFavourite] = useState(false);
     const [draft,setIsDraft] = useState(false);
-    const [notificationMessage, setNotificationMessage] = useState('');
 
 // fetch notes
     useEffect(()=>{
@@ -59,7 +58,8 @@ return new Date(time).toLocaleTimeString("en-US",{
 
         try { 
 
-            if(newNote.id){
+            
+            if(newNote.id ){
                 await axios.put(`http://localhost:5000/notes/${newNote.id}`,newNote)
                 setNotes(prevNotes => prevNotes.map(note => note.id === newNote.id ? newNote : note))
                 setStatus('final saved')
@@ -142,6 +142,7 @@ const isContentEmpty = (html)=>{
         } catch (error) {
             console.error('fucked up',error);
             setStatus('❌Error')
+            window.location.reload();
         }
 
     }
@@ -162,7 +163,7 @@ const isContentEmpty = (html)=>{
     } 
     // edit notes
     const handleEdit =(note) =>{
-        setNoteInput(note);
+        setNoteInput({...noteInput,title:note.title,content:note.content,id:note.id});
         setSelectedEmojis(note.selectedEmojis)
         setSelectedCoverEmoji(note.selectedCoverEmoji)
         setDateAndTime(note.date ? new Date(note.date) : new Date());
@@ -170,14 +171,7 @@ const isContentEmpty = (html)=>{
         setNotificationMessage('Editing on.')
     
     }
-         // notification setting
-         useEffect(()=>{
-            if(notificationMessage){
-                setTimeout(() => {
-                    setNotificationMessage('')
-                }, 3000);
-            }
-        },[notificationMessage]) 
+         
     return ( 
         <NotesContext.Provider value={{notes,
                                        saveNote
@@ -197,7 +191,6 @@ const isContentEmpty = (html)=>{
                                        ,isFavourite
                                        ,setIsFavourite
                                        ,draft
-                                       ,notificationMessage
                                        
                                         }}>
             {children}

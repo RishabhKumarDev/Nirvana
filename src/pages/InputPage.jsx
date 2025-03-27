@@ -4,11 +4,12 @@ import { useNotes } from "../components/NotesContext";
 import SaveBtn from "../components/SaveBtn";
 import "../styles/InputPage.css";
 import InputEmojis from "../components/InputEmojis";
-import Notification from "../components/Notification/Notification";
+import { useNotification } from "../components/Notification/NotificationContext";
 
 
 const InputPage = () => {
        
+   const {setNotification} = useNotification();
    const {saveNote,
           noteInput,setNoteInput,
           selectedEmojis,setSelectedEmojis,
@@ -17,7 +18,6 @@ const InputPage = () => {
           isFavourite,
           setIsFavourite,
           setDateAndTime,
-          notificationMessage
          } = useNotes();
 
       
@@ -25,27 +25,35 @@ const InputPage = () => {
    const saveInput = () =>{
       try {
          const plainTextContent = noteInput.content.replace(/<[^>]*>/g, "").trim();
-         if (!noteInput.title.trim() || !plainTextContent) {
-           alert("Please fill both Title and Note before saving."); // or show a UI message
-           return;
-         }
-        console.log('title',noteInput.title)
-        console.log('constent',noteInput.content)
-setTimeout(()=>
+
+            if(!noteInput.title.trim()){
+               setNotification({message:'title empty',type:"empty"})
+
+               return;
+            }else if( !plainTextContent ){
+               setNotification({message:'Notes empty',type:"empty"})
+               console.log('note content')
+               return;
+            }else if(!selectedCoverEmoji){
+               setNotification({message:'Emoji empty',type:"empty"})
+
+
+               return;
+            }
          saveNote({...noteInput,
             selectedEmojis,
             selectedCoverEmoji,
             isFavourite}), 0
-         )
-console.log(noteInput.title,'second')
 
          setNoteInput({title:'',content:'',id:null});
-         console.log(noteInput.title,'third')
          setSelectedEmojis([]);
          setSelectedCoverEmoji("");
          setIsFavourite(false)
          setDateAndTime(null)
+         setNotification({message:'Succesfuly saved',type:"sucess"})
+         
       } catch (error) {
+         setNotification({message:'Error saving data',type:"error"})
          console.error("coundn't save data")
       }
      
@@ -62,10 +70,11 @@ console.log(noteInput.title,'second')
            
            <div className="cd12">
             <NotePad noteInput={noteInput} setNoteInput={setNoteInput} status={status}   />
-           <SaveBtn onSave={saveInput} />
+           <SaveBtn  onSave={saveInput} />
 
            </div>
-           {notificationMessage && <Notification message={notificationMessage}/>}
+          
+
            <div className="cd13">
 
            </div>

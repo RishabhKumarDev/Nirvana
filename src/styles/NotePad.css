@@ -98,42 +98,52 @@
 .prompts-container{
     width: max-content;
     height: fit-content;
-    background-color: red;
     position: absolute;
     right: 1rem;
     display: none;
-    transition: all 1s ease-in-out;
     z-index: 2;
 }
-.prompts-list{
-    background-color: yellow;
+.prompts-list , .templates-list{
+    background-color: white;
+    border-radius: 1rem;
     color: black;
     padding: 0.5rem;
 }
-.prompts-list ul{
-    background-color: rgba(99, 246, 85, 0.881);
+.prompts-list ul, .templates-list ul{
+    background-color: #211a1a;
+    color: #65f3ba;
+    border: 1px solid #11e9d3;
+    border-radius: 1rem;
 }
-.prompts-list li{
+.prompts-list li, .templates-list li{
     list-style: inside;
+    font-family:  monospace;
+    font-weight: 600;
+    margin: 0.4rem 0 0.4rem 0;
+
+    background-color: #373535;
+    border-radius: 0.5rem;
+    padding: 0.2rem 0.4rem;
+
+}
+.prompts-list li, .templates-list li:hover{
+    background-color: #272525;
+    cursor: pointer;
+}
+.templates-list ul{
+    color: #65bdf3;
+
 }
 .templates-container{
     
-    background-color: yellow;
     position: absolute;
     right: 1rem;
     display: none;
     z-index: 2;
 }
 .templates-list{
-    color: black;
     width: max-content;
     height: fit-content;
-    background-color: green;
-    padding: 0.5rem;
-}
-.templates-list li{
-    list-style: inside;
-
 }
 .prompt-template-visible{
     display: block;

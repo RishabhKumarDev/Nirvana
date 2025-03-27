@@ -1,378 +1,228 @@
 {
   "notes": [
     {
-      "id": "9e48",
-      "title": "great full",
-      "content": "i am great full for everything i have like head phone, scuty, laptop, house, book, body, hair, past experiences, existance it self.\n",
-      "selectedEmojis": [
-        "Medation",
-        "Medium Sleep",
-        "Relax",
-        "Progress",
-        "Skin Care"
-      ]
-    },
-    {
-      "id": "cec9",
-      "title": "test",
-      "content": "for cover emoji save function",
-      "selectedEmojis": [
-        "Biking",
-        "Paint",
-        "Medation",
-        "Helping"
-      ],
-      "selectedCoverEmoji": "rad"
-    },
-    {
-      "id": "670f",
-      "title": "tes 33333",
-      "content": "3333333333333333333333333",
-      "selectedEmojis": [
-        "Biking",
-        "Guitar",
-        "Exercise"
-      ],
-      "selectedCoverEmoji": "rad"
-    },
-    {
-      "id": "86b5",
-      "title": "bad day test",
-      "content": "i had a bod hae",
+      "id": "fc68",
+      "date": "2025-03-26T04:26:23.677Z",
+      "title": "1. first entry for check",
+      "content": "<p>new entry firstf</p>",
       "selectedEmojis": [
         "Guitar",
-        "Anme",
-        "Content",
-        "Growth"
-      ],
-      "selectedCoverEmoji": "good"
-    },
-    {
-      "id": "48c2",
-      "title": "test ",
-      "content": "check before commiting changes to github\n",
-      "selectedEmojis": [
-        "Guitar",
-        "Donate",
-        "Drink Water",
-        "Relax",
-        "Focus",
+        "Read",
+        "Make List",
+        "Teamwork",
         "Sad"
       ],
-      "selectedCoverEmoji": "meh"
+      "selectedCoverEmoji": "rad",
+      "isFavourite": true,
+      "draft": false
     },
     {
-      "id": "1d5c",
-      "title": "test",
-      "content": "hiii",
+      "id": "ea91",
+      "date": "2025-03-26T04:26:52.101Z",
+      "title": "second entry 2nd time ",
+      "content": "<p>to final checks adding evety thing</p>",
       "selectedEmojis": [
         "Biking",
+        "Mid Sleep",
         "Exercise",
-        "Tired"
-      ],
-      "selectedCoverEmoji": "good"
-    },
-    {
-      "id": "e3fc",
-      "date": "2025-03-14T12:24:31.581Z",
-      "title": "save",
-      "content": "date",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": ""
-    },
-    {
-      "id": "1888",
-      "date": "2025-03-14T10:22:15.061Z",
-      "title": "final ",
-      "content": "test",
-      "selectedEmojis": [
-        "Stressed",
-        "Growth",
-        "Gaming",
-        "Gratitude"
-      ],
-      "selectedCoverEmoji": "rad"
-    },
-    {
-      "id": "bee3",
-      "date": "2025-03-15T02:02:32.946Z",
-      "title": "test 1",
-      "content": "of the day just checking everything",
-      "selectedEmojis": [
-        "Biking",
-        "Gaming",
-        "Haircut"
-      ],
-      "selectedCoverEmoji": "good"
-    },
-    {
-      "id": "9e0f",
-      "date": "2025-03-17T02:29:10.260Z",
-      "title": "i am getting better at everthis",
-      "content": "today is 16 march 2025 i am working on nirvana\n",
-      "selectedEmojis": [
-        "Medation",
-        "Mid Sleep",
-        "Drink Water",
-        "Happy",
-        "Excited",
-        "Grateful",
-        "Relaxed",
-        "Content"
-      ],
-      "selectedCoverEmoji": "good"
-    },
-    {
-      "id": "ff71",
-      "date": "2025-03-19T01:54:40.227Z",
-      "title": "this is day one ",
-      "content": "i am great full for all the things in my life \nlike scuty\nlike laptop\nmy health\nmoney\nfood\ni am greatful i don't sleep hungry\ni am greatful i can afford thing i need\ni am greatfull for my peace of mind",
-      "selectedEmojis": [
-        "Medation",
-        "Good Sleep",
-        "Drink Water",
-        "NoSoda",
-        "NoSweets",
-        "Happy",
-        "Grateful",
-        "Relaxed"
-      ],
-      "selectedCoverEmoji": "good"
-    },
-    {
-      "id": "4a7b",
-      "date": "2025-03-20T02:09:11.633Z",
-      "title": "ss",
-      "content": "df",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": ""
-    },
-    {
-      "id": "3c06",
-      "date": "2025-03-20T02:20:27.405Z",
-      "title": "hii",
-      "content": "wre",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": true
-    },
-    {
-      "id": "4af8",
-      "date": "2025-03-20T02:03:10.032Z",
-      "title": "test one of the day",
-      "content": "to-do-list\n.complete use memo logic",
-      "selectedEmojis": [
-        "Medation",
-        "Mid Sleep",
-        "Drink Water",
-        "Happy",
-        "Grateful",
-        "Relaxed"
-      ],
-      "selectedCoverEmoji": "good"
-    },
-    {
-      "id": "475a",
-      "date": "2025-03-20T02:20:09.184Z",
-      "title": "save logic",
-      "content": "is favourite",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": true
-    },
-    {
-      "id": "ea8f",
-      "date": "2025-03-24T09:32:08.321Z",
-      "title": "error chekc gpt",
-      "content": "<p>check</p>",
-      "selectedEmojis": [
-        "Eat Healthy",
-        "Stressed"
-      ],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "ca37",
-      "date": "2025-03-20T03:01:28.277Z",
-      "title": "stestatus",
-      "content": "to ",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": true
-    },
-    {
-      "id": "3329",
-      "date": "2025-03-20T03:11:12.193Z",
-      "title": "time reset check",
-      "content": "chdd",
-      "selectedEmojis": [
-        "Running",
-        "Progress",
+        "Anme",
+        "Family",
         "Sad"
-      ],
-      "selectedCoverEmoji": "",
-      "isFavourite": true
-    },
-    {
-      "id": "7a62",
-      "date": "2025-03-20T03:12:14.016Z",
-      "title": "ss",
-      "content": "ss",
-      "selectedEmojis": [
-        "Friends"
-      ],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "0f22",
-      "date": "2025-03-20T05:05:10.321Z",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "5166",
-      "title": "What made you smile today?",
-      "content": "",
-      "date": "2025-03-21T03:02:43.643Z",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "a878",
-      "title": "",
-      "content": "Today I am grateful for:\n------------------------\nWhy these things matter:",
-      "date": "2025-03-21T03:13:37.638Z",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "a300",
-      "title": "",
-      "content": "Today I am grateful for:\n sdfdfssdfd\nWhy these things matter:",
-      "date": "2025-03-21T03:14:38.001Z",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "1156",
-      "title": "",
-      "content": "📝 Today’s highlight:\n💡 One thing I learned:\n⚠️ What I could do better:",
-      "date": "2025-03-21T03:15:31.821Z",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "d8ec",
-      "title": "",
-      "content": "   noteInput.content + \n\n + template.content  \n\n  📝 Today’s highlight:\n💡 One thing I learned:\n⚠️ What I could do better:  \n\n  How I felt (rate out of 10):\nWhat caused this mood:\nWhat helped me feel better:",
-      "date": "2025-03-21T03:31:13.160Z",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "c1e5",
-      "title": "",
-      "content": "   \n\n  Today I am grateful for:\n \nWhy these things matter:",
-      "date": "2025-03-21T03:32:18.852Z",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "8205",
-      "title": "",
-      "content": "    \n\n Gratitude \n \n  Today I am grateful for:\n \nWhy these things matter:  \n\n Mood Tracker \n \n  How I felt (rate out of 10):\nWhat caused this mood:\nWhat helped me feel better:",
-      "date": "2025-03-21T03:33:35.588Z",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "953a",
-      "title": "One small win I had...",
-      "content": "hj",
-      "date": "2025-03-21T03:38:58.903Z",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "meh",
-      "isFavourite": false
-    },
-    {
-      "id": "621b",
-      "title": "What made you smile today?",
-      "content": "   \n\n Daily Reflection \n \n  📝 Today’s highlight:\n💡 One thing I learned:\n⚠️ What I could do better:",
-      "date": "2025-03-21T06:25:24.263Z",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false
-    },
-    {
-      "id": "0e74",
-      "date": "2025-03-21T08:07:54.084Z",
-      "title": "hi",
-      "content": "   \n\n Daily Reflection \n \n  📝 Today’s highlight:\n💡 One thing I learned:\n⚠️ What I could do better:",
-      "selectedEmojis": [
-        "Start Early",
-        "Relax"
-      ],
-      "selectedCoverEmoji": "bad",
-      "isFavourite": false
-    },
-    {
-      "id": "e41b",
-      "date": "2025-03-22T03:04:41.258Z",
-      "title": "What do I feel grateful for?",
-      "content": " for all the things i have like laptop, scuty, hair, body, existance, connection with my self , my growth, my mindset , my improvement , my head phone.  \n\n Random Thoughts \n \nThought #1:i love my self\nThought #2:i an getting better \nThought #3:i have a plan to work on",
-      "selectedEmojis": [
-        "Medation",
-        "Bad Sleep",
-        "Drink Water",
-        "Relax",
-        "Me",
-        "Happy",
-        "Grateful",
-        "Relaxed",
-        "Content"
       ],
       "selectedCoverEmoji": "good",
-      "isFavourite": true
+      "isFavourite": false,
+      "draft": false
     },
     {
-      "id": "9eba",
-      "title": "Tue Mar 25 2025",
-      "content": "<p>i am great full for everything i have like head phone, scuty, laptop, house, book, body, hair, past experiences, existance it self. </p>",
-      "date": "2025-03-25T10:33:59.547Z",
+      "id": "cb68",
+      "date": "2025-03-26T04:36:49.297Z",
+      "title": "5th What made you smile today?",
+      "content": "<p>check fifth time</p><p>Mind Dump 📝 🧩 What’s on my mind:</p><p><br></p><p>🧩 What’s bothering me:</p><p><br></p><p>🧩 Something unexpected that happened:</p><p><br></p><p>🌻 A happy moment today:</p>",
       "selectedEmojis": [
-        "Medation",
-        "Medium Sleep",
-        "Relax",
-        "Progress",
-        "Skin Care"
+        "Biking",
+        "NoMeat",
+        "Teamwork",
+        "Desperate"
       ],
-      "draft": true
+      "selectedCoverEmoji": "awful",
+      "isFavourite": true,
+      "draft": false
     },
     {
-      "id": "2967",
-      "title": "Tue Mar 25 2025",
-      "content": "<p>check before commiting changes to github </p>",
-      "date": "2025-03-25T10:41:33.401Z",
+      "id": "a5e0",
+      "date": "2025-03-26T04:36:37.226Z",
+      "title": "4th entry rebirth",
+      "content": "<p>4th entry rebirth</p>",
       "selectedEmojis": [
-        "Guitar",
-        "Donate",
-        "Drink Water",
-        "Relax",
-        "Focus",
+        "Stressed",
+        "Helping",
+        "Start Early",
         "Sad"
       ],
-      "selectedCoverEmoji": "meh",
+      "selectedCoverEmoji": "bad",
+      "isFavourite": true,
+      "draft": false
+    },
+    {
+      "id": "74a1",
+      "title": "hii that ",
+      "content": "<p><br></p>",
+      "date": "2025-03-26T04:46:08.290Z",
+      "selectedEmojis": [],
+      "selectedCoverEmoji": "",
+      "isFavourite": false,
       "draft": true
+    },
+    {
+      "id": "9aa8",
+      "date": "2025-03-26T05:27:56.731Z",
+      "title": "Wed Mar 26 2025",
+      "content": "<p><br></p><p>Random Thoughts 🌼 🌀 Thought #1:</p><p><br></p><p>🌀 Thought #2:</p><p><br></p><p>🌀 Thought #3:</p><p><br></p><p>💭 A takeaway or insight:</p>",
+      "selectedEmojis": [
+        "Donate",
+        "Anme",
+        "Progress"
+      ],
+      "selectedCoverEmoji": "good",
+      "isFavourite": false,
+      "draft": false
+    },
+    {
+      "id": "8e3a",
+      "date": "2025-03-26T05:50:27.878Z",
+      "title": "aleart",
+      "content": "<p>aleart</p>",
+      "selectedEmojis": [],
+      "selectedCoverEmoji": "meh",
+      "isFavourite": false,
+      "draft": false
+    },
+    {
+      "id": "87f3",
+      "date": "2025-03-26T05:54:34.524Z",
+      "title": "sdfsdfsdf",
+      "content": "<p>sdf</p>",
+      "selectedEmojis": [],
+      "selectedCoverEmoji": "bad",
+      "isFavourite": false,
+      "draft": false
+    },
+    {
+      "id": "9534",
+      "date": "2025-03-26T06:02:48.816Z",
+      "title": "b",
+      "content": "<p>gg</p>",
+      "selectedEmojis": [
+        "Gratitude"
+      ],
+      "selectedCoverEmoji": "meh",
+      "isFavourite": false,
+      "draft": false
+    },
+    {
+      "id": "fa6f",
+      "date": "2025-03-26T06:05:32.075Z",
+      "title": "b",
+      "content": "<p>sdf</p>",
+      "selectedEmojis": [],
+      "selectedCoverEmoji": "meh",
+      "isFavourite": false,
+      "draft": false
+    },
+    {
+      "id": "94cd",
+      "date": "2025-03-26T06:06:49.225Z",
+      "title": "every thisn",
+      "content": "<p>fine???????</p>",
+      "selectedEmojis": [
+        "Medation"
+      ],
+      "selectedCoverEmoji": "good",
+      "isFavourite": false,
+      "draft": false
+    },
+    {
+      "id": "fc5b",
+      "date": "2025-03-26T06:54:21.898Z",
+      "title": "color",
+      "content": "<p>check</p>",
+      "selectedEmojis": [
+        "Medation",
+        "Focus"
+      ],
+      "selectedCoverEmoji": "meh",
+      "isFavourite": false,
+      "draft": false
+    },
+    {
+      "id": "c179",
+      "title": "Wed Mar 26 2025",
+      "content": "<p><br></p>",
+      "date": "2025-03-26T17:20:55.906Z",
+      "selectedEmojis": [],
+      "selectedCoverEmoji": "",
+      "isFavourite": false,
+      "draft": true
+    },
+    {
+      "id": "9144",
+      "title": "s",
+      "content": "<p><br></p>",
+      "date": "2025-03-26T17:26:31.372Z",
+      "selectedEmojis": [],
+      "selectedCoverEmoji": "",
+      "isFavourite": false,
+      "draft": true
+    },
+    {
+      "id": "9fcb",
+      "title": "s",
+      "content": "<p><br></p>",
+      "date": "2025-03-26T17:28:42.515Z",
+      "selectedEmojis": [],
+      "selectedCoverEmoji": "",
+      "isFavourite": false,
+      "draft": true
+    },
+    {
+      "id": "4a57",
+      "date": "2025-03-26T17:42:28.093Z",
+      "title": "sf",
+      "content": "<p>as</p>",
+      "selectedEmojis": [
+        "Stressed"
+      ],
+      "selectedCoverEmoji": "good",
+      "isFavourite": false,
+      "draft": false
+    },
+    {
+      "id": "921b",
+      "title": "sd",
+      "content": "",
+      "date": "2025-03-26T17:43:41.681Z",
+      "selectedEmojis": [],
+      "selectedCoverEmoji": "",
+      "isFavourite": false,
+      "draft": true
+    },
+    {
+      "id": "96c2",
+      "date": "2025-03-27T02:42:19.537Z",
+      "title": "What do I feel grateful for?",
+      "content": "<p><br></p><p>Gratitude 🌸 🙏</p><p><br></p><p> Today I am grateful for:</p><p>                        my laptop.</p><p>                        existance.</p><p>                        my life.</p><p>✨ Why these things matter: </p><p>         because this is helping me in building my carrere.</p><p>         and my existance made me experiance those feeelings like liked, </p><p>         </p><p><br></p><p>💖 How this makes me feel: very good i am happy, </p>",
+      "selectedEmojis": [
+        "Paint",
+        "Medation",
+        "Mid Sleep",
+        "Read",
+        "Grateful",
+        "Happy",
+        "Relaxed"
+      ],
+      "selectedCoverEmoji": "meh",
+      "isFavourite": false,
+      "draft": false
     }
   ]
 }
