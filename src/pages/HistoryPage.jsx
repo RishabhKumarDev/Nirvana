@@ -4,12 +4,12 @@ import { useNotes } from "../components/NotesContext";
 import { iconCategory, CoverEmojis } from "../components/IconsContainer";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import CalendarDisplay from "../components/calendar/Calendar";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { IoRefresh } from "react-icons/io5"; // Refresh icon
 import { FaHeart } from "react-icons/fa";
 import { PiDotsThreeCircleDuotone } from "react-icons/pi";
 import { GoDotFill } from "react-icons/go";
-import { MdDelete,MdEdit } from "react-icons/md";
+import { MdDelete,MdDoNotTouch,MdEdit } from "react-icons/md";
 
 const HistoryPage = () => {
     const {notes,deleteNote,handleEdit,formatDate,formatTime,draft} = useNotes();
@@ -21,6 +21,21 @@ const HistoryPage = () => {
     const handleMenuId = (id)=>{
         setOpenMenuId((prev) => (prev === id? null : id));
     }
+
+    let menuRef = useRef();
+    useEffect(()=>{
+        const handler = (e)=>{
+            if(!menuRef.current.contains(e.target)){
+                setOpenMenuId(null);
+            }
+        }
+
+        document.addEventListener('click',handler)
+        return ()=> document.removeEventListener('click',handler)
+    },[])
+
+
+
     const showCoverEmoji = (name)=>{
         
             const emoji = CoverEmojis.find((e) => e.name === name);
@@ -59,6 +74,7 @@ if(showFavourite){
 } if(selectedDate){
     return notes.filter(note => new Date(note.date).toDateString() === selectedDate)
 }
+
 return notes.filter(note => note.draft !== true);  // had to add draft becasue auto save caused history to show without final save ( better approach could be saving the auto save entry in local storage )
 // and very intresting thing we are checking !== true because all the prev. data don't have draft key so if i check if the draft is false i.e === false; will won't return any prev. data as they don't contain draft key so the responce will undefined 
 // but when we check !== true it checks only if it is not true any thing else will be fine.
@@ -76,11 +92,9 @@ return notes.filter(note => note.draft !== true);  // had to add draft becasue a
                 <h2>Your Entries</h2>
                 </div>
                 <div className="calendar-icon-wrap">
-                    <span className="calendar-icon">
+                    <span className="calendar-icon"  onClick={()=> {setCalendarVisible(true),setShowFavourite(false)}} >
                     <p>Search </p>
-                        <FaRegCalendarAlt
-                        onClick={()=> setCalendarVisible(true)}
-                    /></span>
+                        <FaRegCalendarAlt /></span>
                     <div className="favourite-list-wrap">
                         <span className="favourite-show"
                         onClick={()=> setShowFavourite(!showFavourite)}
@@ -97,6 +111,12 @@ return notes.filter(note => note.draft !== true);  // had to add draft becasue a
                     </div>
                 </div>
                 <ul className="notes-list">
+
+                    <div className={`no-entries ${filteredNotes.length === 0 ? "yet":""}`}>
+                        <h1>No</h1>
+                        <h2>Entries</h2>
+                        <h3>Yet</h3>
+                    </div>
                     {filteredNotes
                     .map((note)=>(
                         <li 
@@ -119,11 +139,11 @@ return notes.filter(note => note.draft !== true);  // had to add draft becasue a
                                 </div>
                                 <div className="fav-edit-wrap">
                                 <div className="favourite-icon-wrap"> <span className={`favourite-history ${note.isFavourite? "favourite-history-true" : ""}`}>{<FaHeart/>}</span> </div>
-                                 <div className="three-dot-icon-container">
-                                    <span className="threedot-icon" onClick={()=>handleMenuId(note.id)}><PiDotsThreeCircleDuotone />
-                                    <div className={`edit-delete-container ${openMenuId === note.id ? "three-dot-true":""}`}>
-                            <div className="delete-btn"><button onClick={()=>deleteNote(note.id)}><span className="delete-icon"><MdDelete /> </span> Delete</button></div>
-                             <div className="edit-btn"><button onClick={() => handleEdit(note)}> <span className="edit-icon">  <MdEdit/></span> Edit it</button></div>
+                                 <div   className="three-dot-icon-container">
+                                    <span className="threedot-icon" onClick={(e)=>{e.stopPropagation();handleMenuId(note.id);}}><PiDotsThreeCircleDuotone />
+                                    <div ref={menuRef} className={`edit-delete-container ${openMenuId === note.id ? "three-dot-true":""}`}>
+                            <div className="delete-btn"><button onClick={()=> deleteNote(note.id)}><span className="delete-icon"><MdDelete /> </span> Delete</button></div>
+                             <div onClick={() => handleEdit(note)} className="edit-btn"><button > <span className="edit-icon">  <MdEdit/></span> Edit it</button></div>
                                     </div>
                                     </span>
                                  </div>
@@ -143,7 +163,7 @@ return notes.filter(note => note.draft !== true);  // had to add draft becasue a
                              </div>
                              <div className="history-title">{note.title}</div>
                              <div className="history-content"><p>
-                             {(note.content || "").replace(/<[^>]+>/g," ")} {/* <-- this is to display the notes wihtout html elements what happening was besause react-quill act as html editor so it was pushing whole html element in api and display was desplaying all the elements too */}
+                             {(note.content || "").replace(/<[^>]+>/g," ").trim()} {/* <-- this is to display the notes wihtout html elements what happening was besause react-quill act as html editor so it was pushing whole html element in api and display was desplaying all the elements too */}
                                 </p></div> 
                                 
                              

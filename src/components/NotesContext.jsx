@@ -1,9 +1,11 @@
 import axios from "axios";
 import { createContext, useContext, useEffect, useState } from "react";
+import { useNotification } from "./Notification/NotificationContext";
 
 const NotesContext = createContext();
 
 export const NotesProvider = ({children}) => {
+    const {setNotification} = useNotification();
     
     const [notes,setNotes] = useState([]);
     const [noteInput,setNoteInput] = useState({title:"",content:""});
@@ -13,6 +15,7 @@ export const NotesProvider = ({children}) => {
     const [status,setStatus] = useState('');
     const [isFavourite,setIsFavourite] = useState(false);
     const [draft,setIsDraft] = useState(false);
+    const [isSaving,setIsSaving] = useState(false);
 
 // fetch notes
     useEffect(()=>{
@@ -67,7 +70,6 @@ return new Date(time).toLocaleTimeString("en-US",{
                     setStatus('')
                 }, 1000);
                 setNoteInput({...noteInput, title:"",content:"",id:null})
-                setNotificationMessage('Sucessfully Saved');
                
                 
             }
@@ -81,15 +83,17 @@ return new Date(time).toLocaleTimeString("en-US",{
         } catch (err) {
             console.log('4')
             console.error('failed to save',err);
+            setNotification({message:"can't save", type:"error"})
         }
     }
     // auto save---------------------------------------------------------
+    const isContentEmpty = (html)=>{
+        const text = html.replace(/<[^>]*>/g,"").trim();
+        return text.length === 0;
+    }
     useEffect(()=>{
 
-const isContentEmpty = (html)=>{
-    const text = html.replace(/<[^>]*>/g,"").trim();
-    return text.length === 0;
-}
+
         if((noteInput.title ==="" && isContentEmpty(noteInput.content)) && noteInput.id){
             deleteNote(noteInput.id);
             setStatus('saved')
@@ -100,8 +104,8 @@ const isContentEmpty = (html)=>{
         }
         
         else{
+       setIsSaving(true);
         setStatus('saving...');
-       
     const timmer=  setTimeout(() => {
         if(noteInput.title === ''&& !isContentEmpty(noteInput.content) && noteInput.id){
             setNoteInput({...noteInput,title: new Date().toDateString()})
@@ -138,37 +142,40 @@ const isContentEmpty = (html)=>{
             await axios.patch(`http://localhost:5000/notes/${noteInput.id}`,note)
 
           setStatus(' Entry Saved✅')
+          setIsSaving(false);
         }
         } catch (error) {
             console.error('fucked up',error);
             setStatus('❌Error')
-            window.location.reload();
+            setNotification({message:"Error(Refresh page)",type:"error"});
         }
 
     }
 // delete notes
     const deleteNote =async (id) =>{
         try {
-            console.log('deleted started')
-
             await axios.delete(`http://localhost:5000/notes/${id}`)
              setNotes(notes.filter(note => note.id !== id));
              setNoteInput({title:"",content:""});
-             setNotificationMessage('Successfully deleted')
+             setNotification({message:'Successfully deleted',type:"sucess"})
 
         } catch (error) {
             console.error("couldn't delete data",error);
-            setNotificationMessage("Couldn't delte")
+            setNotification({message:"couldn't delete",type:"error"})
+
         }
     } 
     // edit notes
     const handleEdit =(note) =>{
+        debugger;
+        console.log('edit btn is being called',note)
         setNoteInput({...noteInput,title:note.title,content:note.content,id:note.id});
         setSelectedEmojis(note.selectedEmojis)
         setSelectedCoverEmoji(note.selectedCoverEmoji)
         setDateAndTime(note.date ? new Date(note.date) : new Date());
         setIsFavourite(note.isFavourite)
-        setNotificationMessage('Editing on.')
+        setNotification({message:'Edit mode',type:""})
+
     
     }
          
@@ -191,6 +198,7 @@ const isContentEmpty = (html)=>{
                                        ,isFavourite
                                        ,setIsFavourite
                                        ,draft
+                                       ,isSaving
                                        
                                         }}>
             {children}

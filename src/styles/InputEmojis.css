@@ -55,6 +55,7 @@
     align-items: center;
     justify-content: center;
     border: 0.1px solid #b0bdbbb9 ;
+    cursor: pointer;
 }
 .selected-icon{
     color: #202324 !important;

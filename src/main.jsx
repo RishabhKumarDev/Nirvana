@@ -10,11 +10,11 @@ import { NotificationProvider } from './components/Notification/NotificationCont
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <StrictMode>
+    <NotificationProvider>
       <NotesProvider>
-        <NotificationProvider>
        <App/>
-       </NotificationProvider>
        </NotesProvider>
+       </NotificationProvider>
    </StrictMode>
   </BrowserRouter>
   , 

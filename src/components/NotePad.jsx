@@ -2,7 +2,7 @@ import "../styles/NotePad.css";
 import { FaHeart ,FaRegClipboard } from "react-icons/fa";
 import { useNotes } from "./NotesContext";
 import {BsLightbulb } from "react-icons/bs";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Prompts from "./Prompts";
 import Templates from "./Templates";
 import ReactQuill from "react-quill-new";
@@ -19,11 +19,32 @@ const NotePad = ({noteInput,setNoteInput}) => {
     const countChars = ()=>{
         return noteInput.content.replace(/<[^>]*>/g,"").length
     }
+    //  outside click of template closes the template container.
+    let promptRef = useRef();
+
+    useEffect(()=>{
+        const handler =(e)=>{
+            if(!promptRef.current.contains(e.target)){
+                setShowPrompts(false);
+            }
+        }
+      document.addEventListener('mousedown',handler);
+      return ()=> document.removeEventListener('mousedown',handler);
+    },[])
+//  outside click of prompts closes the prompt container.
+let templateRef = useRef();
+
+    useEffect(()=>{
+        const handler =(e)=>{
+            if( !templateRef.current.contains(e.target))
+            setShowTemplate(false);
+        }
+       document.addEventListener('mousedown',handler) 
+       return ()=> document.removeEventListener('mousedown',handler)
+    },[])
     return ( 
         <>
-        <div className={`prompt-shadow ${(showPrompts || showTemplate)? "shadow-open" :""}`} onClick={()=>{setShowPrompts(false)
-            ,setShowTemplate(false)
-        }}></div>
+      
         <div className="note-container">
             <div className="note-title">
                 <input 
@@ -55,14 +76,14 @@ const NotePad = ({noteInput,setNoteInput}) => {
                 onClick={()=>setShowPrompts(!showPrompts)}
                 ><BsLightbulb/>
                 
-                <div className={`prompts-container ${showPrompts? "prompt-template-visible":""}`} > 
+                <div ref={promptRef} className={`prompts-container ${showPrompts? "prompt-template-visible":""}`} > 
                     <Prompts/>
                 </div>
                 </span>
-                <span className={`template-icon ${showTemplate? "feature-true" : ""}`}
+                <span  className={`template-icon ${showTemplate? "feature-true" : ""}`}
                 onClick={()=>setShowTemplate(!showTemplate)}
                 ><FaRegClipboard/>
-                <div className={`templates-container ${showTemplate? "prompt-template-visible":""}`}>
+                <div ref={templateRef} className={`templates-container ${showTemplate? "prompt-template-visible":""}`}>
                     <Templates/>
                 </div>
                 </span>

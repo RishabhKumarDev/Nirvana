@@ -34,6 +34,20 @@
     justify-self: center;
     background-color: #202324;
 }
+/* no entries style----------- */
+
+.no-entries{
+    background-color: #383d3e;
+    margin: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    color: #12f4c3;
+    border: 1px solid white;
+    display: none;
+}
+.yet{
+    display: block;
+}
 /* ----.---------------------search notes style------------------------------- */
 .heading-history h2{
     background-color: #383d3e;
@@ -58,6 +72,7 @@
     background-color: #202324;
     padding: 0.2rem 0.3rem;
     border-radius: 0.4rem;
+    cursor: pointer;
 }
 .favourite-show{
     background-color: #202324;
@@ -66,12 +81,14 @@
     color: #F0162F;
     display: flex;
     gap: 0.1rem;
+    cursor: pointer;
 }
 .refresh-icon{
     background-color: #202324;
     padding: 0.2rem 0.3rem;
     border-radius: 0.4rem;
     color: #F28C38;
+    cursor: pointer;
 }
 .input-container{
     transform: scale(0.8);
@@ -180,6 +197,7 @@
     color: whitesmoke;
     display: flex;
     position: relative;
+    cursor: pointer;
 
 }
 .edit-delete-container{
@@ -212,6 +230,7 @@
     padding: 0.1rem 0.2rem;
     margin: 0.1rem;
     border-radius: 0.3rem;
+    cursor: pointer;
     
 }
 /* -------------------------------------- */
