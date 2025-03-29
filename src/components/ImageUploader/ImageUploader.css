@@ -1,6 +1,7 @@
 
 .image-uploader{
     width: 16rem;
+    /* width: 60%; */
     height: 17.5rem;
     background-color: rgb(36, 31, 31);
     border: 0.2rem  solid rgb(61, 164, 147) ;
@@ -8,7 +9,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10em;
+
+    /* margin-bottom: 1em; */
 }
 .submit-image-btn{
     border: none;

@@ -70,14 +70,15 @@ const InputPage = () => {
            <InputEmojis selectedEmojis={selectedEmojis} setSelectedEmojis={setSelectedEmojis} />
            
            <div className="cd12">
-            <NotePad noteInput={noteInput} setNoteInput={setNoteInput} status={status}   />
-           <SaveBtn  onSave={saveInput} />
            <div className="image-voice-container">
            <div className="image-upload-section">
             <ImageUpload/>
            </div>
            <div className="voice-upload-section"></div>
         </div>
+            <NotePad noteInput={noteInput} setNoteInput={setNoteInput} status={status}   />
+           <SaveBtn  onSave={saveInput} />
+           
            </div>
           
         </div>

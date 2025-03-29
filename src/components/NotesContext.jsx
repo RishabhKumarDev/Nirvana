@@ -16,7 +16,6 @@ export const NotesProvider = ({children}) => {
     const [draft,setIsDraft] = useState(false);
     const [isSaving,setIsSaving] = useState(false);
     const [imageUrl,setImageUrl] =useState('');
-
 // fetch notes
     useEffect(()=>{
         axios.get('http://localhost:5000/notes')
@@ -47,7 +46,6 @@ return new Date(time).toLocaleTimeString("en-US",{
     
     const saveNote = async(note) =>{
         console.log('1');
-
         const newNote = {id: note.id,
                         date: new Date().toISOString(),
                         title: note.title,
@@ -72,7 +70,6 @@ return new Date(time).toLocaleTimeString("en-US",{
                 }, 1000);
                 setNoteInput({...noteInput, title:"",content:"",id:null})
                 setImageUrl('');
-                
             }
             else{
            const res = await axios.post('http://localhost:5000/notes', newNote)

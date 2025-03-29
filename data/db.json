@@ -317,6 +317,53 @@
       "isFavourite": false,
       "draft": true,
       "image": ""
+    },
+    {
+      "id": "69e8",
+      "date": "2025-03-29T11:58:13.608Z",
+      "title": "asd",
+      "content": "<p>asdas</p>",
+      "selectedEmojis": [
+        "Movies",
+        "Sad"
+      ],
+      "selectedCoverEmoji": "rad",
+      "isFavourite": false,
+      "draft": false,
+      "image": ""
+    },
+    {
+      "id": "54de",
+      "title": "A random thought I had...",
+      "content": "<p><br></p><p>Goal Check-in 🎯 ✨ Today’s main goal:</p><p><br></p><p>🏆 Progress made:</p><p><br></p><p>🚧 Challenges faced:</p><p><br></p><p>💪 How I feel about it:</p>",
+      "date": "2025-03-29T12:00:04.299Z",
+      "selectedEmojis": [],
+      "selectedCoverEmoji": "",
+      "isFavourite": false,
+      "draft": true,
+      "image": ""
+    },
+    {
+      "id": "cc89",
+      "title": "Something I learned today",
+      "content": "<p><br></p><p>Self-Care Reminder 💆‍♀️ 🧘‍♂️ Did I rest enough today?:</p><p><br></p><p>🍃 How I treated myself kindly:</p><p><br></p><p>🌸 What I could do for myself tomorrow:</p>",
+      "date": "2025-03-29T12:04:15.355Z",
+      "selectedEmojis": [],
+      "selectedCoverEmoji": "good",
+      "isFavourite": false,
+      "draft": true,
+      "image": ""
+    },
+    {
+      "id": "fc42",
+      "date": "2025-03-29T13:52:06.811Z",
+      "title": "sdfsd",
+      "content": "<p>dfs</p>",
+      "selectedEmojis": [],
+      "selectedCoverEmoji": "good",
+      "isFavourite": false,
+      "draft": false,
+      "image": ""
     }
   ]
 }
