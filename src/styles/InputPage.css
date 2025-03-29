@@ -14,6 +14,7 @@
 }
 .cd12{
     grid-column: span 3;
+    
 }
 .cd1{
 
@@ -22,7 +23,8 @@
     justify-content: center;
     color: #fff ;
     grid-column: span 3;
-    background-color: #3e4141e0 ;
+    background-color: #53cacae0 ;
+    border-radius: 1rem;
 }
 .cd1 h1{
     font-family: sans-serif;
@@ -31,8 +33,4 @@
 .cd11{
     grid-column: span 3;
 }
-.cd13{
-    background-color: red;
 
-    grid-column: span 3;
-}

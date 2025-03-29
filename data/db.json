@@ -2,9 +2,9 @@
   "notes": [
     {
       "id": "fc68",
-      "date": "2025-03-27T17:20:37.223Z",
+      "date": "2025-03-28T05:15:48.931Z",
       "title": "1. first entry for check",
-      "content": "<p><br></p>",
+      "content": "<p><br></p><p>Mood Tracker 🌤️ 😊 Mood rating (out of 10):</p><p><br></p><p>🎯 What caused this mood:</p><p><br></p><p>🫶 What helped me feel better:</p><p><br></p><p>💬 Affirmation for today:</p>",
       "selectedEmojis": [
         "Guitar",
         "Read",
@@ -14,7 +14,8 @@
       ],
       "selectedCoverEmoji": "rad",
       "isFavourite": true,
-      "draft": true
+      "draft": false,
+      "image": ""
     },
     {
       "id": "cb68",
@@ -29,32 +30,8 @@
       ],
       "selectedCoverEmoji": "awful",
       "isFavourite": true,
-      "draft": true
-    },
-    {
-      "id": "a5e0",
-      "date": "2025-03-27T09:38:15.817Z",
-      "title": "4th entry rebirth",
-      "content": "<p><br></p>",
-      "selectedEmojis": [
-        "Stressed",
-        "Helping",
-        "Start Early",
-        "Sad"
-      ],
-      "selectedCoverEmoji": "bad",
-      "isFavourite": true,
-      "draft": true
-    },
-    {
-      "id": "74a1",
-      "title": "hii that ",
-      "content": "<p><br></p>",
-      "date": "2025-03-26T04:46:08.290Z",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false,
-      "draft": true
+      "draft": false,
+      "image": ""
     },
     {
       "id": "9aa8",
@@ -68,70 +45,8 @@
       ],
       "selectedCoverEmoji": "good",
       "isFavourite": false,
-      "draft": true
-    },
-    {
-      "id": "8e3a",
-      "date": "2025-03-27T09:37:31.044Z",
-      "title": "aleart",
-      "content": "<p>aleart</p>",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "meh",
-      "isFavourite": false,
-      "draft": true
-    },
-    {
-      "id": "fc5b",
-      "date": "2025-03-27T09:36:54.870Z",
-      "title": "color",
-      "content": "<p>check</p>",
-      "selectedEmojis": [
-        "Medation",
-        "Focus"
-      ],
-      "selectedCoverEmoji": "meh",
-      "isFavourite": false,
-      "draft": true
-    },
-    {
-      "id": "c179",
-      "title": "Wed Mar 26 2025",
-      "content": "<p><br></p>",
-      "date": "2025-03-26T17:20:55.906Z",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false,
-      "draft": true
-    },
-    {
-      "id": "9144",
-      "title": "s",
-      "content": "<p><br></p>",
-      "date": "2025-03-26T17:26:31.372Z",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false,
-      "draft": true
-    },
-    {
-      "id": "9fcb",
-      "title": "s",
-      "content": "<p><br></p>",
-      "date": "2025-03-26T17:28:42.515Z",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false,
-      "draft": true
-    },
-    {
-      "id": "921b",
-      "title": "sd",
-      "content": "",
-      "date": "2025-03-26T17:43:41.681Z",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false,
-      "draft": true
+      "draft": false,
+      "image": ""
     },
     {
       "id": "96c2",
@@ -149,13 +64,14 @@
       ],
       "selectedCoverEmoji": "meh",
       "isFavourite": false,
-      "draft": false
+      "draft": false,
+      "image": ""
     },
     {
       "id": "b265",
-      "date": "2025-03-28T04:50:53.629Z",
+      "date": "2025-03-28T05:09:52.341Z",
       "title": "again test's for error",
-      "content": "<p>okay now what</p><p>Daily Reflection 🪞 🌟 Today’s highlight:</p><p><br></p><p>💡 One thing I learned:</p><p><br></p><p>⚠️ What I could do better:</p><p><br></p><p>🌈 How I’ll improve tomorrow:</p>",
+      "content": "<p>okay now what</p><p>Daily Reflection 🪞 🌟 Today’s highlight:</p><p><br></p><p>💡 :</p><p><br></p><p>⚠️ What I could do better:</p><p><br></p><p>🌈 How I’ll improve tomorrow:</p>",
       "selectedEmojis": [
         "Helping",
         "Relax",
@@ -164,17 +80,8 @@
       ],
       "selectedCoverEmoji": "awful",
       "isFavourite": false,
-      "draft": false
-    },
-    {
-      "id": "0a04",
-      "title": "sd",
-      "content": "<p>sdfd</p>",
-      "date": "2025-03-27T11:58:15.924Z",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "",
-      "isFavourite": false,
-      "draft": true
+      "draft": false,
+      "image": ""
     },
     {
       "id": "55ac",
@@ -194,17 +101,8 @@
       ],
       "selectedCoverEmoji": "meh",
       "isFavourite": false,
-      "draft": false
-    },
-    {
-      "id": "21c1",
-      "title": "Describe today in 3 words",
-      "content": "<p><br></p>",
-      "date": "2025-03-28T02:50:56.408Z",
-      "selectedEmojis": [],
-      "selectedCoverEmoji": "good",
-      "isFavourite": false,
-      "draft": true
+      "draft": false,
+      "image": ""
     },
     {
       "id": "9c29",
@@ -214,22 +112,24 @@
       "selectedEmojis": [],
       "selectedCoverEmoji": "",
       "isFavourite": false,
-      "draft": true
+      "draft": false,
+      "image": ""
     },
     {
       "id": "c40c",
+      "date": "2025-03-28T05:18:41.494Z",
       "title": "Something I learned today",
       "content": "<p><br></p><p>Daily Reflection 🪞 🌟 Today’s highlight:</p><p><br></p><p>💡 One thing I learned:</p><p><br></p><p>⚠️ What I could do better:</p><p><br></p><p>🌈 How I’ll improve tomorrow:</p><p>Gratitude 🌸 🙏 Today I am grateful for:</p><p><br></p><p>✨ Why these things matter:</p><p><br></p><p>💖 How this makes me feel:</p>",
-      "date": "2025-03-28T03:13:17.638Z",
       "selectedEmojis": [],
-      "selectedCoverEmoji": "",
+      "selectedCoverEmoji": "good",
       "isFavourite": false,
-      "draft": true
+      "draft": false,
+      "image": ""
     },
     {
       "id": "17a2",
-      "date": "2025-03-28T04:50:33.597Z",
-      "title": "Fri Mar 28 2025",
+      "date": "2025-03-28T05:23:01.231Z",
+      "title": "One small win I had...",
       "content": "<p><br></p><p>Gratitude 🌸</p><p>🙏 Today I am grateful for:</p><p>my life experiences.</p><p>my progress \\ my improvement</p><p><br></p><p><br></p><p>✨ Why these things matter:</p><p>because it is making me happy</p><p>making my life meaningfull</p><p><br></p><p>💖 How this makes me feel:happy every happy.</p>",
       "selectedEmojis": [
         "Medation",
@@ -244,25 +144,179 @@
       ],
       "selectedCoverEmoji": "meh",
       "isFavourite": false,
-      "draft": false
+      "draft": false,
+      "image": ""
     },
     {
-      "id": "749d",
-      "title": "Fri Mar 28 2025",
-      "content": "<p><br></p>",
-      "date": "2025-03-28T04:53:06.430Z",
+      "id": "743a",
+      "date": "2025-03-28T11:17:53.319Z",
+      "title": "What do I feel grateful for?",
+      "content": "<p><br></p><p>Goal Check-in 🎯 ✨ Today’s main goal:</p><p><br></p><p>🏆 Progress made:</p><p><br></p><p>🚧 Challenges faced:</p><p><br></p><p>💪 How I feel about it:</p>",
       "selectedEmojis": [
-        "Paint",
+        "Focus"
+      ],
+      "selectedCoverEmoji": "awful",
+      "isFavourite": false,
+      "draft": false,
+      "image": ""
+    },
+    {
+      "id": "b953",
+      "date": "2025-03-28T16:11:33.796Z",
+      "title": "sdfsdfsdfs",
+      "content": "<p>dsfsdfsdfsdf</p>",
+      "selectedEmojis": [
         "Medation",
-        "Mid Sleep",
-        "Read",
-        "Grateful",
-        "Happy",
-        "Relaxed"
+        "Satisfied"
       ],
       "selectedCoverEmoji": "meh",
       "isFavourite": false,
-      "draft": true
+      "draft": false,
+      "image": ""
+    },
+    {
+      "id": "7994",
+      "date": "2025-03-28T17:06:58.742Z",
+      "title": "One small win I had...",
+      "content": "<p><br></p><p>Mood Tracker 🌤️ 😊 Mood rating (out of 10):</p><p><br></p><p>🎯 What caused this mood:</p><p><br></p><p>🫶 What helped me feel better:</p><p><br></p><p>💬 Affirmation for today:</p>",
+      "selectedEmojis": [
+        "Medation",
+        "Read",
+        "Focus"
+      ],
+      "selectedCoverEmoji": "rad",
+      "isFavourite": false,
+      "draft": false,
+      "image": ""
+    },
+    {
+      "id": "59c2",
+      "date": "2025-03-29T03:05:08.022Z",
+      "title": "One small win I had...",
+      "content": "<p><br></p><p>Mind Dump 📝 🧩 What’s on my mind:</p><p><br></p><p>🧩 What’s bothering me:</p><p><br></p><p>🧩 Something unexpected that happened:</p><p><br></p><p>🌻 A happy moment today:</p>",
+      "selectedEmojis": [
+        "Medation",
+        "Anme",
+        "Content"
+      ],
+      "selectedCoverEmoji": "good",
+      "isFavourite": false,
+      "draft": false,
+      "image": "https://res.cloudinary.com/dix8r88u3/image/upload/v1743181767/Screenshot_2025-02-12_215000_twrmlf.png"
+    },
+    {
+      "id": "aa58",
+      "date": "2025-03-29T03:03:46.407Z",
+      "title": "What challenged me?",
+      "content": "<p><br></p><p>Dream Log 🌙 🌌 Dream details:</p><p><br></p><p>🤔 Possible meaning:</p><p><br></p><p>📅 Connection to current life:</p><p><br></p><p>🎈 Feeling after waking up:</p>",
+      "selectedEmojis": [
+        "Mid Sleep"
+      ],
+      "selectedCoverEmoji": "rad",
+      "isFavourite": false,
+      "draft": false,
+      "image": ""
+    },
+    {
+      "id": "6b0b",
+      "date": "2025-03-29T03:03:54.954Z",
+      "title": "What do I feel grateful for?",
+      "content": "<p><br></p><p>Gratitude 🌸 🙏 Today I am grateful for:</p><p><br></p><p>✨ Why these things matter:</p><p><br></p><p>💖 How this makes me feel:</p>",
+      "selectedEmojis": [
+        "Gratitude",
+        "Anme"
+      ],
+      "selectedCoverEmoji": "awful",
+      "isFavourite": false,
+      "draft": false,
+      "image": ""
+    },
+    {
+      "id": "abef",
+      "date": "2025-03-29T03:04:23.489Z",
+      "title": "Sat Mar 29 2025",
+      "content": "<p><br></p><p><br></p><p>Posin #3: i am working in my dream company with my dream salary.</p><p><br></p><p>✨ How I feel reading them: i am very happy</p>",
+      "selectedEmojis": [
+        "Medation",
+        "Mid Sleep",
+        "Drink Water",
+        "Progress",
+        "Wellness",
+        "Happy",
+        "Excited",
+        "Grateful"
+      ],
+      "selectedCoverEmoji": "meh",
+      "isFavourite": false,
+      "draft": false,
+      "image": ""
+    },
+    {
+      "id": "8152",
+      "title": "",
+      "content": "<p><br></p><p><br></p><p>Positive Affirmations 🌈</p><p>💖 Affirmation #1: i am improving every second</p><p><br></p><p>💖 Affirmation #2:i am happy and living a joy full life</p><p><br></p><p>💖 Affirmation #3: i am working in my dream company with my dream salary.</p><p><br></p><p>✨ How I feel reading them: i am very happy</p>",
+      "date": "2025-03-29T02:56:29.142Z",
+      "selectedEmojis": [
+        "Medation",
+        "Mid Sleep",
+        "Drink Water",
+        "Progress",
+        "Wellness",
+        "Happy",
+        "Excited",
+        "Grateful"
+      ],
+      "selectedCoverEmoji": "meh",
+      "isFavourite": false,
+      "draft": true,
+      "image": ""
+    },
+    {
+      "id": "1fd1",
+      "date": "2025-03-29T03:05:25.922Z",
+      "title": "Sat Mar 29 2025",
+      "content": "<p><br></p><p><br></p><p>Positive Affirmations 🌈</p><p>💖 Affirmation #1: i am improving every second</p><p><br></p><p>💖 Affirmation #2:i am happy and living a joy full life</p><p><br></p><p>💖 Affirmation #3: i am working in my dream company with my dream salary.</p><p><br></p><p>✨ How I feel reading them: i am very happy</p>",
+      "selectedEmojis": [
+        "Medation",
+        "Mid Sleep",
+        "Drink Water",
+        "Progress",
+        "Wellness",
+        "Happy",
+        "Excited",
+        "Grateful"
+      ],
+      "selectedCoverEmoji": "meh",
+      "isFavourite": false,
+      "draft": false,
+      "image": ""
+    },
+    {
+      "id": "f2b3",
+      "date": "2025-03-29T03:16:12.495Z",
+      "title": "A random thought I had...",
+      "content": "<p>Kindness Record 🌷 ❤️ Kind thing I did for someone:</p><p><br></p><p>🌼 How they reacted:</p><p><br></p><p>💖 Kind thing someone did for me:</p><p><br></p><p>🌸 What I learned from kindness:</p>",
+      "selectedEmojis": [
+        "Biking",
+        "Sad"
+      ],
+      "selectedCoverEmoji": "good",
+      "isFavourite": false,
+      "draft": false,
+      "image": "https://res.cloudinary.com/dix8r88u3/image/upload/v1743218173/456824_qsg56y.jpg"
+    },
+    {
+      "id": "81d5",
+      "title": "Something I learned today",
+      "content": "<p>Mini Achievements 🌟 🥳 Little wins today:</p><p><br></p><p>🎯 Effort I’m proud of:</p><p><br></p><p>💡 What kept me going:</p><p><br></p><p>💐 A reward I deserve:</p>",
+      "date": "2025-03-29T03:19:26.735Z",
+      "selectedEmojis": [
+        "Relax"
+      ],
+      "selectedCoverEmoji": "awful",
+      "isFavourite": false,
+      "draft": true,
+      "image": ""
     }
   ]
 }

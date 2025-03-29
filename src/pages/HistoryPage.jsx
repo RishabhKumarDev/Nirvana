@@ -115,7 +115,7 @@ return notes.filter(note => note.draft !== true);  // had to add draft becasue a
                     <div className={`no-entries ${filteredNotes.length === 0 ? "yet":""}`}>
                         <h1>No</h1>
                         <h2>Entries</h2>
-                        <h3>Yet</h3>
+                        <h3>Found</h3>
                     </div>
                     {filteredNotes
                     .map((note)=>(
@@ -166,8 +166,11 @@ return notes.filter(note => note.draft !== true);  // had to add draft becasue a
                              {(note.content || "").replace(/<[^>]+>/g," ").trim()} {/* <-- this is to display the notes wihtout html elements what happening was besause react-quill act as html editor so it was pushing whole html element in api and display was desplaying all the elements too */}
                                 </p></div> 
                                 
-                             
+                            {note.image && <div className="note-image-display">
+                                <img className="actual-image-history" src={note.image} alt="uploaded image" />
+                             </div>}
                              </div>
+                             
                             </div>
                             </div>
                         </li>

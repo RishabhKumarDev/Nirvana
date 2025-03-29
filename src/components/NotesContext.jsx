@@ -1,7 +1,6 @@
 import axios from "axios";
 import { createContext, useContext, useEffect, useState } from "react";
 import { useNotification } from "./Notification/NotificationContext";
-
 const NotesContext = createContext();
 
 export const NotesProvider = ({children}) => {
@@ -16,6 +15,7 @@ export const NotesProvider = ({children}) => {
     const [isFavourite,setIsFavourite] = useState(false);
     const [draft,setIsDraft] = useState(false);
     const [isSaving,setIsSaving] = useState(false);
+    const [imageUrl,setImageUrl] =useState('');
 
 // fetch notes
     useEffect(()=>{
@@ -55,10 +55,11 @@ return new Date(time).toLocaleTimeString("en-US",{
                         selectedEmojis: note.selectedEmojis,
                         selectedCoverEmoji: note.selectedCoverEmoji,
                         isFavourite: note.isFavourite,
-                        draft: false
-                    }; // this create an object which check 
+                        draft: false,
+                        image:imageUrl,
+                    }; 
         console.log(newNote.id,note.id);
-
+        console.log(imageUrl);
         try { 
 
             
@@ -70,7 +71,7 @@ return new Date(time).toLocaleTimeString("en-US",{
                     setStatus('')
                 }, 1000);
                 setNoteInput({...noteInput, title:"",content:"",id:null})
-               
+                setImageUrl('');
                 
             }
             else{
@@ -126,6 +127,7 @@ return new Date(time).toLocaleTimeString("en-US",{
                        selectedCoverEmoji: selectedCoverEmoji,
                        isFavourite: isFavourite,
                        draft:true,
+                       image:"",
                     }
 
                        
@@ -158,7 +160,8 @@ return new Date(time).toLocaleTimeString("en-US",{
              setNotes(notes.filter(note => note.id !== id));
              setNoteInput({title:"",content:""});
              setNotification({message:'Successfully deleted',type:"sucess"})
-
+   
+            
         } catch (error) {
             console.error("couldn't delete data",error);
             setNotification({message:"couldn't delete",type:"error"})
@@ -167,13 +170,13 @@ return new Date(time).toLocaleTimeString("en-US",{
     } 
     // edit notes
     const handleEdit =(note) =>{
-        debugger;
-        console.log('edit btn is being called',note)
+        
         setNoteInput({...noteInput,title:note.title,content:note.content,id:note.id});
         setSelectedEmojis(note.selectedEmojis)
         setSelectedCoverEmoji(note.selectedCoverEmoji)
         setDateAndTime(note.date ? new Date(note.date) : new Date());
         setIsFavourite(note.isFavourite)
+        setImageUrl(note.image)
         setNotification({message:'Edit mode',type:""})
 
     
@@ -199,6 +202,9 @@ return new Date(time).toLocaleTimeString("en-US",{
                                        ,setIsFavourite
                                        ,draft
                                        ,isSaving
+                                       ,setIsSaving
+                                       ,setImageUrl
+                                       ,imageUrl
                                        
                                         }}>
             {children}

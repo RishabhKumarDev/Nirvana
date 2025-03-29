@@ -150,13 +150,28 @@
     /* contain coveremoji and one history */
     display: flex;
 }
+
+.rad{
+    color:#15B790  ;
+}
+.good{
+    color: #8CCD29 ;
+}
+.meh{
+    color: #4DA3D4 ;
+}
+.bad{
+    color: #F28C38;
+}
+.awful{
+    color: #F0162F ;
+}
 .cover-emoji-history{
     /* cover emoji icon form first page  */
     font-size: clamp(2rem, 2vw + 2rem, 2.3rem);
     /* font-size: 3rem; */
     padding-right: clamp(0.5rem , 0.3vw , 0.7rem);
     /* padding-right: 1rem; */
-    color: #12f4c3;
 }
 .time-coveremojiname-fav-edit-wrap{
     /* first div inside one history contians cover emoi name, time, fav, edit icon*/
@@ -272,19 +287,13 @@
     white-space: pre-line;
     color: #fff;
 }
+/* image-display */
+.note-image-display{
+    width: 100%;
+    height: 12em;
+}
+.actual-image-history{
+    width: 100%;
+    height: 100%;
 
-.rad{
-    color:#15B790  ;
-}
-.good{
-    color: #8CCD29 ;
-}
-.meh{
-    color: #4DA3D4 ;
-}
-.bad{
-    color: #F28C38;
-}
-.awful{
-    color: #F0162F ;
 }

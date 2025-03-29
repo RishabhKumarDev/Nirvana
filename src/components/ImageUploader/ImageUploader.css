@@ -1,0 +1,46 @@
+
+.image-uploader{
+    width: 16rem;
+    height: 17.5rem;
+    background-color: rgb(36, 31, 31);
+    border: 0.2rem  solid rgb(61, 164, 147) ;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10em;
+}
+.submit-image-btn{
+    border: none;
+    position: relative;
+    outline: none;
+    border-radius: 1rem;
+    background-color: rgb(36, 31, 31);
+}
+.upload-icon{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 2em;
+    color: aquamarine;
+
+}
+.default-image{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 1rem;
+    background-color: rgb(36, 31, 31);
+    font-size: 3em;
+    font-weight: 800;
+    color: rgb(130, 210, 184);
+}
+.remove-img{
+    background-color: rgb(229, 58, 58);
+    border-radius: 0.5rem;
+    display: flex;
+    font-weight: 800;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}

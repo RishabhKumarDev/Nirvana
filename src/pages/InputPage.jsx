@@ -5,6 +5,7 @@ import SaveBtn from "../components/SaveBtn";
 import "../styles/InputPage.css";
 import InputEmojis from "../components/InputEmojis";
 import { useNotification } from "../components/Notification/NotificationContext";
+import ImageUpload from "../components/ImageUploader/ImageUploader";
 
 
 const InputPage = () => {
@@ -43,7 +44,7 @@ const InputPage = () => {
          saveNote({...noteInput,
             selectedEmojis,
             selectedCoverEmoji,
-            isFavourite}), 0
+            isFavourite})
 
          setNoteInput({title:'',content:'',id:null});
          setSelectedEmojis([]);
@@ -71,15 +72,16 @@ const InputPage = () => {
            <div className="cd12">
             <NotePad noteInput={noteInput} setNoteInput={setNoteInput} status={status}   />
            <SaveBtn  onSave={saveInput} />
-
+           <div className="image-voice-container">
+           <div className="image-upload-section">
+            <ImageUpload/>
            </div>
-          
-
-           <div className="cd13">
-
+           <div className="voice-upload-section"></div>
+        </div>
            </div>
           
         </div>
+       
         </>
      );
 }
