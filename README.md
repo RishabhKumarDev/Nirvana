@@ -24,7 +24,7 @@ Nirvana is a personal journaling app designed to make tracking emotions, thought
 ## Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/nirvana.git
+   git clone https://github.com/RishabhKumarDev/nirvana.git
    ```
 2. Navigate to the project folder:
    ```sh
