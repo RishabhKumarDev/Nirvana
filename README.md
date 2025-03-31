@@ -11,11 +11,8 @@ Nirvana is a personal journaling app designed to make tracking emotions, thought
 - **Favorites:** Mark important journal entries for easy access.
 - **Remember Feature:** Highlight and save key moments.
 - **History Page:** View and manage past entries with a calendar-based UI.
-
- ## Future updates
-- **Login System:** authentication with firebase.
-- **Responsive Design:** Works across different devices.(workin on it)
-- **Voice Notes:** Record and upload voice notes (planned feature).
+- **Login System:** Basic authentication for personalized experiences (WIP).(future plan)
+- **Responsive Design:** Works across different devices.(future plan)
 
 ## Tech Stack
 - **Frontend:** React (Vite), Axios for API calls.
@@ -58,7 +55,7 @@ VITE_CLOUDINARY_UPLOAD_PRESET=your_preset_name
 - `POST /entries` - Add a new entry.
 - `DELETE /entries/:id` - Remove an entry.
 
-## Known Issues & Future Improvements
+## Known Issues & Future Improvements(All Issues will be gone when I will add a real backend currently i am using .JSON that's why the Issues are.)
 - **Image Upload Flow:** Currently, images are uploaded to Cloudinary before clicking save. This might need optimization.
 - **Authentication:** Implement a real authentication system instead of mock login.
 - **Data Persistence:** Move from JSON Server to a real backend (e.g., Firebase, MongoDB).
