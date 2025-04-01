@@ -7,13 +7,15 @@ Nirvana is a personal journaling app designed to make tracking emotions, thought
 - **Mood Tracking:** Select an emoji to reflect your current emotion.
 - **Journal Entries:** Write notes with options like to-do lists and reflections.
 - **Photo Uploads:** Attach an image to your journal entry (stored on Cloudinary, with the link saved in a JSON server).
-- **Voice Notes:** Record and upload voice notes (planned feature).
 - **Search by Date:** Quickly find past entries based on date.
 - **Favorites:** Mark important journal entries for easy access.
 - **Remember Feature:** Highlight and save key moments.
 - **History Page:** View and manage past entries with a calendar-based UI.
-- **Login System:** Basic authentication for personalized experiences (WIP).
-- **Responsive Design:** Works across different devices.
+
+ ## Future updates
+- **Login System:** authentication with firebase.
+- **Responsive Design:** Works across different devices.(workin on it)
+- **Voice Notes:** Record and upload voice notes (planned feature).
 
 ## Tech Stack
 - **Frontend:** React (Vite), Axios for API calls.
@@ -42,7 +44,7 @@ Nirvana is a personal journaling app designed to make tracking emotions, thought
    ```sh
    npm run dev
    ```
-
+If you don't want photo upload feature don't follow further step.
 ## Environment Variables
 Create a `.env` file in the root directory and add the following:
 ```env
