@@ -32,7 +32,7 @@ const EmotionsTracker = ({selectedCoverEmoji,setSelectedCoverEmoji}) => {
                      {emoji.name}</p> 
                 </div>
             )
-            // wrap Link only if the location is first page "/".
+            // wrap Link only if the location is first page "/".(if not then on every click it will take this to first page)
             
             return isCoverPage ? (<Link to={"/input"} key={i}> {emojiElement} </Link>) : (<div key={i}> {emojiElement}  </div>);
            

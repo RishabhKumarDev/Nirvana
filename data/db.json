@@ -1,23 +1,6 @@
 {
   "notes": [
     {
-      "id": "fc68",
-      "date": "2025-03-28T05:15:48.931Z",
-      "title": "1. first entry for check",
-      "content": "<p><br></p><p>Mood Tracker 🌤️ 😊 Mood rating (out of 10):</p><p><br></p><p>🎯 What caused this mood:</p><p><br></p><p>🫶 What helped me feel better:</p><p><br></p><p>💬 Affirmation for today:</p>",
-      "selectedEmojis": [
-        "Guitar",
-        "Read",
-        "Make List",
-        "Teamwork",
-        "Sad"
-      ],
-      "selectedCoverEmoji": "rad",
-      "isFavourite": true,
-      "draft": false,
-      "image": ""
-    },
-    {
       "id": "cb68",
       "date": "2025-03-28T04:49:07.118Z",
       "title": "5th What made you smile today?",
@@ -362,6 +345,52 @@
       "selectedEmojis": [],
       "selectedCoverEmoji": "good",
       "isFavourite": false,
+      "draft": false,
+      "image": ""
+    },
+    {
+      "id": "8d8c",
+      "title": "Tue Apr 01 2025",
+      "content": "<p><br></p>",
+      "date": "2025-04-01T10:34:45.772Z",
+      "selectedEmojis": [],
+      "selectedCoverEmoji": "",
+      "isFavourite": false,
+      "draft": true,
+      "image": ""
+    },
+    {
+      "id": "3adb",
+      "date": "2025-04-05T05:21:43.196Z",
+      "title": "One small win I had...",
+      "content": "<p><br></p><p>Self-Care Reminder 💆‍♀️ 🧘‍♂️ Did I rest enough today?:</p><p><br></p><p>🍃 How I treated myself kindly:</p><p><br></p><p>🌸 What I could do for myself tomorrow:</p>",
+      "selectedEmojis": [
+        "Donate",
+        "Read",
+        "Focus",
+        "Stresed",
+        "Content"
+      ],
+      "selectedCoverEmoji": "good",
+      "isFavourite": true,
+      "draft": false,
+      "image": ""
+    },
+    {
+      "id": "f673",
+      "date": "2025-04-08T09:31:36.389Z",
+      "title": "What do I want to improve tomorrow?",
+      "content": "<p><strong>sd</strong></p><p>Self-Care Remisough today?:</p><h1>sdsdf sdf<em>dfsdffdf<u>dfdff </u></em></h1><p>🍃 How I treated myself kindly:</p><p><br></p><ol><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>🌸 What I could do for myself<u> tomorrow</u></li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span><br></li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span><br></li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span><br></li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span><br></li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span><br></li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span><br></li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span>fsd</li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span><br></li><li data-list=\"ordered\"><span class=\"ql-ui\" contenteditable=\"false\"></span><u>fdsd:</u></li></ol><p>Self-Care Reminder 💆‍♀️ 🧘‍♂️ Did I rest enough today?:</p><p><br></p><p>🍃 How I treated myself kindly:</p><p><br></p><p>🌸 What I could do for myself tomorrow:</p><p>Positive Affirmations 🌈 💖 Affirmation #1:</p><p>sdfd</p><p>💖 Affirmation #2:</p><p><br></p><p>💖 Affirmation #3:</p><p><br></p><p>✨ How I feel reading them:</p><p>Mini Achievements 🌟 🥳 Little wins today:</p><p><br></p><p>🎯 Effort I’m proud of:</p><p><br></p><p>💡 What kept me going:</p><p><br></p><p>💐 A reward I deserve:</p>",
+      "selectedEmojis": [
+        "Walk",
+        "Read",
+        "Growth",
+        "Angry",
+        "Tired",
+        "Good Sleep"
+      ],
+      "selectedCoverEmoji": "meh",
+      "isFavourite": true,
       "draft": false,
       "image": ""
     }

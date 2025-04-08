@@ -14,7 +14,7 @@ import {
     MdOutlineSportsBasketball, MdMovie, 
     MdFamilyRestroom,  MdEmojiPeople, MdOutlineTrackChanges, MdChecklist, 
     MdCelebration ,
-    MdFaceRetouchingNatural ,MdSentimentSatisfied 
+    MdFaceRetouchingNatural  
   } from "react-icons/md";
   
   // react-icons/gi
@@ -47,7 +47,7 @@ export const iconCategory = [
             {icon: <FaGuitar/>, name:"Guitar"},
             {icon: <FaPaintBrush/>, name:"Paint"},
             {icon: <FaRunning/>, name:"Running"},
-            {icon: <FaChess />, name:"Chess"},
+            {icon: <FaChess />, name:" Chess "},
             {icon: <FaWalking/>, name:"Walking"}
         ]
 
@@ -58,6 +58,7 @@ export const iconCategory = [
             {icon:<FaHandHoldingHeart/>,name:"Helping"},
             {icon:<FaHandHoldingUsd/>,name:"Donate"},
             {icon:<FaAssistiveListeningSystems/>,name:"Listen"},
+            {icon:<FaPrayingHands/>,name:"Gratitude"},
             {icon:<FaPrayingHands/>,name:"Gratitude"}
             
         ]
@@ -68,17 +69,18 @@ export const iconCategory = [
             {icon:<FaRegTired/>,name:"Bad Sleep"},
             {icon:<MdNightlight/>,name:"Mid Sleep"},
             {icon:<GiAlarmClock/>,name:"Sleep Early"},
-            {icon:<GiAlarmClock/>,name:"Sleep Late"}
+            {icon:<GiAlarmClock/>,name:"Sleep Late"},
 
         ]
     },{
         category:"Health",
         emojis:[
             {icon:<FaDumbbell/>,name:"Exercise"},
-            {icon:<GiFruitBowl/>,name:"Eat Healthy"},
-            {icon:<GiWaterBottle/>,name:"Drink Water"},
+            {icon:<GiFruitBowl/>,name:"Healthy"},
+            {icon:<GiWaterBottle/>,name:"Water"},
             {icon:<FaWalking/>,name:"Walk"},
-            {icon:<MdOutlineSportsBasketball/>,name:"Sport"}
+            {icon:<MdOutlineSportsBasketball/>,name:"Sport"},
+            {icon:<MdOutlineSportsBasketball/>,name:"Sport"},
 
         ]
     },{
@@ -88,17 +90,19 @@ export const iconCategory = [
             {icon:<FaBook/>,name:"Read"},
             {icon:<GiConsoleController/>,name:"Gaming"},
             {icon:<FaSpa/>,name:"Relax"},
-            {icon:<FaFilm/>,name:"Anme"}
+            {icon:<FaFilm/>,name:"Anme"},
+            {icon:<FaFilm/>,name:"Anme"},
+
         ]
     },{
         category:"Food",
         emojis:[
             {icon:<GiFrenchFries/>,name:"Fast Food"},
-            {icon:<GiHotMeal/>,name:"Homemade"},
+            {icon:<GiHotMeal/>,name:"Home"},
             {icon:<MdDeliveryDining/>,name:"Delivery"},
             {icon:<TbMeatOff/>,name:"NoMeat"},
-            {icon:<GiCakeSlice/>,name:"NoSweets"},
-            {icon:<GiSodaCan/>,name:"NoSoda"}
+            {icon:<GiCakeSlice/>,name:"Sweets"},
+            {icon:<GiSodaCan/>,name:"Soda"}
         ]
     },{
         category:"Social",
@@ -107,7 +111,8 @@ export const iconCategory = [
             {icon:<FaUserFriends/>,name:"Friends"},
             {icon:<FaUser/>,name:"Me"},
             {icon:<MdEmojiPeople/>,name:"Party"},
-            {icon:<FaPeopleCarry/>,name:"Teamwork"}
+            {icon:<FaPeopleCarry/>,name:"Teamwork"},
+            {icon:<FaPeopleCarry/>,name:"Teamwork"},
 
         ]
     },{
@@ -127,6 +132,8 @@ export const iconCategory = [
             {icon:<GiThreeLeaves/>,name:"Wellness"},
             {icon:<FaHandSparkles/>,name:"Manicure"},
             {icon:<MdFaceRetouchingNatural/>,name:"Skin Care"},
+            {icon:<MdFaceRetouchingNatural/>,name:"Skin Care"},
+            {icon:<MdFaceRetouchingNatural/>,name:"Skin"},
 
         ]
     },{
@@ -138,14 +145,18 @@ export const iconCategory = [
             {icon:<GiIsland />,name:"Relaxed"},
             {icon:<GiLotus/>,name:"Content"},
             {icon:<GiHotSurface />,name:"Tired"},
+            
+            
+        ]
+    },{
+        category:"Bad Emotion",
+        emojis:[
             {icon:<FaQuestion />,name:"Unsure"},
             {icon:<TbMountain />,name:"Bored"},
             {icon:<TbCloudStorm />,name:"Anxious"},
             {icon:<GiVolcano />,name:"Angry"},
-            {icon:<GiHeavyRain />,name:"Stressed"},
+            {icon:<GiHeavyRain />,name:"Stresed"},
             {icon:<GiThreeLeaves/>,name:"Sad"},
-            {icon:<GiHelp />,name:"Desperate"},
-            
         ]
     }
     

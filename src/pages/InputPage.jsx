@@ -65,22 +65,23 @@ const InputPage = () => {
       <div className="start-emotion">
          <EmotionsTracker selectedCoverEmoji={selectedCoverEmoji} setSelectedCoverEmoji={setSelectedCoverEmoji} /> 
       </div>
+      <span className="cd1"> <h1>What have been up to?</h1></span>
+
         <div className="input-wrap">
-           <div className="cd1"> <h1>What have been up to?</h1></div>
            <InputEmojis selectedEmojis={selectedEmojis} setSelectedEmojis={setSelectedEmojis} />
+        </div>
            
-           <div className="cd12">
+           <div className="note-image-audio-container">
            <div className="image-voice-container">
            <div className="image-upload-section">
             <ImageUpload/>
            </div>
            <div className="voice-upload-section"></div>
-        </div>
-            <NotePad noteInput={noteInput} setNoteInput={setNoteInput} status={status}   />
-           <SaveBtn  onSave={saveInput} />
+            
            
            </div>
-          
+           <NotePad noteInput={noteInput} setNoteInput={setNoteInput} status={status}   />
+           <SaveBtn  onSave={saveInput} />
         </div>
        
         </>

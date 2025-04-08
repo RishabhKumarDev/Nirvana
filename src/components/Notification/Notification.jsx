@@ -19,7 +19,7 @@ const handleNotificationColor =(type)=>{
         <div className={"notification-container"}>
         <div className={`notification ${handleNotificationColor(notification.type)}`}>
             <span className="notification-icon"> <IoInformationCircleSharp /></span>
-            <span className={`notification-message ${handleNotificationColor(notification.type)}`}>{notification.message}</span>
+            <span className={`notification-message `}>{notification.message}</span>
             <span className="notification-remove-icon"> <MdCancel /></span>
         </div>
         </div>

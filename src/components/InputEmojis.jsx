@@ -19,7 +19,7 @@ const InputEmojis = ({selectedEmojis,setSelectedEmojis}) => {
         <>
         {iconCategory.map((categoryObj,index) =>(
             <div key={categoryObj.category}
-            className={`cd${index + 2}`}
+            className={`Emojis-card`}
             >
         <div className="emoji-title">{categoryObj.category}</div>
 
