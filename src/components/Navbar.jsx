@@ -38,6 +38,8 @@ const Navbar = () => {
               <span className="nirvana-part1">Nirvana</span>
             </Link>
 
+            <Link to="/direct" style={{color:'white', fontSize:"24px"}}> Direct</Link>  
+
         </nav>
         <SideBar  sideBarVisible={sideBarVisible} setSideBarVisible={setSideBarVisible}/>
 

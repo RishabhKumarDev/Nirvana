@@ -1,0 +1,128 @@
+
+.direct-container{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+   
+}
+.direct-upper{
+    /* background-color: aliceblue; */
+    width: 100vw;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.direct-name{
+    color: honeydew;
+    /* font-size: clamp(1.8rem, calc(1rem+2vw),  4vw); */
+    font-size: 3rem;
+    color: #00ffbfd8;
+    border-bottom: 0.3rem solid #00ccff;
+    font-family:  monospace;
+    background-color: #000000;
+    padding: 1px;
+    
+}
+
+.direct-lower{
+    /* background-color: red; */
+    width: 100vw;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+.direct-sign{
+    width: fit-content;
+    height: fit-content;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    font-size: 3rem;
+    font-weight: 700;
+    /* color: rgba(255, 145, 0, 0.859); */
+    padding: 1rem;
+}
+
+.s {
+    color: #ff0000; 
+    text-shadow: 0 0 2px #39FF14;
+  }
+  
+  .i {
+    color: #1500ff; 
+    text-shadow: 0 0 2px #FF1493;
+  }
+  
+  .g {
+    color: #ff0000; 
+    text-shadow: 0 0 2px #00BFFF;
+  }
+  
+  .n {
+    color: #1500ff; 
+    text-shadow: 0 0 2px #00FFFF;
+  }
+  
+  ._ {
+    color: #ffffff; 
+    text-shadow: 0 0 2px #8A2BE2;
+  }
+  
+  .h {
+    color: #f6ff00; 
+    text-shadow: 0 0 2px #FFFF00;
+  }
+
+  .penguin{
+    /* background-color: #00c8ff; */
+    width: 400px;
+    margin-top: -100px;
+    display: block;
+  }
+.character-container{
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    /* background-color: red; */
+}
+.pill{
+   position: absolute;
+   padding: 0.5rem 1.5rem;
+   border-radius: 1rem;
+   color: white;
+   border: 1px solid white;
+   text-align: center;
+   font-weight: bold;
+   text-decoration: none;
+   transition: all 0.6s ease;
+   box-sizing: 0 0 0 transparent;
+}
+.red-pill{
+    background-color: red;
+    top: 60%;
+    left: 12.666%;
+   padding: 0.5rem 1.6rem;
+
+}
+.red-pill:hover{
+    background-color: darkred;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px red;
+}
+.blue-pill{
+    background-color: blue;
+    top: 60%;
+    right: 10%;
+}
+.blue-pill:hover{
+    background-color: darkblue;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px blue;
+}
