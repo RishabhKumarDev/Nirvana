@@ -16,8 +16,8 @@ const AuthPageContainer = () => {
     const mode = query.get('mode') || 'login';
 
 
-    useEffect(()=>{
-     setIsSignUp(mode === "signup")
+    useEffect(()=>{ // check the selected mode in direct page
+     setIsSignUp(mode === "signup")  // short way of putting true i.e if mode === signup = true;
     },[mode])
     return ( 
 

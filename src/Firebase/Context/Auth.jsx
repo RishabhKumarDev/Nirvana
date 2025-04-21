@@ -1,22 +1,39 @@
-import { getAuth } from "firebase/auth";
-import { app } from "../FireBaseConfig";
+import {
+  createUserWithEmailAndPassword,
+  getAuth,
+  GoogleAuthProvider,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+} from "firebase/auth";
+import { auth } from "../FireBaseConfig";
 import { createContext } from "react";
 import { useContext } from "react";
 
-
-const auth = getAuth(app); 
 const AuthContext = createContext(null);
+const provider = new GoogleAuthProvider();
 
-export const AuthProvider = ({children}) => {
+export const AuthProvider = ({ children }) => {
+  const SignUpUser = async (email, password) => {
+    return await createUserWithEmailAndPassword(auth, email, password);
+  };
+  const singInUser = async (email, password) => {
+    return await signInWithEmailAndPassword(auth, email, password);
+  };
+  const popUpsign = async () => {
+    return await signInWithPopup(auth, provider);
+  };
 
-    const logInUser = () =>{
-        
-    }
-    return ( 
-        <AuthContext.Provider  >
-            {children}
-        </AuthContext.Provider>
-     );
-}
+  return (
+    <AuthContext.Provider
+      value={{
+        SignUpUser,
+        singInUser,
+        popUpsign,
+      }}
+    >
+      {children}
+    </AuthContext.Provider>
+  );
+};
 
-export const UseAuth = () => useContext(AuthContext);
+export const useAuth = () => useContext(AuthContext);
