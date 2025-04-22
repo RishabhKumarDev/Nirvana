@@ -2,15 +2,23 @@ import "../styles/SignIn.css";
 import { FaUser, FaLock, FaGoogle } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { useAuth } from "../Firebase/Context/Auth";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDatabase } from "../Firebase/Context/Database";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
-  const { SignUpUser, popUpsign } = useAuth();
+  const { SignUpUser, popUpsign, user } = useAuth();
   const { createUserInDB } = useDatabase();
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
+
+  useEffect(()=>{
+      if(user){
+         navigate("/")
+      }
+    },[user])
 
   const handleSubmit = async (e) => {
     e.preventDefault();

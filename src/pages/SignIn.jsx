@@ -1,17 +1,24 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../styles/SignIn.css";
 import { FaLock, FaGoogle } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { useAuth } from "../Firebase/Context/Auth";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDatabase } from "../Firebase/Context/Database";
 
 const SignIn = () => {
-  const { singInUser, popUpsign } = useAuth();
+  const { singInUser, popUpsign,user } = useAuth();
   const { createUserInDB } = useDatabase();
+const navigate = useNavigate();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  useEffect(()=>{
+    if(user){
+       navigate("/")
+    }
+  },[user])
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {

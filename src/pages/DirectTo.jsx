@@ -2,10 +2,19 @@ import { Link, useNavigate } from "react-router-dom";
 import "../styles/DirectTo.css"
 import matrixbackground0 from "../assets/matrixbackground0.gif"
 import penguin from "../assets/penguin.png"
+import { useAuth } from "../Firebase/Context/Auth";
+import { useEffect } from "react";
 const DirectTo = () => {
    
 
   const navigate = useNavigate();
+
+  const{user} = useAuth();
+  useEffect(()=>{
+    if(user){
+      navigate('/')
+    }
+  },[user])
     return ( 
     <div className="direct-container" style={{ background:`url(${matrixbackground0})`}}>
       

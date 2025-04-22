@@ -1,40 +1,53 @@
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import FirstPage from "./pages/FirstPage";
+import InputPage from "./pages/InputPage";
+import HistoryPage from "./pages/HistoryPage";
+import Playground from "./components/Notification/playground";
+import Notification from "./components/Notification/Notification";
+import DirectTo from "./pages/DirectTo";
+import AuthPageContainer from "./components/AuthPageContainer";
+import Profile from "./pages/Profile";
+import ProtectedRoutes from "./components/ProtectedRoutes";
+import NotFoundPage from "./pages/NotFound";
+import { useAuth } from "./Firebase/Context/Auth";
 
-import { Route, Routes, useLocation } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import FirstPage from './pages/FirstPage';
-import InputPage from './pages/InputPage';
-import HistoryPage from './pages/HistoryPage';
-import Playground from './components/Notification/playground';
-import Notification from './components/Notification/Notification';
-import DirectTo from './pages/DirectTo';
-// import SignUp from './pages/SignUp';
-// import SignIn from './pages/SignIn';
-import AuthPageContainer from './components/AuthPageContainer';
 function App() {
   const location = useLocation();
-  const hideNavPaths = ["/direct","/signin","/signup","/authpage"];
+  const { user, loading } = useAuth();
+
+  const hideNavPaths = ["/direct", "/signin", "/signup", "/authpage", "*"];
+  if (loading) return <p>loading...</p>;
   return (
     <>
-        {!hideNavPaths.includes(location.pathname) &&  <Navbar/>}
+      {!hideNavPaths.includes(location.pathname) && <Navbar />}
       <div className="content">
         <Routes>
-        <Route path='/' element={ <FirstPage />} />
-        <Route path='/input' element={ <InputPage />} />
-        <Route path='/history' element={ <HistoryPage />} />
-        <Route path='/playground' element={ <Playground/>} />
-        <Route path='/direct' element={ <DirectTo/>} />
-        {/* <Route path='/signin' element={ <SignIn/>} />
-        <Route path='/signup' element={ <SignUp/>} /> */}
-        <Route path='/authpage' element={ <AuthPageContainer/>} />
+          {/* unauthorised user route */}
+          {!user ? (
+            <>
+              <Route path="/direct" element={<DirectTo />} />
+              <Route path="/authpage" element={<AuthPageContainer />} />
+            </>
+          ) : (
+            <Route path="/authpage" element={<Navigate to="/" replace />} />
+          )}
 
-
-        
+          {/* private routes */}
+          <Route element={<ProtectedRoutes />}>
+            <Route path="/" element={<FirstPage />} />
+            <Route path="/input" element={<InputPage />} />
+            <Route path="/history" element={<HistoryPage />} />
+            <Route path="/profile" element={<Profile />} />
+          </Route>
+          {/* public routes */}
+          <Route path="/playground" element={<Playground />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
-        <Notification/>
+        <Notification />
       </div>
-      </>
+    </>
   );
 }
-
 
 export default App;

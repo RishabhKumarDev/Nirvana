@@ -3,6 +3,7 @@ import SignIn from "../pages/SignIn";
 import SignUp from "../pages/SignUp";
 import "../styles/signIn.css";
 import { useEffect, useState } from "react";
+import { useAuth } from "../Firebase/Context/Auth";
 
 function useQuery() {
     return new URLSearchParams(useLocation().search);
@@ -11,7 +12,8 @@ function useQuery() {
 const AuthPageContainer = () => {
     const [isSignUp,setIsSignUp] = useState(false)
     const navigate = useNavigate();
-    
+
+
     const query = useQuery();
     const mode = query.get('mode') || 'login';
 
