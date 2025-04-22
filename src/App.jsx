@@ -5,7 +5,6 @@ import InputPage from "./pages/InputPage";
 import HistoryPage from "./pages/HistoryPage";
 import Playground from "./components/Notification/playground";
 import Notification from "./components/Notification/Notification";
-import DirectTo from "./pages/DirectTo";
 import AuthPageContainer from "./components/AuthPageContainer";
 import Profile from "./pages/Profile";
 import ProtectedRoutes from "./components/ProtectedRoutes";
@@ -16,7 +15,7 @@ function App() {
   const location = useLocation();
   const { user, loading } = useAuth();
 
-  const hideNavPaths = ["/direct", "/signin", "/signup", "/authpage", "*"];
+  const hideNavPaths = [ "/signin", "/signup", "/authpage", "*"]; // just keep this so i know diff. ways to hide nav. 
   if (loading) return <p>loading...</p>;
   return (
     <>
@@ -26,7 +25,6 @@ function App() {
           {/* unauthorised user route */}
           {!user ? (
             <>
-              <Route path="/direct" element={<DirectTo />} />
               <Route path="/authpage" element={<AuthPageContainer />} />
             </>
           ) : (

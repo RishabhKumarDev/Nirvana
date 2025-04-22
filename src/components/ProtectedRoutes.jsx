@@ -4,7 +4,7 @@ import { useAuth } from "../Firebase/Context/Auth";
 const ProtectedRoutes = () => {
     const {user} = useAuth();
 
-    return user ? <Outlet/> : <Navigate to="/direct" />;
+    return user ? <Outlet/> : <Navigate to="/authpage" />;
     
 
 }
