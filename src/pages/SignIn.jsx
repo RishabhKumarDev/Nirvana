@@ -5,27 +5,35 @@ import { MdEmail } from "react-icons/md";
 import { useAuth } from "../Firebase/Context/Auth";
 import { useEffect, useState } from "react";
 import { useDatabase } from "../Firebase/Context/Database";
+import { toast } from "react-toastify";
+import { IoSparkles } from "react-icons/io5";
+import { getErrorToast } from "../utlities/ErrorMessages";
 
 const SignIn = () => {
-  const { singInUser, popUpsign,user } = useAuth();
+  const { singInUser, popUpsign, user } = useAuth();
   const { createUserInDB } = useDatabase();
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  useEffect(()=>{
-    if(user){
-       navigate("/")
+  useEffect(() => {
+    if (user) {
+      navigate("/");
     }
-  },[user])
+  }, [user]);
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const user = await singInUser(email, password);
+      toast.success("Login Sucessful", { icon: <IoSparkles/> });
       console.log("user loged in sucessfully", user);
     } catch (error) {
-      console.log("user doesn't exist", error);
+      const { message, icon } = getErrorToast(error, "auth");
+
+      toast.clearWaitingQueue();
+      toast.error(`${message}`, { icon: icon });
+      console.log("user doesn't exist", error.message);
     }
   };
   const handleClick = async () => {

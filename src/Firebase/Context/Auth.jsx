@@ -15,22 +15,19 @@ const AuthContext = createContext(null);
 const provider = new GoogleAuthProvider();
 
 export const AuthProvider = ({ children }) => {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  const [user,setUser] = useState(null);
-  const [loading,setLoading] = useState(true);
-
-  useEffect(()=>{
-    const checkUser = onAuthStateChanged(auth,(user) => {
-       setUser(user || null)
-       setLoading(false);
-       console.log(user)
-
-    })
-  console.log(user,"state user")
-
+  useEffect(() => {
+    const checkUser = onAuthStateChanged(auth, (user) => {
+      setUser(user || null);
+      setLoading(false);
+      console.log(user);
+    });
+    console.log(user, "state user");
 
     return () => checkUser();
-  },[])
+  }, []);
 
   const SignUpUser = async (email, password) => {
     return await createUserWithEmailAndPassword(auth, email, password);
@@ -41,10 +38,10 @@ export const AuthProvider = ({ children }) => {
   const popUpsign = async () => {
     return await signInWithPopup(auth, provider);
   };
- 
-  const signOutUser = async () =>{
+
+  const signOutUser = async () => {
     return await signOut(auth);
-  }
+  };
   return (
     <AuthContext.Provider
       value={{
@@ -61,4 +58,4 @@ export const AuthProvider = ({ children }) => {
   );
 };
 
-export const useAuth = () => useContext(AuthContext);
+export const useAuth = () =>  useContext(AuthContext) || { user: null, loading: true };

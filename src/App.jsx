@@ -10,11 +10,19 @@ import Profile from "./pages/Profile";
 import ProtectedRoutes from "./components/ProtectedRoutes";
 import NotFoundPage from "./pages/NotFound";
 import { useAuth } from "./Firebase/Context/Auth";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const location = useLocation();
   const { user, loading } = useAuth();
-
+  ['success', 'error', 'info', 'warn', 'warning'].forEach(type => {
+    const original = toast[type];
+    toast[type] = (...args) => {
+      toast.clearWaitingQueue();
+      return original(...args);
+    };
+  });
   const hideNavPaths = [ "/signin", "/signup", "/authpage", "*"]; // just keep this so i know diff. ways to hide nav. 
   if (loading) return <p>loading...</p>;
   return (
@@ -43,6 +51,7 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Notification />
+        <ToastContainer theme="dark" limit={3} />
       </div>
     </>
   );

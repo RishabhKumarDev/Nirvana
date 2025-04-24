@@ -8,16 +8,26 @@ import { FaQuestion } from "react-icons/fa";
 import { TbLogout2 } from "react-icons/tb";
 import { FaHome } from "react-icons/fa";
 import { useAuth } from "../Firebase/Context/Auth";
+import { auth } from "../Firebase/FireBaseConfig";
+import { toast } from "react-toastify";
+import { getErrorToast } from "../utlities/ErrorMessages";
+import { useDatabase } from "../Firebase/Context/Database";
 
 const SideBar = ({ sideBarVisible, setSideBarVisible }) => {
   const { signOutUser } = useAuth();
-
+const {userData} = useDatabase();
+console.log(userData,"user data side bar ")
   const handleClick = async () => {
     try {
-      await signOutUser();
+      await signOutUser(auth);
+      toast.success("Loged out sucessfully");
+
       console.log("user sign out");
     } catch (e) {
       console.log("couldn't sign out user", e);
+      const { message, icon } = getErrorToast(e, "auth");
+      toast.clearWaitingQueue();
+      toast.error(`${message}`, { icon: icon });
     }
   };
 
@@ -33,7 +43,7 @@ const SideBar = ({ sideBarVisible, setSideBarVisible }) => {
       >
         <div className="sidebar-header">
           <img alt="" className="profile-pic" />
-          <div className="username">Blue Red</div>
+          <div className="username">{userData?.name}</div>
         </div>
         <ul className="sidebar-menu" onClick={() => setSideBarVisible(false)}>
           <li>

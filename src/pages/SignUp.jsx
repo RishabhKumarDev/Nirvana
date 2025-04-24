@@ -5,6 +5,8 @@ import { useAuth } from "../Firebase/Context/Auth";
 import { useEffect, useState } from "react";
 import { useDatabase } from "../Firebase/Context/Database";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { getErrorToast } from "../utlities/ErrorMessages";
 
 const SignUp = () => {
   const { SignUpUser, popUpsign, user } = useAuth();
@@ -28,11 +30,14 @@ const SignUp = () => {
       const user = userCred.user;
       if (user) {
         await createUserInDB(user, name);
+        toast.success("Account Created Sucessfully")
         console.log("user data sent to database");
       }
       console.log("user sucessfully created", userCred);
       console.log("user", userCred.user);
     } catch (error) {
+      const {message, icon} = getErrorToast(error, "signup-auth")
+      toast.error(`${message}`, {icon:icon})
       console.log("conuldn't create user", error);
     }
   };
@@ -45,8 +50,12 @@ const SignUp = () => {
       if (user) {
         try {
           await createUserInDB(user);
+        toast.success("Account Created Sucessfully")
+
           console.log("data sent pop up sign up");
         } catch (error) {
+          const {message, icon} = getErrorToast(error, "signup-auth")
+          toast.error(`${message}`, {icon:icon})
           console.log("user data couldn't be sent pop up sign up", error);
         }
       }

@@ -11,15 +11,15 @@ import { DatabaseProvider } from "./Firebase/Context/Database.jsx";
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <StrictMode>
-      <DatabaseProvider>
-        <AuthProvider>
+      <AuthProvider>
+        <DatabaseProvider>
           <NotificationProvider>
             <NotesProvider>
               <App />
             </NotesProvider>
           </NotificationProvider>
-        </AuthProvider>
-      </DatabaseProvider>
+        </DatabaseProvider>
+      </AuthProvider>
     </StrictMode>
   </BrowserRouter>
 );
